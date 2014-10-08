@@ -23,11 +23,19 @@
     }
   }
 
-/* Responsive images */
+/* Responsive images - render alt italicised if images don't load */
 
   img {
     display:block;
+    font-style:italic;
     max-width:100%;
+  }
+
+/* Non-responsive iamges - assign a height and/or width  */
+
+  img[width],
+  img[height] {
+    max-width:none;
   }
 
 /* Remove default styles on lists as most won't require them */
@@ -36,4 +44,13 @@
     list-style:none;
     margin:0;
     padding:0;
+  }
+
+/* Typography settings */
+
+  h1 {
+    letter-spacing:-1px;
+    font-size:em(36);
+    font-weight:900;
+
   }
