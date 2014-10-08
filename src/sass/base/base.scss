@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/* Base page colors and font family */
+
+  body {
+    background-color:$body-background-color;
+    font-family:$main-font;
+    color:$main-text-color;
+    line-height:1.5;
+  }
+
+/* Base links */
+
+  a {
+    color:$main-link-color;
+    text-decoration:none;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration:underline;
+    }
+  }
+
+/* Responsive images */
+
+  img {
+    display:block;
+    max-width:100%;
+  }
+
+/* Remove default styles on lists as most won't require them */
+
+  ol,ul,li {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
