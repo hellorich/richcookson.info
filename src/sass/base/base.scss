@@ -38,6 +38,12 @@
     max-width:none;
   }
 
+/* Prevent focus outline on links that cannot be accessed via keyboard */
+
+  [tabindex="-1"]:focus {
+    outline:none !important;
+  }
+
 /* Remove default styles on lists as most won't require them */
 
   ol,ul,li {
