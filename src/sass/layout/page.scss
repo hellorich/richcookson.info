@@ -4,5 +4,5 @@
 
   #page {
     @include outer-container();
-    max-width:768px;
+    max-width:rem(768);
   }
