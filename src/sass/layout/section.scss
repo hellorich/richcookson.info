@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Section
+   ========================================================================== */
+
+  .section {
+    @include span-columns(12);
+    margin-top:rem(45);
+    h2 {
+      @include span-columns(3);
+    }
+    div {
+      @include span-columns(8);
+    }
+    article {
+      margin-bottom:rem(30);
+    }
+  }
