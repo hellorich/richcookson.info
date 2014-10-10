@@ -6,7 +6,8 @@
     @include span-columns(12);
     margin-top:rem(45);
     h2 {
-      @include span-columns(3);
+      @include shift(1);
+      @include span-columns(2);
     }
     div {
       @include span-columns(8);
