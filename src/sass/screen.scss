@@ -7,9 +7,11 @@
  *
  * Bourbon is a lightweight SASS mixin library.
  * Neat is a lightweight grid framework for SASS and Bourbon.
+ * Normalize sets browsers to as common a baseline as possible.
  */
 
   @import "vendor/bourbon/bourbon", "vendor/neat/neat";
+  @import "vendor/normalize/normalize";
 
 /**
  * Settings
@@ -22,8 +24,9 @@
 /**
  * Base
  *
- * Normalize sets browsers to as common a baseline as possible.
- * Base contains basic HTML styles for common elements such as the body and links.
+ *
+ * Base contains basic HTML styles for common elements.
+ * Typography handles basic settings for headings, paragraphs, blockquotes etc.
  */
 
   @import "base/base";

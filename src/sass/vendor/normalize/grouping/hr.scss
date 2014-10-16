@@ -1,0 +1,8 @@
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+  hr {
+    @include prefixer(box-sizing, content-box, moz spec);
+    height:0;
+  }
