@@ -28,3 +28,13 @@
     margin:0 0 rem(9);
   }
 
+/* Unordered lists */
+
+  article {
+    li {
+      color:#565656;
+      font-size:rem(18);
+      list-style:square inside;
+    }
+  }
+
