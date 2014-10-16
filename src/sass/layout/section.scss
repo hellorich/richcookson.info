@@ -4,15 +4,15 @@
 
   .section {
     @include span-columns(12);
-    margin-top:rem(45);
+    margin-bottom:rem(25);
     h2 {
-      @include shift(1);
-      @include span-columns(2);
     }
     div {
-      @include span-columns(8);
     }
     article {
       margin-bottom:rem(30);
+      &:last-child {
+        margin-bottom:0;
+      }
     }
   }

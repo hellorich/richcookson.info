@@ -3,7 +3,6 @@
    ========================================================================== */
 
   #banner {
-    @include shift(3);
-    @include span-columns(8);
+    margin-bottom:rem(25);
     margin-top:rem(90);
   }
