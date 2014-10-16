@@ -13,22 +13,23 @@ html(lang='en')
 
       h1 Richard Cookson
       h2 Front end web developer and interaction designer
-      p I've worked in the industry for over fifteen years, producing well organised web sites to the highest standards across a wide range of projects and for numerous high profile organisations. My current focus is on responsive web development and learning Angular.js.
 
-    main(role='main')
+      div(class='intro')
+        p I've worked in the industry for over fifteen years, producing well organised web sites to the highest standards across a wide range of projects and for numerous high profile organisations. My current focus is on responsive web development and learning Angular.js.
 
-      address(class='address', id='contact-info')
+      address(class='address')
         ul
           li
-            abbr(title='Mobile') m:
-              a(href='tel:+447792871698') +44 7792&nbsp;871698
+            span Mobile:
+            a(href='tel:+447792871698') +44 7792&nbsp;871698
           li
-            abbr(title='Email') e:
-              a(href='mailto:rich.cookson@gmail.com') rich.cookson@gmail.com
+            span Email:
+            a(href='mailto:rich.cookson@gmail.com') rich.cookson@gmail.com
           li
-            abbr(title='Address') a:
-              a(href='http://goo.gl/maps/QKat7') Brighton, UK
+            span Address:
+            a(href='http://goo.gl/maps/QKat7') Brighton, UK
 
+    main(role='main')
 
       section(class='section', id='skills')
 
