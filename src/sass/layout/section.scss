@@ -3,16 +3,5 @@
    ========================================================================== */
 
   .section {
-    @include span-columns(12);
     margin-bottom:rem(25);
-    h2 {
-    }
-    div {
-    }
-    article {
-      margin-bottom:rem(30);
-      &:last-child {
-        margin-bottom:0;
-      }
-    }
   }
