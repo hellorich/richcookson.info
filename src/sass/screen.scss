@@ -26,8 +26,8 @@
  * Base contains basic HTML styles for common elements such as the body and links.
  */
 
-  @import "base/normalize";
   @import "base/base";
+  @import "base/typography";
 
 /**
  * Layout
@@ -46,4 +46,4 @@
  * Define the styles and internal spacing (padding) of modules
  */
 
-
+  @import "modules/section-skills";
