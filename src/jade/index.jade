@@ -9,128 +9,15 @@ html(lang='en')
 
   div(id='page')
 
-    header(id='banner', role='banner')
-
-      h1 Richard Cookson
-      h2 Front end web developer and interaction designer
-
-      address(class='address')
-        ul
-          li
-            span Github:
-            a(href='https://github.com/Frobitz') www.github.com/Frobitz
-          li
-            span Phone:
-            a(href='tel:+447792871698') +44 7792&nbsp;871698
-          li
-            span Email:
-            a(href='mailto:rich.cookson@gmail.com') rich.cookson@gmail.com
-          li
-            span Location:
-            a(href='https://goo.gl/maps/jtqom') Brighton, UK
-
-
-      div(class='intro')
-        p I've worked in the industry for over fifteen years, producing well organised web sites to the highest standards across a wide range of projects and for numerous high profile organisations. My current focus is on responsive web development and learning Angular.js.
-
-
+    include ./includes/header.jade
 
     main(role='main')
 
-      section(class='section', id='skills')
+      include ./includes/skills.jade
 
-        h2 Skills
+      include ./includes/projects.jade
 
-        div
+      include ./includes/highlights.jade
 
-          article(class='skill')
+      include ./includes/about.jade
 
-            h3 HTML.
-            p Producing semantic, minimalist and W3C standards compliant HTML5 markup with experience of working to accessibility coding standards.
-            p I've worked with several templating systems including Smarty and Jade, and have carred out integration of code into a variety of CMS systems including Wordpress.
-
-          article(class='skill')
-
-            h3 CSS.
-            p Coded plain CSS for years with an indepth knowledge of working around the rendering quirks of various browsers.
-            p Currently I work with the SASS pre-processor, using Bourbon and Neat mixin libraries.
-            p I use the SMACSS methodology of organising CSS code.
-
-          article(class='skill')
-
-            h3 JavaScript.
-            p Competent JavaScript coder utilising the jQuery library for various user interface enhancements and functionality.
-            p Currently working on an Angular.js project to improve OOP JavaScript skills.
-
-      section(class='section', id='latest-projects')
-
-        h2 Latest Projects
-
-        p My most recent work, some of which may still be undergoing bug fixes and optimisation work.
-
-        div
-
-          article(class='project')
-
-            h3
-              a(href='http://www.lshift.net') www.lshift.net
-            p Carried out a full stack web development project to redesign and restructure the existing LShift company web site using Wordpress.
-            ul
-              li Utilised Grunt, SASS and Jade framework to create prototype templates allowing for rapid, in-browser design.
-              li Refined front end code to work responsively in variety of viewport and device sizes.
-              li Set up a complex Wordpress installation to match the requirements of the site structure.
-              li Imported and refactored content from the previous verson of the web site.
-              li Integrated HTML and CSS code into a working Wordpress theme.
-              li Continuing support and development ongoing.
-
-          article(class='project')
-
-            h3
-              a(href='http://www.weare5k.com') www.weare5k.com
-            p A responsive design project to create the initial one page web site to introduce potential customers to 5K.
-            ul
-              li Produced front end code using Codekit, SASS and Jade.
-              li Refined front end code to work responsively in variety of viewport and device sizes as required by the designs.
-              li Continuing support and optimisation ongoing following work done to integrate into Wordpress by third party.
-
-          article(class='project')
-
-            h3
-              a(href='https://github.com/Frobitz/go') www.github.com/Frobitz/go
-            p A personal project to create a quickstart framework for getting web site and prototype template builds underway quickly.
-            ul
-              li Uses Grunt to compile Jade and SASS into HTML and CSS.
-              li Optimises image files automatically
-              li Integrates Bourbon mixin library to extend SASS
-              li Integrates Neat grid system for quick, responsive layout creation
-              li Currently under development
-
-
-      section(class='section', id='career-highlights')
-
-        h2 Career Highlights
-
-        p Notable projects I've worked on in the past. I've provided links where the sites still retain the design or code I worked on.
-
-        div
-
-          article(class='highlight')
-
-            h3 HSBC HTML5 Skunkworks Project
-            p I was hired by Sapient to lead a team of developers producing HTML5 templates for a rebrand of the HSBC.ae website which was carried out by internal CMS developers. This was a challenging role as not only were the deadlines tight, but I had to investigate and determine the best way to handle their requirement for the site to use HTML5.
-
-          article(class='highlight')
-
-            h3 BBC Trust and BBC UK China
-            p I’ve worked on two projects for the BBC, the first was as lead developer at Wilson Fletcher to build the first version of the BBC Trust site. Later in my career I was hired directly as a contractor to act as the developer in charge of creating the new BBC UK China website.
-
-          article(class='highlight')
-
-            h3 Which? Redesign
-            p Acted as the lead developer in a team of six at Wilson Fletcher, co-ordinating and producing templates for the new Which website on a year long project to rebrand and integrate their existing sites under one domain.
-
-      section(class='section', id='about')
-
-        h2 And finally
-
-        p Iʼm a big music fan and love going to see bands play live - I’m never happier than when I’m up to my knees in mud at a festival. I also enjoy cycling, films and reading books.
