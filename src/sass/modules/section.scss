@@ -5,9 +5,22 @@
   .section {
     div {
       margin-top:rem(15);
+
+      /* Print */
+    
+        @media print {
+          margin-top:rem(7.5);
+        }
     }
     article {
       margin-bottom:rem(30);
+
+      /* Print */
+    
+        @media print {
+          margin-bottom:rem(15);
+        }
+
       &:last-child {
         margin-bottom:0;
       }

@@ -1,14 +1,11 @@
 /* ==========================================================================
-   Page
+   Latest Projects
    ========================================================================== */
 
-  #page {
-    @include outer-container();
+  #latest-projects {
+    .project {
+      &:first-child {
+        page-break-after:always;
+      }
+    }
   }
-
-  /* Print */
-
-    @page  {
-      margin:20mm 0;  
-      size:auto;
-    } 

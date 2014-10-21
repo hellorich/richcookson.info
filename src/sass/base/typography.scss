@@ -3,21 +3,57 @@
    ========================================================================== */
 
 /* Headings */
+
   h1 {
     font-size:rem(64);
     font-weight:900;
     letter-spacing:-1px;
     margin:0;
+
+    /* Print */
+
+      @media print {
+        font-size:rem(26);
+        margin:0 0 rem(6);
+      }
+
   }
   h2 {
     font-size:rem(32);
     font-weight:900;
     margin:0 0 rem(12);
+
+    /* Print */
+
+      @media print {
+        font-size:rem(16);
+        margin:0;
+      }
+
   }
   h3 {
     font-size:rem(18);
     font-weight:700;
     margin:0;
+
+    /* Print */
+
+      @media print {
+        font-size:rem(12);
+      }
+
+  }
+
+/* Address */
+
+  address {
+
+    /* Print */
+
+      @media print {
+        font-size:rem(12);
+      }
+
   }
 
 /* Paragraphs */
@@ -27,6 +63,14 @@
     font-size:rem(18);
     line-height:1.35;
     margin:0 0 rem(9);
+
+    /* Print */
+
+      @media print {
+        font-size:rem(12);
+        margin:0 0 rem(5);
+      }
+
   }
 
 /* Unordered lists */
@@ -37,6 +81,12 @@
       font-size:rem(18);
       line-height:1.35;
       list-style:square inside;
+
+      /* Print */
+
+        @media print {
+          font-size:rem(12);
+        }
     }
   }
 

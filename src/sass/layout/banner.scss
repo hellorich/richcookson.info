@@ -7,4 +7,11 @@
     @include span-columns(10);
     margin-bottom:rem(25);
     margin-top:rem(90);
+
+    /* Print */
+  
+      @media print {
+        margin-bottom:rem(30);
+        margin-top:0;
+      }
   }

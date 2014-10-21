@@ -11,5 +11,12 @@
     li {
       display:inline-block;
       margin-right:rem(15);
+
+      /* Print */
+    
+        @media print {
+          display:block;
+          margin-right:0;
+        }
     }
   }

@@ -6,4 +6,10 @@
     @include shift(1);
     @include span-columns(10);
     margin-bottom:rem(50);
+
+    /* Print */
+  
+      @media print {
+        margin-bottom:rem(30);
+      }
   }
