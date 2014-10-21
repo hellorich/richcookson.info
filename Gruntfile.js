@@ -6,10 +6,23 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    connect: {
+      server: {
+        options: {
+          base: 'dist',
+          hostname: '0.0.0.0',
+          port: 8000
+        }
+      }
+    },
+
     watch: {
+      options: {
+        livereload: true
+      },
       sass: {
         files: 'src/sass/**/*.scss',
-        tasks: ['sass']
+        tasks: ['sass'],
       },
       jade: {
         files: 'src/jade/**/*.jade',
@@ -92,6 +105,10 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('default', ['watch']);
+  //grunt.registerTask('default', ['watch']);
+  grunt.registerTask('serve', [
+    'connect:server',
+    'watch'
+  ]);
 
 };
