@@ -5,10 +5,19 @@
 /* Headings */
 
   h1 {
-    font-size:rem(64);
+    font-size:rem(40);
     font-weight:900;
     letter-spacing:-1px;
     margin:0;
+
+    /* Breakpoints */
+
+      @include media($medium) {
+        font-size:rem(48);
+      }
+      @include media($large) {
+        font-size:rem(64);
+      }
 
     /* Print */
 
@@ -19,9 +28,18 @@
 
   }
   h2 {
-    font-size:rem(32);
+    font-size:rem(20);
     font-weight:900;
     margin:0 0 rem(12);
+
+    /* Breakpoints */
+
+      @include media($medium) {
+        font-size:rem(26);
+      }
+      @include media(large) {
+        font-size:rem(32);
+      }
 
     /* Print */
 
@@ -32,9 +50,15 @@
 
   }
   h3 {
-    font-size:rem(18);
+    font-size:rem(16);
     font-weight:700;
     margin:0;
+
+    /* Breakpoints */
+
+      @include media($medium) {
+        font-size:rem(18);
+      }
 
     /* Print */
 
@@ -60,9 +84,15 @@
 
   p {
     color:#565656;
-    font-size:rem(18);
+    font-size:rem(16);
     line-height:1.35;
     margin:0 0 rem(9);
+
+    /* Breakpoints */
+
+      @include media($medium) {
+        font-size:rem(18);
+      }
 
     /* Print */
 
@@ -78,9 +108,15 @@
   article {
     li {
       color:#565656;
-      font-size:rem(18);
+      font-size:rem(16);
       line-height:1.35;
       list-style:square inside;
+
+      /* Breakpoints */
+
+        @include media($medium) {
+          font-size:rem(18);
+        }
 
       /* Print */
 

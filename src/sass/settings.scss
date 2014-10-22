@@ -16,6 +16,12 @@
     $main-text-color:#434343;
     $main-link-color:#C00;
 
+/*
+   Breakpoints
+   ========================================================================== */
+
+    $medium:new-breakpoint(min-width 580px);
+    $large:new-breakpoint(min-width 870px);
 
 
 

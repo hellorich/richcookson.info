@@ -9,8 +9,14 @@
       margin-right:rem(10);
     }
     li {
-      display:inline-block;
+      display:block;
       margin-right:rem(15);
+
+      /* Breakpoints */
+
+        @include media($large) {
+          display:inline-block;
+        }
 
       /* Print */
     
