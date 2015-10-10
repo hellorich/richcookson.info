@@ -104,6 +104,12 @@ module.exports = function(grunt) {
     }
 
   });
+  
+  grunt.registerTask('make', [
+    'sass',
+    'jade',
+    'imagemin'
+  ]);
 
   grunt.registerTask('serve', [
     'connect:server',
