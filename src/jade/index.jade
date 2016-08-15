@@ -27,6 +27,6 @@ html(lang='en')
       | var githubLink = document.getElementsByClassName('js-github'),
       |     phoneLink = document.getElementsByClassName('js-phone'),
       |     emailLink = document.getElementsByClassName('js-email');
-      | githubLink[0].addEventListener('click', _gs('event', 'Opened Github profile') );
-      | phoneLink[0].addEventListener('click', _gs('event', 'Called me') );
-      | emailLink[0].addEventListener('click', _gs('event', 'Emailed me') );
+      | githubLink[0].addEventListener('click', function() { _gs('event', 'Opened Github profile') });
+      | phoneLink[0].addEventListener('click', function() { _gs('event', 'Called me') });
+      | emailLink[0].addEventListener('click', function() { _gs('event', 'Emailed me') });
