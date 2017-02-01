@@ -6,9 +6,17 @@
     @include outer-container();
   }
 
+  #career-highlights {
+    h2 {
+      page-break-before: always;
+    }
+  }
+
   /* Print */
 
-    @page  {
-      margin:20mm 0;  
-      size:auto;
-    } 
+    @media print {
+      #page {
+        margin: 5mm 0;
+        size: auto;
+      }
+    }
