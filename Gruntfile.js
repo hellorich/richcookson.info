@@ -1,89 +1,100 @@
+'use strict';
+
 module.exports = function(grunt) {
+
+  // Grunt task timing
+  require('time-grunt')(grunt);
 
   // Load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+  // Paths
+  var path = {
+    conf: 'config',
+    src: 'src',
+    dest: 'dist'
+  };
+
   // Project configuration.
   grunt.initConfig({
 
-    connect: {
-      server: {
-        options: {
-          base: 'dist',
-          hostname: '0.0.0.0',
-          port: 8000
-        }
-      }
-    },
+    path: path,
 
     watch: {
       options: {
         livereload: true
       },
-      sass: {
-        files: 'src/sass/**/*.scss',
-        tasks: ['sass'],
+      gruntfile: {
+        files: ['Gruntfile.js'],
+        tasks: ['jshint']
       },
-      jade: {
-        files: 'src/jade/**/*.jade',
-        tasks: ['jade']
+      requirejs: {
+        files: '<%= path.src %>/js/**/*.js',
+        tasks: ['requirejs']
+      },
+      sass: {
+        files: '<%= path.src %>/sass/**/*.scss',
+        tasks: ['sass', 'autoprefixer'],
       },
       imagemin: {
-        files: 'src/img/**/*.{gif,png,jpg}',
-        tasks: ['imagemin']
+        files: '<%= path.src %>/img/**/*.{gif,png,jpg,svg}',
+        tasks: ['newer:imagemin']
+      },
+      mustache_render: {
+        files: '<%= path.src %>/mustache/**/*.{mustache,json}',
+        tasks: ['mustache_render']
+      }
+    },
+
+    // Build
+
+    requirejs: {
+      compile: {
+        options : {
+          baseUrl: '',
+          include: '<%= path.src %>/js/main',
+          mainConfigFile: '<%= path.conf %>/require.js',
+          name: '<%= path.src %>/js/lib/almond',
+          out: '<%= path.dest %>/assets/js/scripts.js'
+        }
       }
     },
 
     sass: {
       dist: {
         options: {
-          sourcemap: true,
+          includePaths: require('node-neat').includePaths,
           style: 'compressed'
         },
         files: {
-          'dist/_/styles/screen.css': 'src/sass/screen.scss'
+          '<%= path.dest %>/assets/css/styles.css': '<%= path.src %>/sass/manifest.scss'
         }
       }
     },
 
-    jade: {
-      compile: {
+    autoprefixer:{
+      dist:{
         options: {
-          pretty: true
+          browsers: ['> 1%']
         },
-        files: [
-          {
-            dest: 'dist/',
-            expand: true,
-            ext: '.html',
-            flatten: true,
-            src: ['src/jade/**/*.jade', '!src/jade/includes/*.jade']
-          }
-        ]
+        files:{
+          '<%= path.dest %>/assets/css/styles.css':'<%= path.dest %>/assets/css/styles.css'
+        }
       }
     },
 
     imagemin: {
-      gif: {
-        files: [
-          {
-            dest: 'dist/_/images/gif/',
-            expand: true,
-            ext: '.gif',
-            src: ['src/img/gif/*.gif']
-          }
-        ]
-      },
       png: {
         options: {
           optimizationLevel: 7
         },
         files: [
           {
-            dest: 'dist/_/images/png/',
+            cwd: '<%= path.src %>/img/png/',
+            dest: '<%= path.dest %>/assets/img/png/',
             expand: true,
             ext: '.png',
-            src: ['src/img/png/*.png']
+            src: '**/*.png'
           }
         ]
       },
@@ -93,27 +104,107 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            dest: 'dist/_/images/jpg/',
+            cwd: '<%= path.src %>/img/jpg/',
+            dest: '<%= path.dest %>/assets/img/jpg/',
             expand: true,
             ext: '.jpg',
-            flatten: true,
-            src: ['src/img/jpg/*.jpg'],
+            src: '**/*.jpg'
           }
         ]
+      },
+      svg: {
+        options: {
+          plugins: [
+            {removeViewBox: false}
+          ],
+        },
+        files: [
+          {
+            cwd: '<%= path.src %>/img/svg/',
+            dest: '<%= path.dest %>/assets/img/svg/',
+            expand: true,
+            ext: '.svg',
+            src: '**/*.svg'
+          }
+        ]
+      }
+    },
+
+    mustache_render: {
+      options: {
+        directory: '<%= path.src %>/mustache/',
+        pretty: true
+      },
+      templates: {
+        options: {
+          data: '<%= path.src %>/mustache/data/data.json'
+        },
+        files: {
+          '<%= path.dest %>/index.html' : '<%= path.src %>/mustache/index.mustache'
+        }
+      }
+    },
+
+    // Tests
+
+    jshint: {
+      options: {
+        force: true,
+        jshintrc: '<%= path.conf %>/.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+      all: [
+        'Gruntfile.js',
+        '<%= path.src %>/js/{,*/}*.js',
+        '!<%= path.src %>/js/lib/*'
+      ]
+    },
+
+    scsslint: {
+      options: {
+        bundleExec: false,
+        config: '<%= path.conf %>/.scss-lint.yml',
+        reporterOutput: null
+      },
+      files: [
+        '<%= path.src %>/sass'
+      ]
+    },
+
+    // Display
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+            '<%= path.dest %>/assets/js/*.js',
+            '<%= path.dest %>/assets/css/*.css',
+            '<%= path.dest %>/*.html'
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: '<%= path.dest %>'
+        }
       }
     }
 
   });
-  
+
   grunt.registerTask('make', [
+    'requirejs',
     'sass',
-    'jade',
-    'imagemin'
+    'imagemin',
+    'mustache_render'
   ]);
 
-  grunt.registerTask('serve', [
-    'connect:server',
+  grunt.registerTask('go', [
+    'browserSync',
     'watch'
   ]);
+
+  grunt.registerTask('check:sass', ['scsslint']);
+
+  grunt.registerTask('check:js', ['jshint']);
 
 };
