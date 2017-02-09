@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------------
 
 p {
+  @include margin(0 null rem(16));
   color: setColor(neutral, color_gray_20);
   font-size: rem(17);
-  line-height: 1.35; // [TODO] - Make this more global, maybe move to body quark
 }
