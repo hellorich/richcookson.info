@@ -1,0 +1,7 @@
+//
+// setColor
+// ------------------------------------------------------------------
+
+@function setColor($palette, $tone: 'base') {
+  @return map-get( map-get( $palettes, $palette ), $tone );
+}

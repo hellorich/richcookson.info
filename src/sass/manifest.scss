@@ -8,3 +8,10 @@
 // Neat..................A grid framework for Bourbon: http://neat.bourbon.io
 
 @import 'bourbon', 'neat';
+
+// Utilities
+
+@import 'utilities/settings/fonts';
+@import 'utilities/settings/breakpoints';
+@import 'utilities/libraries/colors', 'utilities/helpers/setColor';
+@import 'utilities/libraries/svgs', 'utilities/helpers/setSVG';
