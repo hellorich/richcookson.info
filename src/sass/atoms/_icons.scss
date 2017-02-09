@@ -1,0 +1,36 @@
+//
+// Icons
+// ---------------------------------------------------------------------------------
+
+@mixin icon($icon) {
+  position: relative;
+
+  &:before {
+    @include position(absolute, 50% null null em(8));
+    @include setSVG($icon);
+    @include size(em(24));
+    @include transform(translateY(-50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    vertical-align: middle;
+  }
+}
+
+.icon-email {
+  @include icon(email);
+}
+
+.icon-github {
+  @include icon(github);
+}
+
+.icon-telephone {
+  @include icon(telephone);
+}
+
+.icon-twitter {
+  @include icon(twitter);
+}

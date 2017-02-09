@@ -28,6 +28,7 @@
 @import 'quarks/hyperlinks';
 @import 'quarks/img';
 @import 'quarks/main';
+@import 'quarks/nav';
 @import 'quarks/section';
 
 // Atoms
@@ -36,9 +37,14 @@
 @import 'atoms/duration';
 @import 'atoms/headings';
 @import 'atoms/hyperlinks';
+@import 'atoms/icons';
 @import 'atoms/lists';
 @import 'atoms/list-unordered';
 @import 'atoms/paragraphs';
+
+// Molecules
+
+@import 'molecules/nav-contact';
 
 // Templates
 

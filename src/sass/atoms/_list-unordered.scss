@@ -3,15 +3,17 @@
 // ---------------------------------------------------------------------------------
 
 ul {
-  li {
-    padding-left: rem(16);
-    position: relative;
+  &.list {
+    li {
+      padding-left: rem(16);
+      position: relative;
 
-    &:before {
-      @include position(absolute, 0 null null 0);
-      color: setColor(neutral, color_gray_20);
-      content: '\25AA';
-      display: inline-block;
+      &:before {
+        @include position(absolute, 0 null null 0);
+        color: setColor(neutral, color_gray_20);
+        content: '\25AA';
+        display: inline-block;
+      }
     }
   }
 }
