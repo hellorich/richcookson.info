@@ -15,3 +15,17 @@
 @import 'utilities/settings/breakpoints';
 @import 'utilities/libraries/colors', 'utilities/helpers/setColor';
 @import 'utilities/libraries/svgs', 'utilities/helpers/setSVG';
+
+// Quarks
+
+@import 'quarks/abbr';
+@import 'quarks/article';
+@import 'quarks/body';
+@import 'quarks/bold';
+@import 'quarks/footer';
+@import 'quarks/header';
+@import 'quarks/html';
+@import 'quarks/hyperlinks';
+@import 'quarks/img';
+@import 'quarks/main';
+@import 'quarks/section';
