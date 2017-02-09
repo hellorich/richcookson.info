@@ -1,0 +1,24 @@
+//
+// Tag
+// ---------------------------------------------------------------------------------
+
+.tag {
+  //margin-bottom: rem(4);
+
+  a {
+    background-color: setColor(brand, color_primary);
+    color: setColor(neutral, color_white);
+    display: block;
+    padding: em(8);
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: setColor(brand, color_accent);
+      }
+    }
+  }
+}
