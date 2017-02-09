@@ -1,6 +1,9 @@
 # Ignore SASS caches
 .sass-cache
 
+# Ignore OS X system files
+.DS_Store
+
 # Ignore folder where static template code and assets are generated
 dist
 
