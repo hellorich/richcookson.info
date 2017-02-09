@@ -8,7 +8,7 @@
   &:before {
     @include position(absolute, 50% null null em(8));
     @include setSVG($icon);
-    @include size(em(24));
+    @include size(em(20));
     @include transform(translateY(-50%));
     background-position: center;
     background-repeat: no-repeat;
