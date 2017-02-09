@@ -3,5 +3,7 @@
 // ---------------------------------------------------------------------------------
 
 body {
+  color: setColor(neutral, color_gray_20);
   font-family: $body-font;
+  font-size: rem(17);
 }

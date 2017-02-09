@@ -10,7 +10,5 @@ ul, ol {
 
   li {
     @include margin(null null rem(8));
-    color: setColor(neutral, color_gray_20);
-    font-size: rem(17);
   }
 }

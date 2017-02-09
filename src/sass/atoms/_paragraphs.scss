@@ -4,6 +4,4 @@
 
 p {
   @include margin(0 null rem(16)); // [TODO] - This might be a universal spacing so make global?
-  color: setColor(neutral, color_gray_20);
-  font-size: rem(17);
 }
