@@ -5,4 +5,9 @@
 a {
   color: setColor(brand, color_primary);
   text-decoration: none;
+
+  &:active, &:focus, &:hover {
+    outline: none; // [TODO] - Make better outline that looks good in all contexts
+    text-decoration: underline;
+  }
 }
