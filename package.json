@@ -9,23 +9,22 @@
     "url": "git://github.com/hellorich/go.git"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-browser-sync": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-requirejs": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-mustache-render": "*",
-    "grunt-newer": "*",
-    "grunt-sass": "*",
-    "grunt-scss-lint": "*",
-    "jshint-stylish": "*",
-    "node-bourbon": "*",
-    "node-neat": "*",
-    "time-grunt": "*"
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mustache-render": "^1.9.2",
+    "grunt-newer": "^1.2.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-scss-lint": "^0.5.0",
+    "jshint-stylish": "^2.2.1",
+    "matchdep": "^1.0.1",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
+    "time-grunt": "^1.4.0"
   },
-  "dependencies": {
-    "matchdep": "*"
-  }
+  "dependencies": {}
 }
