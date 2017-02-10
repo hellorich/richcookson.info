@@ -92,3 +92,24 @@
     order: 2;
   }
 }
+
+.section-projects {
+  @include media($bp-medium) {
+    @include flex(1);
+    order: 3;
+  }
+}
+
+.section-learning {
+  @include media($bp-medium) {
+    @include flex(1);
+    order: 4;
+  }
+}
+
+.section-about {
+  @include media($bp-medium) {
+    @include flex(1);
+    order: 5;
+  }
+}
