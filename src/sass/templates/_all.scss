@@ -61,18 +61,34 @@
 }
 
 .main {
-  @include span-columns(12);
-
+  width: 100%;
   @include media($bp-medium) {
-    @include shift(2);
-    @include span-columns(10);
+    @include display(flex);
+    @include flex-direction(column);
   }
 }
 
 .section {
+  @include span-columns(12);
   margin-bottom: rem(24);
 
   @include media($bp-medium) {
+    @include shift(2);
+    @include span-columns(10);
     margin-bottom: rem(32);
+  }
+}
+
+.section-skills {
+  @include media($bp-medium) {
+    @include flex(1);
+    order: 1;
+  }
+}
+
+.section-career {
+  @include media($bp-medium) {
+    @include flex(1);
+    order: 2;
   }
 }

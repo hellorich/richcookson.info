@@ -4,7 +4,7 @@
 //   SASS files.
 // ------------------------------------------------------------------
 
-$bp-small-only: new-breakpoint(max-width em(320));
+$bp-tiny: new-breakpoint(max-width em(320));
 $bp-small: new-breakpoint(min-width em(321));
 $bp-medium: new-breakpoint(min-width em(426));
 $bp-large: new-breakpoint(min-width em(769));

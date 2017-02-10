@@ -10,10 +10,14 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   color: setColor(neutral, color_gray_20);
-  font-size: rem(48);
+  font-size: rem(36);
   font-weight: 900;
   letter-spacing: rem(-1);
   text-align: center;
+
+  @include media($bp-small) {
+    font-size: rem(48);
+  }
 
   @include media($bp-medium) {
     font-size: rem(64);
