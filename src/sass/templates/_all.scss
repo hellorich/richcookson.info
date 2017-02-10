@@ -5,10 +5,25 @@
 .page {
   @include outer-container(rem(960));
   margin-top: rem(64);
+  position: relative;
+
+  // [TODO] - This needs improving into the grid proper I think, use rows
+  &:before {
+    @include position(absolute, 0 null null 0);
+    background-image: url('/assets/img/png/avatar.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 200px;
+    margin-left: 2.3576515979%;
+    margin-right: 2.3576515979%;
+    width: 14.7019570017%;
+  }
 }
 
 .header {
-	@include shift(2);
+  @include shift(2);
   @include span-columns(10);
 }
 
