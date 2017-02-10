@@ -47,7 +47,13 @@
 
 // Molecules
 
+@import 'molecules/article-content';
+@import 'molecules/article-header';
 @import 'molecules/nav-contact';
+
+// Organisms
+
+@import 'organisms/article';
 
 // Templates
 
