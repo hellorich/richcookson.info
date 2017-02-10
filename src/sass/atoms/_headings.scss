@@ -26,3 +26,14 @@ h3 {
   font-size: rem(24);
   font-weight: 900;
 }
+
+// Primary headings on header and sections
+.header, .section {
+  h1, h2 {
+    &:first-child {
+      border-bottom: rem(1) solid setColor(neutral, color_gray_85);
+      margin-bottom: rem(16);
+      padding-bottom: rem(8);
+    }
+  }
+}
