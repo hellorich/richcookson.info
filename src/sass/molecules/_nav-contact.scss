@@ -3,8 +3,16 @@
 // ---------------------------------------------------------------------------------
 
 .nav-contact {
-  ul {
+  .nav-contact-list {
     margin-left: em(-8);
+
+    @include media($bp-medium) {
+      @include group-horizontal();
+    }
+  }
+
+  li {
+    @include margin(null em(4) em(8) null);
   }
 
   a {

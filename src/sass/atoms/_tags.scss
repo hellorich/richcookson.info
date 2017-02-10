@@ -3,6 +3,8 @@
 // ---------------------------------------------------------------------------------
 
 .tag {
+  @include margin(null em(4) em(8) null);
+  
   a {
     background-color: setColor(brand, color_primary);
     color: setColor(neutral, color_white);

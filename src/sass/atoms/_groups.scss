@@ -2,9 +2,8 @@
 // Groups
 // ---------------------------------------------------------------------------------
 
-.group-horizontal {
-  li {
-    @include margin(null em(4) em(8) null); // [TODO] - This spacing might be better more specific
+@mixin group-horizontal() {
+  > * {
     display: inline-block;
   }
 }
