@@ -4,8 +4,15 @@
 
 .page {
   @include outer-container(rem(960));
-  margin-top: rem(64);
-  position: relative;
+  margin-top: rem(32);
+  padding-left: em(16);
+  padding-right: em(16);
+
+  @include media($bp-medium) {
+    margin-top: rem(64);
+    padding-left: em(32);
+    padding-right: em(32);
+  }
 }
 
 .header {
@@ -13,11 +20,19 @@
 
   &:before {
     @extend .avatar;
-    @include span-columns(2);
+    @include span-columns(12);
+
+    @include media($bp-medium) {
+      @include span-columns(2);
+    }
   }
 
   h1 {
-    @include span-columns(10);
+    @include span-columns(12);
+
+    @include media($bp-medium) {
+      @include span-columns(10);
+    }
   }
 }
 
@@ -25,22 +40,39 @@
   @include row();
 
   p { // This needs structural adjustment to allow for multiple HTML tags, not just one <p>
+    @include span-columns(12);
+
+    @include media($bp-medium) {
+      @include shift(2);
+      @include span-columns(10);
+    }
+  }
+}
+
+.nav-contact {
+  @include span-columns(12);
+  margin-bottom: rem(24);
+
+  @include media($bp-medium) {
+    @include shift(2);
+    @include span-columns(10);
+    margin-bottom: rem(32);
+  }
+}
+
+.main {
+  @include span-columns(12);
+
+  @include media($bp-medium) {
     @include shift(2);
     @include span-columns(10);
   }
 }
 
-.nav-contact {
-  @include shift(2);
-  @include span-columns(10);
-  margin-bottom: rem(32);
-}
-
-.main {
-  @include shift(2);
-  @include span-columns(10);
-}
-
 .section {
-  margin-bottom: rem(32);
+  margin-bottom: rem(24);
+
+  @include media($bp-medium) {
+    margin-bottom: rem(32);
+  }
 }
