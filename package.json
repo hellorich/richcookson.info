@@ -1,12 +1,12 @@
 {
-  "name": "go",
-  "description": "Starter Grunt installation with some useful packages.",
+  "name": "rich-cookson-cv",
+  "description": "My CV",
   "author": "Rich Cookson <rich@frobitz.com>",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hellorich/go.git"
+    "url": "git://github.com/hellorich/richcookson.info.git"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
