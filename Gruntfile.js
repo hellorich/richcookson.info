@@ -140,7 +140,8 @@ module.exports = function(grunt) {
           data: '<%= path.src %>/mustache/data/data.json'
         },
         files: {
-          '<%= path.dest %>/index.html' : '<%= path.src %>/mustache/index.mustache'
+          '<%= path.dest %>/index.html' : '<%= path.src %>/mustache/index.mustache',
+          '<%= path.dest %>/style-guide.html' : '<%= path.src %>/mustache/style-guide.mustache'
         }
       }
     },
