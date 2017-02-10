@@ -4,4 +4,8 @@
 
 .article {
   margin-bottom: em(32);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
