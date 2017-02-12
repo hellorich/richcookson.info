@@ -9,9 +9,10 @@ ul {
       position: relative;
 
       &:before {
-        @include position(absolute, 0 null null 0);
-        color: setColor(neutral, color_gray_20);
-        content: '\25AA';
+        @include position(absolute, em(8) null null 0);
+        @include size(em(5));
+        background-color: setColor(neutral, color_gray_20);
+        content: '';
         display: inline-block;
       }
     }
