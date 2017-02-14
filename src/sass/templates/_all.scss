@@ -113,3 +113,11 @@
     order: 5;
   }
 }
+
+.floating-action-button {
+  @include position(fixed, null em(12) em(12) null);
+
+  @include media($bp-large) {
+    @include position(fixed, null em(24) em(24) null);
+  }
+}
