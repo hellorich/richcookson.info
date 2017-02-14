@@ -21,14 +21,26 @@
 
 .icon-email {
   @include icon(email);
+
+  &:active, &:focus, &:hover {
+    @include icon(email_hover);
+  }
 }
 
 .icon-github {
   @include icon(github);
+
+  &:active, &:focus, &:hover {
+    @include icon(github_hover);
+  }
 }
 
 .icon-telephone {
   @include icon(telephone);
+
+  &:active, &:focus, &:hover {
+    @include icon(telephone_hover);
+  }
 }
 
 .icon-twitter {
