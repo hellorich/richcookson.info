@@ -1,9 +1,13 @@
-require(['jquery', 'test'], function ($, test) {
-  
-  'use strict';
-  
-  console.log('Main loaded');
+require(['jquery', 'top'], function ($, top) {
 
-  test.publicMethod('Hello');
+  'use strict';
+
+  // Set JS flag class - possibly switch to Modernizr later
+
+    $('html').addClass('js');
+
+  // Initialise top link behaviours
+
+    top.init();
 
 });

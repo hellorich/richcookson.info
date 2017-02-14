@@ -2,7 +2,7 @@ require.config({
 
   paths: {
     jquery: 'src/js/lib/jquery',
-    test: 'src/js/modules/test'
+    top: 'src/js/modules/top'
   }
 
 });
