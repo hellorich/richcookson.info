@@ -20,11 +20,25 @@ define('top', ['jquery'], function($) {
 
   };
 
+  var _scrollTop = function ( $element ) {
+
+    $element.on('click', function() {
+
+      $('html, body').animate({ scrollTop: 0 });
+
+      return false;
+
+    });
+
+  };
+
   var init = function () {
 
     // Fade in / out when page is at viewport height + 50
 
     var $topLink = $('.js-top');
+
+    _scrollTop( $topLink );
 
     $(window).scroll( function() {
 
