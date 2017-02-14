@@ -6,17 +6,16 @@
   position: relative;
 
   &:before {
-    @include position(absolute, 50% null null em(8));
     @include setSVG($icon);
-    @include size(em(20));
-    @include transform(translateY(-50%));
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
     content: '';
-    display: block;
-    vertical-align: middle;
+    display: inline-block;
   }
+}
+
+.icon-arrow {
+  @include icon(arrow);
 }
 
 .icon-email {
