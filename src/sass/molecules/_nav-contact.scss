@@ -16,13 +16,14 @@
   }
 
   a {
-    padding: em(8) em(8) em(8) em(36);
+    padding: em(8) em(8) em(8) em(32);
 
     // Position and size icons in this context
     &:before {
       @include position(absolute, 50% null null em(8));
-      @include size(em(20));
+      @include size(em(24));
       @include transform(translateY(-50%));
+      background-position: left center;
     }
   }
 }
