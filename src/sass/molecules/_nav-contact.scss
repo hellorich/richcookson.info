@@ -4,23 +4,18 @@
 
 .nav-contact {
   .nav-contact-list {
-    margin-left: em(-8);
-
     @include media($bp-medium) {
       @include group-horizontal();
     }
   }
 
-  li {
-    @include margin(null em(4) em(8) null);
-  }
-
   a {
-    padding: em(8) em(8) em(8) em(32);
+    margin-right: su(1);
+    padding: su(1) su(1) su(1) su(3);
 
     // Position and size icons in this context
     &:before {
-      @include position(absolute, 50% null null em(8));
+      @include position(absolute, 50% null null 0);
       @include size(em(24));
       @include transform(translateY(-50%));
       background-position: left center;

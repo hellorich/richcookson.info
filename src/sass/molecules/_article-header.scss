@@ -3,8 +3,10 @@
 // ---------------------------------------------------------------------------------
 
 .article-header {
+	margin-bottom: su(1);
+
 	.article-heading {
-		margin-bottom: em(8, 32);
+		margin-bottom: su(0.5);
 	}
 
 	.article-metadata {
@@ -12,7 +14,7 @@
 			@include group-horizontal();
 
 			.duration {
-				margin-left: em(8);
+				margin-left: su(1);
 			}
 		}
 	}

@@ -43,7 +43,7 @@ h3 {
     &:first-child {
       border-bottom: rem(1) solid setColor(neutral, color_gray_85);
       margin-bottom: rem(16);
-      padding-bottom: rem(8);
+      padding-bottom: su(1);
     }
   }
 }

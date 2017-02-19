@@ -10,10 +10,10 @@ ul, ol {
   padding-left: 0;
 
   &.list {
-    @include margin(0 null rem(16)); // [TODO] - This might be a universal spacing so make global?
+    @include margin(0 null su(2)); // [TODO] - This might be a universal spacing so make global?
 
     li {
-      @include margin(null null rem(8));
+      @include margin(null null su(1));
     }
   }
 }
