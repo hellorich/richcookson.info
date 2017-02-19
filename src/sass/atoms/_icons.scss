@@ -2,49 +2,36 @@
 // Icons
 // ---------------------------------------------------------------------------------
 
-@mixin icon($icon) {
-  position: relative;
+$icons: (
+  arrow: ( is-interactive: false ),
+  email: ( is-interactive: true ),
+  github: ( is-interactive: true ),
+  telephone: ( is-interactive: true ),
+  twitter: ( is-interactive: true )
+);
 
+.icon {
+  position: relative;
   &:before {
-    @include setSVG($icon);
     background-repeat: no-repeat;
     content: '';
     display: inline-block;
   }
 }
 
-.icon-arrow {
-  @include icon(arrow);
-}
+// Dynamically build icon classes
+@each $i in $icons {
+  .icon-#{nth($i,1)} {
+    &:before {
+      @include setSVG(#{nth($i,1)});
+    }
 
-.icon-email {
-  @include icon(email);
-
-  &:active, &:focus, &:hover {
-    @include icon(email_hover);
-  }
-}
-
-.icon-github {
-  @include icon(github);
-
-  &:active, &:focus, &:hover {
-    @include icon(github_hover);
-  }
-}
-
-.icon-telephone {
-  @include icon(telephone);
-
-  &:active, &:focus, &:hover {
-    @include icon(telephone_hover);
-  }
-}
-
-.icon-twitter {
-  @include icon(twitter);
-
-  &:active, &:focus, &:hover {
-    @include icon(twitter_hover);
+    @if map-get(nth($i,2), is-interactive) == true {
+      &:active, &:focus, &:hover {
+        &:before {
+          @include setSVG(#{nth($i,1)}_hover);
+        }
+      }
+    }
   }
 }
