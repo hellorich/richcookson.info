@@ -6,4 +6,8 @@ body {
   color: setColor(neutral, color_gray_20);
   font-family: $body-font;
   font-size: rem(17);
+
+  @media print {
+    font-size: rem(14);
+  }
 }

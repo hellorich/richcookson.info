@@ -7,6 +7,10 @@
     @include media($bp-medium) {
       @include group-horizontal();
     }
+
+    @media print {
+      @include group-horizontal();
+    }
   }
 
   a {

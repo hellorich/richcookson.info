@@ -23,6 +23,10 @@ h1 {
     font-size: rem(64);
     text-align: left;
   }
+
+  @media print  {
+    text-align: left;
+  }
 }
 
 h2 {

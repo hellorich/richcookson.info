@@ -13,4 +13,8 @@
   @include media($bp-medium) {
     background-position: top right;
   }
+
+  @media print {
+    display: none !important; // The !important is unpleasant but will do for now
+  }
 }
