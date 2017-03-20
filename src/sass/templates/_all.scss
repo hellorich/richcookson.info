@@ -13,6 +13,12 @@
     padding-left: su(4);
     padding-right: su(4);
   }
+
+  @media print {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
 }
 
 .header {
@@ -57,6 +63,13 @@
     @include shift(2);
     @include span-columns(10);
     margin-bottom: su(4);
+  }
+
+  @media print {
+    @include position(absolute, su(1) 0 null null);
+    @include span-columns(9);
+    @include omega();
+    text-align: right;
   }
 }
 

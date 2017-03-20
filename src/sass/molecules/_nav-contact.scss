@@ -24,5 +24,11 @@
       @include transform(translateY(-50%));
       background-position: left center;
     }
+
+    @media print {
+      margin-left: su(2);
+      margin-right: 0;
+      padding: su(1) 0 su(1) su(3);
+    }
   }
 }

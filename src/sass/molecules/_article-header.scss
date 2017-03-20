@@ -5,6 +5,10 @@
 .article-header {
 	margin-bottom: su(1);
 
+	@media print  {
+		margin-bottom: su(0.5);
+	}
+
 	.article-heading {
 		margin-bottom: su(0.5);
 	}
@@ -17,5 +21,13 @@
 				margin-left: su(1);
 			}
 		}
+
+    @media print  {
+      @include group-horizontal();
+
+			.duration {
+				margin-left: su(1);
+			}
+    }
 	}
 }
