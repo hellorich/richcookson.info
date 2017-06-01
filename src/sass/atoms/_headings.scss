@@ -25,7 +25,8 @@ h1 {
   }
 
   @media print  {
-    font-size: rem(24);
+    font-size: rem(32);
+    letter-spacing: 0;
     text-align: left;
   }
 }
