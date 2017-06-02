@@ -112,6 +112,7 @@ $bp-section-reorder: new-breakpoint(max-width em(426));
 .section-career {
   @include flex(1);
   order: 1;
+  position: relative;
 
   @include media($bp-medium) {
     @include flex(1);
@@ -121,6 +122,13 @@ $bp-section-reorder: new-breakpoint(max-width em(426));
   @media print {
     order: 2;
   }
+
+  // .article-work {
+  //   &:nth-child(3) {
+  //     page-break-after: always;
+  //     position: relative;
+  //   }
+  // }
 }
 
 .section-projects {
