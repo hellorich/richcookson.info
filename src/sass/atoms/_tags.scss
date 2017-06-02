@@ -10,9 +10,13 @@
     color: setColor(neutral, color_white);
     display: block;
     min-width: em(80);
-    padding: em(8);
+    padding: su(1);
     text-align: center;
     text-decoration: none;
+
+    @media print {
+      padding: su(0.5) su(1);
+    }
 
     &:link,
     &:visited {
