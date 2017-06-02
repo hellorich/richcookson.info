@@ -13,6 +13,14 @@
     }
   }
 
+  li {
+    margin-bottom: su(1);
+
+    @include media($bp-medium) {
+      margin-bottom: 0;
+    }
+  }
+
   a {
     margin-right: su(1);
     padding: su(1) su(1) su(1) su(3);
