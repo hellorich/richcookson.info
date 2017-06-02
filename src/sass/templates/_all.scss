@@ -2,6 +2,8 @@
 // All: Global template
 // ---------------------------------------------------------------------------------
 
+$bp-section-reorder: new-breakpoint(max-width em(426));
+
 .page {
   @include outer-container(rem(960));
   margin-top: su(4);
@@ -74,10 +76,11 @@
 }
 
 .main {
+  @include display(flex);
+  @include flex-direction(column);
   width: 100%;
   @include media($bp-medium) {
-    @include display(flex);
-    @include flex-direction(column);
+
   }
 }
 
@@ -93,38 +96,46 @@
 }
 
 .section-skills {
+  @include flex(1);
+  order: 2;
+
   @include media($bp-medium) {
     @include flex(1);
+    order: 1;
+  }
+
+  @media print {
     order: 1;
   }
 }
 
 .section-career {
+  @include flex(1);
+  order: 1;
+
   @include media($bp-medium) {
     @include flex(1);
+    order: 2;
+  }
+
+  @media print {
     order: 2;
   }
 }
 
 .section-projects {
-  @include media($bp-medium) {
-    @include flex(1);
-    order: 3;
-  }
+  @include flex(1);
+  order: 3;
 }
 
 .section-learning {
-  @include media($bp-medium) {
-    @include flex(1);
-    order: 4;
-  }
+  @include flex(1);
+  order: 4;
 }
 
 .section-about {
-  @include media($bp-medium) {
-    @include flex(1);
-    order: 5;
-  }
+  @include flex(1);
+  order: 5;
 }
 
 .floating-action-button {
