@@ -1,0 +1,42 @@
+//
+// Nav: Contact
+// ---------------------------------------------------------------------------------
+
+.nav-contact {
+  .nav-contact-list {
+    @include media($bp-medium) {
+      @include group-horizontal();
+    }
+
+    @media print {
+      @include group-horizontal();
+    }
+  }
+
+  li {
+    margin-bottom: su(1);
+
+    @include media($bp-medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    margin-right: su(1);
+    padding: su(1) su(1) su(1) su(3);
+
+    // Position and size icons in this context
+    &:before {
+      @include position(absolute, 50% null null 0);
+      @include size(em(24));
+      @include transform(translateY(-50%));
+      background-position: left center;
+    }
+
+    @media print {
+      margin-left: su(1);
+      margin-right: 0;
+      padding: su(1) 0 su(1) su(3);
+    }
+  }
+}

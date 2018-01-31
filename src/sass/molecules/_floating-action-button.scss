@@ -1,0 +1,39 @@
+//
+// Floating Action Button
+//
+// 1. Make Mixin to allow easier setting of layer heights for materials
+// 2. Required to layer over the hidden text on parent
+// ---------------------------------------------------------------------------------
+
+.floating-action-button {
+  @include animation-warp(0, 0.25s, $direction: out);
+  @include circle();
+  @include hide-text;
+  @include size(rem(56));
+
+  background-color: setColor(brand, color_accent);
+  box-shadow: 0px 7px 5px -4px rgba(0,0,0,0.15); // 1
+  display: none;
+  padding: initial;
+
+  @media print {
+    display: none !important;
+  }
+
+  // Icon
+  &:before {
+    @include animation-spin(0, 0.25s, $direction: counter-clockwise);
+    @include position(absolute, 0 0 0 0); // 2
+    @include size(100%);
+    background-position: center;
+  }
+
+  // JavaScript enabled
+  &.js-animate {
+    @include animation-warp(0, 0.25s, $direction: in);
+
+    &:after {
+      @include animation-spin(0, 0.25s, $direction: clockwise);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+//
+// List: Unordered
+// ---------------------------------------------------------------------------------
+
+ul {
+  &.list {
+    li {
+      padding-left: su(2);
+      position: relative;
+
+      &:before {
+        @include position(absolute, em(8) null null 0);
+        @include size(em(5));
+        background-color: setColor(neutral, color_gray_20);
+        content: '';
+        display: inline-block;
+      }
+    }
+  }
+}

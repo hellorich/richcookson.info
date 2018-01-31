@@ -1,0 +1,13 @@
+//
+// Groups
+// ---------------------------------------------------------------------------------
+
+@mixin group-horizontal() {
+  > * {
+    display: inline-block;
+  }
+}
+
+.group-horizontal {
+  @include group-horizontal();
+}

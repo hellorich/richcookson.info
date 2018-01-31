@@ -1,0 +1,11 @@
+//
+// Breakpoints
+// - Global. Components may have individual breakpoints in their own
+//   SASS files.
+// ------------------------------------------------------------------
+
+$bp-tiny: new-breakpoint(max-width em(320));
+$bp-small: new-breakpoint(min-width em(321));
+$bp-medium: new-breakpoint(min-width em(426));
+$bp-large: new-breakpoint(min-width em(769));
+$bp-x-large: new-breakpoint(min-width em(1025));

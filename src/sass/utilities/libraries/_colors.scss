@@ -1,0 +1,23 @@
+//
+// Colors
+// ------------------------------------------------------------------
+
+$palettes: (
+  neutral: (
+    color_white: rgb(255, 255, 255),
+    color_gray_90: rgb(229, 229, 229),
+    color_gray_85: rgb(217, 217, 217),
+    color_gray_80: rgb(204, 204, 204),
+    color_gray_60: rgb(154, 154, 154),
+    color_gray_50: rgb(128, 128, 128),
+    color_gray_40: rgb(103, 103, 103),
+    color_gray_20: rgb(52, 52, 52),
+    color_black: rgb(0, 0, 0)
+  ),
+  brand: (
+    color_primary: rgb(33, 150, 243),
+    color_primary_dark: rgb(25, 118, 210),
+    color_primary_light: rgb(187, 222, 251),
+    color_accent: rgb(255, 87, 34)
+  )
+);

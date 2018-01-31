@@ -1,0 +1,30 @@
+//
+// Tag
+// ---------------------------------------------------------------------------------
+
+.tag {
+  @include margin(null su(0.5) su(1) null);
+
+  a {
+    background-color: setColor(brand, color_primary);
+    color: setColor(neutral, color_white);
+    display: block;
+    min-width: em(80);
+    padding: su(1);
+    text-align: center;
+    text-decoration: none;
+
+    @media print {
+      padding: su(0.5) su(1);
+    }
+
+    &:link,
+    &:visited {
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: setColor(brand, color_accent);
+      }
+    }
+  }
+}

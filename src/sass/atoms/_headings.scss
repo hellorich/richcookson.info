@@ -1,0 +1,63 @@
+//
+// Headings
+// ---------------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5 {
+  @include margin(0);
+  font-family: $heading-font;
+  line-height: 1.2;
+}
+
+h1 {
+  color: setColor(neutral, color_gray_20);
+  font-size: rem(32);
+  font-weight: 900;
+  letter-spacing: rem(-1);
+  text-align: center;
+
+  @include media($bp-small) {
+    font-size: rem(48);
+  }
+
+  @include media($bp-medium) {
+    font-size: rem(64);
+    text-align: left;
+  }
+
+  @media print  {
+    font-size: rem(32);
+    letter-spacing: 0;
+    text-align: left;
+  }
+}
+
+h2 {
+  color: setColor(neutral, color_gray_20);
+  font-size: rem(32);
+  font-weight: 900;
+
+  @media print  {
+    font-size: rem(24);
+  }
+}
+
+h3 {
+  color: setColor(neutral, color_gray_20);
+  font-size: rem(24);
+  font-weight: 900;
+
+  @media print  {
+    font-size: rem(18);
+  }
+}
+
+// Primary headings on header and sections
+.header, .section {
+  h1, h2 {
+    &:first-child {
+      border-bottom: rem(1) solid setColor(neutral, color_gray_85);
+      margin-bottom: rem(16);
+      padding-bottom: su(1);
+    }
+  }
+}
