@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hellorich/richcookson.info/issues"
   },
-  "homepage": "https://github.com/hellorich/richcookson.info#readme"
+  "homepage": "https://github.com/hellorich/richcookson.info#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
