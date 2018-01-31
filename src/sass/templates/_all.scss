@@ -76,8 +76,8 @@ $bp-section-reorder: new-breakpoint(max-width em(426));
 }
 
 .main {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   width: 100%;
   @include media($bp-medium) {
 
@@ -96,11 +96,11 @@ $bp-section-reorder: new-breakpoint(max-width em(426));
 }
 
 .section-skills {
-  @include flex(1);
+  flex: 1;
   order: 2;
 
   @include media($bp-medium) {
-    @include flex(1);
+    flex: 1;
     order: 1;
   }
 
@@ -110,39 +110,32 @@ $bp-section-reorder: new-breakpoint(max-width em(426));
 }
 
 .section-career {
-  @include flex(1);
+  flex: 1;
   order: 1;
   position: relative;
 
   @include media($bp-medium) {
-    @include flex(1);
+    flex: 1;
     order: 2;
   }
 
   @media print {
     order: 2;
   }
-
-  // .article-work {
-  //   &:nth-child(3) {
-  //     page-break-after: always;
-  //     position: relative;
-  //   }
-  // }
 }
 
 .section-projects {
-  @include flex(1);
+  flex: 1;
   order: 3;
 }
 
 .section-learning {
-  @include flex(1);
+  flex: 1;
   order: 4;
 }
 
 .section-about {
-  @include flex(1);
+  flex: 1;
   order: 5;
 }
 

@@ -4,21 +4,21 @@
 //   animations - see: https://css-tricks.com/restart-css-animation/
 // ---------------------------------------------------------------------------------
 
-@include keyframes(clockwise) {
-  0% {
-    @include transform(rotate(0deg));
+@keyframes clockwise  {
+  from {
+    transform: rotate(0deg);
   }
-  100% {
-    @include transform(rotate(360deg));
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@include keyframes(counter-clockwise) {
-  0% {
-    @include transform(rotate(360deg));
+@keyframes counter-clockwise  {
+  from {
+    transform: rotate(360deg);
   }
-  100% {
-    @include transform(rotate(0deg));
+  to {
+    transform: rotate(0deg);
   }
 }
 
@@ -26,11 +26,11 @@
 
   @if $direction == clockwise {
 
-    @include animation(clockwise $duration ease-in-out #{$delay}s);
+    animation: clockwise $duration ease-in-out #{$delay}s;
 
   } @else if $direction == counter-clockwise {
 
-    @include animation(counter-clockwise $duration ease-in-out #{$delay}s);
+    animation: counter-clockwise $duration ease-in-out #{$delay}s;
 
   }
 

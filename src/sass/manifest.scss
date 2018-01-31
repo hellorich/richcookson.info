@@ -11,6 +11,9 @@
 
 // Utilities
 
+@import 'utilities/helpers/strip-units';
+@import 'utilities/helpers/em';
+@import 'utilities/helpers/rem';
 @import 'utilities/settings/fonts';
 @import 'utilities/settings/breakpoints';
 @import 'utilities/settings/space';

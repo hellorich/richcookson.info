@@ -4,21 +4,21 @@
 //   animations - see: https://css-tricks.com/restart-css-animation/
 // ---------------------------------------------------------------------------------
 
-@include keyframes(warp-in) {
+@keyframes warp-in {
   from {
-    @include transform(scale(0));
+    transform: scale(0);
   }
   to {
-    @include transform(scale(1));
+    transform: scale(1);
   }
 }
 
-@include keyframes(warp-out) {
+@keyframes warp-out {
   from {
-    @include transform(scale(1));
+    transform: scale(1);
   }
   to {
-    @include transform(scale(0));
+    transform: scale(0);
   }
 }
 
@@ -26,11 +26,11 @@
 
   @if $direction == in {
 
-    @include animation(warp-in $duration ease-in-out #{$delay}s forwards);
+    animation: warp-in $duration ease-in-out #{$delay}s forwards;
 
   } @else if $direction == out {
 
-    @include animation(warp-out $duration ease-in-out #{$delay}s forwards);
+    animation: warp-out $duration ease-in-out #{$delay}s forwards;
 
   }
 

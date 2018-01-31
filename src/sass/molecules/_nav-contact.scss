@@ -29,8 +29,8 @@
     &:before {
       @include position(absolute, 50% null null 0);
       @include size(em(24));
-      @include transform(translateY(-50%));
       background-position: left center;
+      transform: translateY(-50%);
     }
 
     @media print {
