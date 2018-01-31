@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/hellorich/richcookson.info#readme",
   "devDependencies": {
+    "bourbon": "^5.0.0",
+    "bourbon-neat": "^1.9.0",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
