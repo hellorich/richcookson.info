@@ -16,4 +16,14 @@ const path = {
   }
 };
 
-gulp.task('default');
+gulp.task('sass', function() { 
+  return gulp.src(path.styles.src)
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
+    .pipe(autoprefixer()) 
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest(path.styles.dest));
+});
+
+gulp.task('default', ['sass']);
