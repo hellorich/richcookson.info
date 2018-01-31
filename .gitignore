@@ -1,0 +1,5 @@
+# Ignore OS X system files
+.DS_Store
+
+# Ignore Go dependencies.
+node_modules
