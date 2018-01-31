@@ -1,7 +1,0 @@
-//
-// su - spacing units
-// ------------------------------------------------------------------
-
-@function su($unit) {
-  @return map-get( $spacing-units, $unit );
-}
