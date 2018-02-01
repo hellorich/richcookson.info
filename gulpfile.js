@@ -73,8 +73,7 @@ gulp.task('img', () =>
 );
 
 // Task: BrowserSync
-gulp.task('go', ['css', 'html', 'js', 'img'], function() {
-
+gulp.task('browsersync', ['css', 'html', 'js', 'img'], function() {
   browserSync.init({
       server: path.html.dest
   });
@@ -86,5 +85,24 @@ gulp.task('go', ['css', 'html', 'js', 'img'], function() {
   gulp.watch(path.html.src).on('change', browserSync.reload);
 });
 
+// Task: Express
+gulp.task('express', ['css', 'html', 'js', 'img'], function() {
+  const promise = new Promise(function(resolve, reject) {
+    nodemon({
+      script: 'app/app.js',
+      ext: 'js,html',
+      env: {
+        'DEBUG': 'playbook:*'
+      }
+    }).on('restart', function() {
+      return resolve();
+    });
+  });
+  gulp.watch(path.styles.src, ['css']);
+  gulp.watch(path.html.src, ['html']);
+  gulp.watch(path.scripts.src, ['js']);
+  gulp.watch(path.images.src, ['img']);
+});
+
 // Task: Default
-gulp.task('default', ['go']);
+gulp.task('default', ['express']);

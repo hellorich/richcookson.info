@@ -30,5 +30,11 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "helmet": "^3.10.0",
+    "heroku-ssl-redirect": "0.0.4"
   }
 }
