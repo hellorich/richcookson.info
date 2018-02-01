@@ -9,10 +9,10 @@ app.use(sslRedirect());
 app.use(helmet());
 app.use(compression());
 
-app.use(express.static(__dirname + '/../dist'));
+app.use(express.static('./dist'));
 
-app.get('/', function(request, response) {
-  response.sendfile(__dirname + '/../dist/index.html');
+app.get('/', function(req, res) {
+  res.sendfile('./dist/index.html');
 });
 
 app.listen(port, function() {
