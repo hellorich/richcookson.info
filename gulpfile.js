@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-compile-handlebars');
 const uglify = require('gulp-uglify');
+const pump = require('pump');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
@@ -25,13 +26,13 @@ const path = {
     'src': 'src/js/*.js'
   },
   'images': {
-    'dest': 'dist/assets/images',
+    'dest': 'dist/assets/img',
     'src': 'src/img/**/*.{gif,png,jpg,svg}'
   }
 };
 
 // Task: SASS
-gulp.task('sass', () => { 
+gulp.task('css', () => { 
   gulp.src(path.styles.src)
     .pipe(sass({
       outputStyle: 'compressed',
@@ -43,7 +44,7 @@ gulp.task('sass', () => { 
 });
 
 // Task: Handlebars
-gulp.task('handlebars', () => {
+gulp.task('html', () => {
   gulp.src('src/hbs/index.hbs')
     .pipe(handlebars({}, {
       batch : ['./src/hbs/partials']
@@ -53,31 +54,35 @@ gulp.task('handlebars', () => {
 });
 
 // Task: Uglify
-gulp.task('scripts', () => {
-  gulp.src(path.scripts.src)
-  .pipe(uglify())
-  .pipe(concat('scripts.js'))
-  .pipe(gulp.dest(path.scripts.dest));
+gulp.task('js', function(cb) {
+  pump([
+    gulp.src(path.scripts.src),
+      uglify(),
+      concat('scripts.js'),
+      gulp.dest(path.scripts.dest)
+    ],
+    cb
+  );
 });
 
 // Task: ImageMin
-gulp.task('images', () =>
+gulp.task('img', () =>
   gulp.src(path.images.src)
     .pipe(imagemin())
     .pipe(gulp.dest(path.images.dest))
 );
 
 // Task: BrowserSync
-gulp.task('go', ['sass', 'handlebars'], function() {
+gulp.task('go', ['css', 'html', 'js', 'img'], function() {
 
   browserSync.init({
       server: path.html.dest
   });
 
-  gulp.watch(path.styles.src, ['sass']);
-  gulp.watch(path.html.src, ['handlebars']);
-  gulp.watch(path.scripts.src, ['scripts']);
-  gulp.watch(path.images.src, ['images']);
+  gulp.watch(path.styles.src, ['css']);
+  gulp.watch(path.html.src, ['html']);
+  gulp.watch(path.scripts.src, ['js']);
+  gulp.watch(path.images.src, ['img']);
   gulp.watch(path.html.src).on('change', browserSync.reload);
 });
 
