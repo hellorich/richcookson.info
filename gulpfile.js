@@ -104,5 +104,8 @@ gulp.task('express', ['css', 'html', 'js', 'img'], function() {
   gulp.watch(path.images.src, ['img']);
 });
 
+// Task: Build
+gulp.task('build', ['css', 'html', 'js', 'img']);
+
 // Task: Default
 gulp.task('default', ['express']);
