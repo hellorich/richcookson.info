@@ -18,7 +18,7 @@
     "url": "https://github.com/hellorich/richcookson.info/issues"
   },
   "homepage": "https://github.com/hellorich/richcookson.info#readme",
-  "devDependencies": {
+  "dependencies": {
     "bourbon": "^5.0.0",
     "bourbon-neat": "^1.9.0",
     "browser-sync": "^2.23.6",
@@ -31,9 +31,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "pump": "^3.0.0"
-  },
-  "dependencies": {
+    "pump": "^3.0.0",
     "compression": "^1.7.1",
     "express": "^4.16.2",
     "helmet": "^3.10.0",
