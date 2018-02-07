@@ -3,7 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const compression = require('compression');
 const app = express();
-const port = 5002;
+const port = process.env.PORT || 5002;
 
 app.use(sslRedirect());
 app.use(helmet());
