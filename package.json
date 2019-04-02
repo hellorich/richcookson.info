@@ -1,28 +1,36 @@
 {
-  "name": "richcookson.info",
+  "name": "@frobitz/richcookson.info",
   "version": "1.0.0",
-  "description": "My CV and web portfolio website.",
+  "description": "My CV and web portfolio application.",
   "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "8.11.2"
+  },
   "scripts": {
-    "start": "gulp"
+    "develop": "gulp",
+    "postinstall": "gulp build",
+    "start": "node app/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/hellorich/richcookson.info.git"
   },
   "author": "Rich Cookson",
+  "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/hellorich/richcookson.info/issues"
   },
   "homepage": "https://gitlab.com/hellorich/richcookson.info#readme",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
     "babelify": "10.0.0",
     "browser-sync": "2.26.3",
     "browserify": "16.2.3",
+    "compression": "1.7.4",
     "del": "3.0.0",
+    "express": "4.16.4",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
     "gulp-babel": "8.0.0",
@@ -35,6 +43,8 @@
     "gulp-sourcemaps": "2.6.4",
     "gulp-standard": "12.0.0",
     "gulp-uglify": "3.0.1",
+    "helmet": "3.16.0",
+    "heroku-ssl-redirect": "0.0.4",
     "imagemin-pngquant": "7.0.0",
     "vinyl-buffer": "1.0.1",
     "vinyl-source-stream": "2.0.0"
