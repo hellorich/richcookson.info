@@ -1,7 +1,7 @@
 {
-  "name": "Go",
+  "name": "richcookson.info",
   "version": "1.0.0",
-  "description": "A basic starting point for web builds using Handlebars, ES6 and SCSS.",
+  "description": "My CV and web portfolio website.",
   "private": true,
   "scripts": {
     "start": "gulp"
