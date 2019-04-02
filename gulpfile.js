@@ -167,7 +167,5 @@ gulp.task('build',
 
 // Task: Default
 gulp.task('default',
-  gulp.series(clean,
-    gulp.parallel('build', 'server')
-  )
+  gulp.parallel('build', 'server')
 )
