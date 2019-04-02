@@ -1,0 +1,10 @@
+//
+// Helper: Icons
+// ------------------------------------------------------------------
+
+@mixin set-image($icon-name) {
+  background-image: map-get(map-get($icons, $icon-name), fallback);
+
+  // This controls fallback, see: https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
+  background-image: map-get(map-get($icons, $icon-name), svg), linear-gradient(transparent, transparent);
+}
