@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/hellorich/go.git"
+    "url": "git+ssh://git@gitlab.com/hellorich/richcookson.info.git"
   },
   "author": "Rich Cookson",
   "bugs": {
-    "url": "https://gitlab.com/hellorich/go/issues"
+    "url": "https://gitlab.com/hellorich/richcookson.info/issues"
   },
-  "homepage": "https://gitlab.com/hellorich/go#readme",
+  "homepage": "https://gitlab.com/hellorich/richcookson.info#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.2.2",
