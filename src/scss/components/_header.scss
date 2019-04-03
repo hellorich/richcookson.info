@@ -8,6 +8,6 @@
   padding-bottom: 0.5rem;
 
   &:before {
-    @extend .avatar;
+    @extend %avatar;
   }
 }
