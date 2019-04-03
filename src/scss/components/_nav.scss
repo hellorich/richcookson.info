@@ -1,0 +1,42 @@
+//
+// Nav
+// ---------------------------------------------------------------------------------
+
+.nav {
+  .nav-list {
+    @include respond-above(medium) {
+      @include group-horizontal();
+    }
+
+    @media print {
+      @include group-horizontal();
+    }
+  }
+
+  // li {
+  //   margin-bottom: 0.5rem;
+  //
+  //   @include respond-above(medium) {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  // a {
+  //   margin-right: 0.5rem;
+  //   padding: 0.5rem 0.5rem 1.5rem;
+  //
+  //   // Position and size icons in this context
+  //   &:before {
+  //     //@include position(absolute, 50% null null 0);
+  //     //@include size(em(24));
+  //     background-position: left center;
+  //     transform: translateY(-50%);
+  //   }
+  //
+  //   // @media print {
+  //   //   margin-left: su(1);
+  //   //   margin-right: 0;
+  //   //   padding: su(1) 0 su(1) su(3);
+  //   // }
+  // }
+}
