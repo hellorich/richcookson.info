@@ -1,0 +1,20 @@
+//
+// Avatar
+// -----------------------------------------------------------------------------
+
+.avatar {
+  background-image: url('/assets/img/png/avatar.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 6.25rem;
+
+  @include respond-above(medium) {
+    background-position: top right;
+  }
+
+  // @media print {
+  //   display: none !important; // The !important is unpleasant but will do for now
+  // }
+}

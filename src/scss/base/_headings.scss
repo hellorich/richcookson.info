@@ -10,16 +10,16 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   color: set-color(neutral, gray-20);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: -0.0625rem;
   text-align: center;
+  //
+  // @include respond-above(small) {
+  //   font-size: 3rem;
+  // }
 
-  @include respond-above(sm) {
-    font-size: 3rem;
-  }
-
-  @include respond-above(md) {
+  @include respond-above(medium) {
     font-size: 4rem;
     text-align: left;
   }

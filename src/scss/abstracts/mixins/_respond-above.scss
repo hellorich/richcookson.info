@@ -2,7 +2,7 @@
 // Respond Above
 // Applies CSS code contained within it on viewport sizes above
 // breakpoint variable or size.
-// Usage: @include respond-above(sm) { CSS }
+// Usage: @include respond-above(small) { CSS }
 // -----------------------------------------------------------------------------
 
 @mixin respond-above($breakpoint) {
