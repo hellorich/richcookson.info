@@ -5,7 +5,7 @@
 // Abstracts
 @import 'abstracts/maps/breakpoints', 'abstracts/mixins/respond-above', 'abstracts/mixins/respond-below';
 @import 'abstracts/maps/colors', 'abstracts/functions/set-color';
-@import 'abstracts/maps/icons', 'abstracts/functions/set-icon';
+@import 'abstracts/maps/svgs', 'abstracts/functions/set-svg';
 @import 'abstracts/mixins/group-horizontal';
 @import 'abstracts/variables/fonts';
 
@@ -20,6 +20,7 @@
 @import 'components/avatar';
 @import 'components/groups';
 @import 'components/header';
+@import 'components/icons';
 @import 'components/nav';
 
 // Layouts

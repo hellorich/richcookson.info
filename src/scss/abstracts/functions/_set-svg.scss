@@ -1,0 +1,7 @@
+//
+// Helper: Set SVG
+// -----------------------------------------------------------------------------
+
+@mixin set-svg($svg-name) {
+  background-image: map-get(map-get($svgs, $svg-name), svg);
+}
