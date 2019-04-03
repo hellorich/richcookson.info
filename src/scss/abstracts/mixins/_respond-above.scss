@@ -3,7 +3,7 @@
 // Applies CSS code contained within it on viewport sizes above
 // breakpoint variable or size.
 // Usage: @include respond-above(sm) { CSS }
-// ------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 @mixin respond-above($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
