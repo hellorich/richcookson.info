@@ -1,0 +1,13 @@
+//
+// Hyperlinks
+// -----------------------------------------------------------------------------
+
+a {
+  color: set-color(brand, primary);
+  text-decoration: none;
+
+  &:active, &:focus, &:hover {
+    color: set-color(brand, accent);
+    outline: none; // [TODO] - Make better outline that looks good in all contexts
+  }
+}
