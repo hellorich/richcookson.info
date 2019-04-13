@@ -8,4 +8,12 @@
   @include respond-above(medium) {
     margin-bottom: 2rem;
   }
+
+  &-header {
+    h2 {
+      border-bottom: 0.0625rem solid set-color(neutral, gray-85);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+  }
 }
