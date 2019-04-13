@@ -3,11 +3,15 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  border-bottom: 0.0625rem solid set-color(neutral, gray-85);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-
+  position: relative;
+  
   &:before {
     @extend %avatar;
+  }
+
+  .name {
+    border-bottom: 0.0625rem solid set-color(neutral, gray-85);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
 }

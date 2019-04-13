@@ -8,13 +8,10 @@
   background-repeat: no-repeat;
   content: '';
   display: block;
-  height: 6.25rem;
+  height: 5rem;
+  width: 5rem;
 
   @include respond-above(medium) {
     background-position: top right;
   }
-
-  // @media print {
-  //   display: none !important; // The !important is unpleasant but will do for now
-  // }
 }
