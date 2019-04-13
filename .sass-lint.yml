@@ -109,7 +109,7 @@ rules:
     - 1
     - style: single
   shorthand-values: 1
-  single-line-per-selector: 1
+  single-line-per-selector: 0
   space-after-bang:
     - 1
     - include: false
