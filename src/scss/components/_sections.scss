@@ -1,0 +1,11 @@
+//
+// Sections
+// -----------------------------------------------------------------------------
+
+.section {
+  margin-bottom: 1.5rem;;
+
+  @include respond-above(medium) {
+    margin-bottom: 2rem;
+  }
+}
