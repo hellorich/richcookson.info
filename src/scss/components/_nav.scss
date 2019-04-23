@@ -8,7 +8,7 @@
   @include respond-above(medium) {
     margin-bottom: 2rem;
   }
-  
+
   .nav-list {
     @include respond-above(medium) {
       @include group-horizontal();

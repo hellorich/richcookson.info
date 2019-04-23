@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  
+
   &:before {
     @extend %avatar;
   }
