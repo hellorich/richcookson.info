@@ -1,0 +1,39 @@
+//
+// Animation: Warp
+// - Requires two animations due to problems resetting and restarting CSS3
+//   animations - see: https://css-tricks.com/restart-css-animation/
+// ---------------------------------------------------------------------------------
+
+@keyframes warp-in {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes warp-out {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+@mixin animation-warp($delay, $duration, $direction: in) {
+
+  @if $direction == in {
+
+    animation: warp-in $duration ease-in-out #{$delay}s forwards;
+
+  } @else if $direction == out {
+
+    animation: warp-out $duration ease-in-out #{$delay}s forwards;
+
+  }
+
+}

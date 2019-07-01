@@ -1,0 +1,39 @@
+//
+// Animation: Spin
+// - Requires two animations due to problems resetting and restarting CSS3
+//   animations - see: https://css-tricks.com/restart-css-animation/
+// ---------------------------------------------------------------------------------
+
+@keyframes clockwise  {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-clockwise  {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@mixin animation-spin($delay, $duration, $direction: clockwise) {
+
+  @if $direction == clockwise {
+
+    animation: clockwise $duration ease-in-out #{$delay}s;
+
+  } @else if $direction == counter-clockwise {
+
+    animation: counter-clockwise $duration ease-in-out #{$delay}s;
+
+  }
+
+}

@@ -6,6 +6,8 @@
 @import 'abstracts/maps/breakpoints', 'abstracts/mixins/respond-above', 'abstracts/mixins/respond-below';
 @import 'abstracts/maps/colors', 'abstracts/functions/set-color';
 @import 'abstracts/maps/svgs', 'abstracts/functions/set-svg';
+@import 'abstracts/mixins/animation-spin';
+@import 'abstracts/mixins/animation-warp';
 @import 'abstracts/mixins/group-horizontal';
 @import 'abstracts/variables/fonts';
 
