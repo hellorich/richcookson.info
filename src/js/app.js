@@ -1,3 +1,3 @@
-import { greeting } from './modules/test'
+import { intersectionObserver } from './modules/top'
 
-console.log(`${greeting}`)
+intersectionObserver.observe(document.querySelector('.top'))
