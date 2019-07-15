@@ -6,11 +6,11 @@
 // ---------------------------------------------------------------------------------
 
 .top {
-  height: 150vh;
+  height: 50vh;
   position: absolute;
   right: 0;
   top: 0;
-  width: 10px;
+  width: 1px;
 
   .button-top {
     @include animation-warp(0, 0.25s, $direction: out);
@@ -18,28 +18,33 @@
     border-radius: 3.5rem;
     bottom: 1.5rem;
     box-shadow: 0 0.4375rem 0.3125rem -0.25rem rgba(0, 0, 0, 0.15); // [ToDo]
-    display: block; // [ToDo] JS class
+    display: block;
     height: 3.5rem;
-    position: absolute;
+    position: fixed;
     right: 1.5rem;
     width: 3.5rem;
+    z-index: 1;
 
     &:before {
       @include animation-spin(0, 0.25s, $direction: counter-clockwise);
-      bottom: 0; // [ToDo] - Flexbox?
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
+      background-position: center;
+      height: 100%;
+      width: 100%;
     }
 
     &.display {
       @include animation-warp(0, 0.25s, $direction: in);
-      position: fixed;
 
-      &:after {
+      &:before {
         @include animation-spin(0, 0.25s, $direction: clockwise);
       }
     }
   }
+
+  // JS on
+  // .js & {
+  //   .button-top {
+  //     display: block;
+  //   }
+  // }
 }

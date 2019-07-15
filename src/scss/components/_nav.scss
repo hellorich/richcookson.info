@@ -28,29 +28,21 @@
   }
 
   a {
+    align-items: center;
+    display: flex;
     margin-right: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
     position: relative;
     vertical-align: middle;
 
-    // &:before {
-    //   margin-right: 0.5rem;
-    //   position: absolute;
-    //   top: 50%;
-    //   transform: translateY(-50%);
-    // }
+    &:before {
+      background-position: left center;
+      height: 1.5rem;
+      margin-right: 0.25rem;
+      width: 1.5rem;
+    }
   }
 
-  //
-  //   // Position and size icons in this context
-  //
-  //     //@include position(absolute, 50% null null 0);
-  //     //@include size(em(24));
-  //     background-position: left center;
-  //     transform: translateY(-50%);
-  //   }
-  //
   //   // @media print {
   //   //   margin-left: su(1);
   //   //   margin-right: 0;
