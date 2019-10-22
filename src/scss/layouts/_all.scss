@@ -15,6 +15,11 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  @media print {
+    margin: 0;
+    max-width: none;
+  }
 }
 
 .header {
@@ -38,6 +43,10 @@
 .introduction {
   @include respond-above(medium) {
     margin-left: 6.5rem;
+  }
+
+  @media print {
+    margin-left: 0;
   }
 }
 

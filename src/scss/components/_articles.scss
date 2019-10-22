@@ -5,6 +5,10 @@
 .article {
   margin-bottom: 2rem;
 
+  @media print {
+    margin-bottom: 1rem;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -30,6 +34,10 @@
   &-content {
     p {
       margin-bottom: 0.5rem;
+
+      @media print {
+        font-size: 0.875rem;
+      }
     }
   }
 }

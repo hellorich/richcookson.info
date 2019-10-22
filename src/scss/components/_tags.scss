@@ -17,8 +17,9 @@
     &:active, &:focus, &:hover {
       background-color: set-color(brand, accent);
     }
-    // @media print {
-    //   padding: 0.25rem 0.5rem;
-    // }
+
+    @media print {
+      padding: 0.25rem 0.5rem;
+    }
   }
 }

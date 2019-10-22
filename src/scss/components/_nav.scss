@@ -9,6 +9,10 @@
     margin-bottom: 2rem;
   }
 
+  @media print {
+    margin-bottom: 0.5rem;
+  }
+
   .nav-list {
     @include respond-above(medium) {
       @include group-horizontal();

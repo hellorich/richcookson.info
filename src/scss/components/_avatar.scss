@@ -14,4 +14,8 @@
   @include respond-above(medium) {
     background-position: top right;
   }
+
+  @media print {
+    display: none;
+  }
 }

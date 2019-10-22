@@ -21,6 +21,11 @@ ul {
         top: 0.5rem;
         width: 0.3125rem;
       }
+
+      @media print {
+        font-size: 0.875rem;
+        margin-bottom: 0.125rem;
+      }
     }
   }
 }
