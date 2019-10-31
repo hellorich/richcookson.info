@@ -3,11 +3,18 @@
 // -----------------------------------------------------------------------------
 
 a {
-  color: set-color(brand, primary);
   text-decoration: none;
+
+  &:link {
+    color: set-color(brand, primary);
+  }
 
   &:active, &:focus, &:hover {
     color: set-color(brand, accent);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
+
+  // &:visited {
+  //   color: darken(set-color(skill, basic), 30%)
+  // }
 }

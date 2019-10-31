@@ -5,15 +5,13 @@
 .skill-level {
   &-advanced {
     .link {
-      background-color: set-color(skill, advanced);
-      
-      &:active, &:focus, &:hover {
+      &:active, &:focus, &:hover, &:link {
         background-color: set-color(skill, advanced);
       }
 
-      &:visited {
-
-      }
+      // &:visited {
+      //   background-color: darken(set-color(skill, advanced), 10%);
+      // }
     }
 
     .key-example {
@@ -23,15 +21,13 @@
 
   &-basic {
     .link {
-      background-color: set-color(skill, basic);
-      
-      &:active, &:focus, &:hover {
+      &:active, &:focus, &:hover, &:link {
         background-color: set-color(skill, basic);
       }
 
-      &:visited {
-
-      }
+      // &:visited {
+      //   background-color: darken(set-color(skill, basic), 10%);
+      // }
     }
 
     .key-example {
