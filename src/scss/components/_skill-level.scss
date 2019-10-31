@@ -5,7 +5,7 @@
 .skill-level {
   &-advanced {
     .link {
-      &:active, &:focus, &:hover, &:link {
+      &:active, &:focus, &:hover, &:link, &:visited {
         background-color: set-color(skill, advanced);
       }
 
@@ -21,7 +21,7 @@
 
   &-basic {
     .link {
-      &:active, &:focus, &:hover, &:link {
+      &:active, &:focus, &:hover, &:link, &:visited {
         background-color: set-color(skill, basic);
       }
 
