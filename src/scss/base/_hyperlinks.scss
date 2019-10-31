@@ -5,11 +5,11 @@
 a {
   text-decoration: none;
 
-  &:link {
+  &:link, &:visited {
     color: set-color(brand, primary);
   }
 
-  &:active, &:focus, &:hover, &:visited {
+  &:active, &:focus, &:hover {
     color: set-color(brand, accent);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
