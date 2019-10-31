@@ -1,0 +1,41 @@
+//
+// Tag
+// -----------------------------------------------------------------------------
+
+.skill-level {
+  &-advanced {
+    .link {
+      background-color: set-color(skill, advanced);
+      
+      &:active, &:focus, &:hover {
+        background-color: set-color(skill, advanced);
+      }
+
+      &:visited {
+
+      }
+    }
+
+    .key-example {
+      background-color: set-color(skill, advanced);
+    }
+  }
+
+  &-basic {
+    .link {
+      background-color: set-color(skill, basic);
+      
+      &:active, &:focus, &:hover {
+        background-color: set-color(skill, basic);
+      }
+
+      &:visited {
+
+      }
+    }
+
+    .key-example {
+      background-color: set-color(skill, basic); 
+    }
+  }
+}

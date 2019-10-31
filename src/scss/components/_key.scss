@@ -1,0 +1,25 @@
+//
+// Key
+// -----------------------------------------------------------------------------
+
+.key {
+  margin: 1.5rem 0.25rem;
+
+  &-caption {
+    display: inline-block;
+    line-height: 1;
+    margin-left: 0.25rem;
+    vertical-align: middle;
+  }
+
+  &-example {
+    display: inline-block;
+    height: 1.0625rem;
+    vertical-align: middle;
+    width: 1.0625rem;
+  }
+
+  &-item {
+    margin-right: 0.5rem;
+  }
+}
