@@ -78,9 +78,7 @@ gulp.task('css', (done) => {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'] // Adjust this to our requirements in a config file
-    }))
+    .pipe(autoprefixer())
     .pipe(concat('styles.css'))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.styles.dest))
