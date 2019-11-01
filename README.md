@@ -5,7 +5,7 @@ One page CV and portfolio site.
 ## Requirements
 
 1. Install the [NodeJS](https://nodejs.org/en/). The most recently tested version for this project is 13.0.1. Using NVM is recommended if you have multiple projects using different versions of Node.
-2  Gulp CLI: `npm install --global gulp-cli`
+2. Gulp CLI: `npm install --global gulp-cli`
 
 ## Commands
 
