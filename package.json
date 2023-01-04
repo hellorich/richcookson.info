@@ -37,7 +37,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-imagemin": "6.1.1",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-standard": "14.0.0",
@@ -45,7 +45,7 @@
     "helmet": "^3.21.2",
     "heroku-ssl-redirect": "^0.0.4",
     "imagemin-pngquant": "8.0.0",
-    "node-sass": "4.14.1",
+    "node-sass": "8.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
