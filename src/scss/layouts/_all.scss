@@ -65,6 +65,14 @@
   @include respond-below(medium) {
     order: 1;
   }
+  
+  @media print {
+    .article {
+      &:nth-child(8) ~ .article {
+        display: none;
+      }
+    }
+  }
 }
 
 .section-about {
