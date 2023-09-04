@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev --no-open -p 6007",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded"
   },
   "dependencies": {
     "@types/node": "20.5.9",
@@ -31,7 +32,10 @@
     "@storybook/nextjs": "^7.4.0",
     "@storybook/react": "^7.4.0",
     "@storybook/testing-library": "^0.2.0",
+    "chromatic": "^7.0.0",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.4.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "richcookson.info@0.1.0"
 }
