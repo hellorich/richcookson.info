@@ -1,9 +1,0 @@
-# Ignore system files
-.DS_Store
-
-# Ignore generated files
-public
-
-# Ignore node stuff
-npm-debug.log
-node_modules

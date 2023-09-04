@@ -1,9 +1,0 @@
-//
-// set-color
-// Extracts colors from the colors map - see abstracts/maps/_colors.scss
-// Usage: set-color(neutral, color_white);
-// -----------------------------------------------------------------------------
-
-@function set-color($palette, $tone: 'base', $alpha: 1) {
-  @return rgba(map-get(map-get($palettes, $palette), $tone), $alpha);
-}
