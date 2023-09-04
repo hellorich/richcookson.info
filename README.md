@@ -1,14 +1,34 @@
-# richcookson.info
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-One page CV and portfolio site. 
+## Getting Started
 
-## Requirements
+First, run the development server:
 
-1. Install the [NodeJS](https://nodejs.org/en/). The most recently tested version for this project is 13.0.1. Using NVM is recommended if you have multiple projects using different versions of Node.
-2. Gulp CLI: `npm install --global gulp-cli`
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## Commands
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-`gulp`: Runs clean to purge public folder, then builds code and runs BrowserSync server. Watches source code for any changes and rebuilds as required.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-`npm start`: Runs the production Express server. Primarily used by Heroku.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
