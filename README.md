@@ -9,7 +9,7 @@ My resume web site.
 
 ## Testing
 
-This app uses Storybook for component development, publishing to Chromatic on each PR to automate visual and interaction rests. This also allows integration of Storybook with Figma for a seamless design / development workflow.
+This app uses Storybook for component development, publishing to Chromatic on each PR to automate visual and interaction tests. This also allows integration of Storybook with Figma for a seamless design / development workflow.
 
 ## Deployment
 
