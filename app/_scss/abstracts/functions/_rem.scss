@@ -1,0 +1,9 @@
+//
+// Rem
+// Converts a pixel value into rems
+// Usage: rem(16);
+// -----------------------------------------------------------------------------
+
+@function rem($px) {
+	@return ($px / 16) * 1rem;
+}
