@@ -1,0 +1,15 @@
+//
+// Grid Gutter
+// Sets the gutter of a grid, increasing size for larger screens
+// Gutter size can be changed globally in variables in 
+// `scss/abstracts/variables/_grid.scss`
+// Usage: @include grid-gutter()
+// -----------------------------------------------------------------------------
+
+@mixin grid-gutter() {
+	grid-gap: $grid-gutter * 1.5;
+
+  @include respond-above(md) {
+		grid-gap: $grid-gutter * 2;
+  }
+}

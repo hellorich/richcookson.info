@@ -1,0 +1,12 @@
+//
+// Grid Max Width
+// Sets the maximum width of the grid using a global variable and centers it
+// inside the viewport.
+// Usage: @include grid-max-width()
+// -----------------------------------------------------------------------------
+
+@mixin grid-max-width() {
+	margin-left: auto;
+  margin-right: auto;
+	max-width: $grid-max-width;
+}

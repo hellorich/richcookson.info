@@ -1,0 +1,17 @@
+//
+// Respond Below
+// Applies CSS code contained within it on viewport sizes below
+// breakpoint variable or size.
+// Usage: @include respond-below(sm) { CSS }
+// -----------------------------------------------------------------------------
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media screen and (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
