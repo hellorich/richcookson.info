@@ -1,0 +1,17 @@
+//
+// Grid
+// Sets up grid layout on the HTML element.
+// -----------------------------------------------------------------------------
+
+.grid {
+  @include grid-max-width;
+	@include grid-padding;
+  @include grid-gutter;
+	align-items: start;
+	box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+	height: 100%;
+	width: 100%;
+}
