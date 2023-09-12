@@ -5,6 +5,13 @@ import Header from './header'
 const meta = {
   component: Header,
   title: 'Header',
+  decorators: [
+    (Story) => (
+      <div style={{ display: 'grid', padding: '4rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Header>
 
 export default meta
