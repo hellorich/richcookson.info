@@ -18,7 +18,7 @@ const meta: Meta<typeof Skill> = {
 
 export default meta
 
-type Story = StoryObj<typeof Skill>;
+type Story = StoryObj<typeof Skill>
 
 export const Default: Story = {
   args: {
@@ -32,5 +32,5 @@ Default.play = async ({ canvasElement }) => {
 	const link = await canvas.getByRole('link')
 
 	await expect(link).toBeInTheDocument()
-	await expect(link.textContent).toBe('Rich Cookson')
+	await expect(link.textContent).toBe('Tag')
 }
