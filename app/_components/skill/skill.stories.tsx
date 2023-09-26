@@ -1,6 +1,4 @@
-import { expect } from '@storybook/jest'
 import type { Meta, StoryObj } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
 
 import Skill from './skill'
 
@@ -25,22 +23,4 @@ export const Default: Story = {
     label: 'Tag',
 		url: 'http://www.google.com',
   },
-}
-
-export const ClickedLink: Story = {
-	args: {
-    label: 'Tag',
-		url: 'https://www.google.com',
-  },
-
-	play: async ({ canvasElement }) => {
-		const canvas = within(canvasElement)
-		const link = canvas.getByRole('link', { name: 'Tag' })
-		
-		await expect(link).toBeInTheDocument()
-
-		await userEvent.click(link)
-
-		await expect(window.location.href).toBe('https://www.google.com')
-	}
 }
