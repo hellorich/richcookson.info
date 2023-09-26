@@ -1,3 +1,5 @@
+import { lato } from '../../_utilities/fonts'
+
 import styles from './skill.module.scss'
 
 interface SkillProps {
@@ -6,7 +8,7 @@ interface SkillProps {
 
 const Skill = ({ label, ...props} : SkillProps) => {
   return (
-    <span className={styles.skill}>{label}</span>
+    <li className={`${styles.skill} ${lato.className}`}><a href="#">{label}</a></li>
   )
 }
 

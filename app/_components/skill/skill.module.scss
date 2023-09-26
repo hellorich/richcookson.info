@@ -3,5 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .skill {
-  background-color: setColor(primary, cyan);
+	margin: rem(8);
+	
+	a {
+		background-color: setColor(primary, cyan);
+		color: setColor(neutral, white);
+		display: inline-block;
+		min-width: rem(80);
+		padding: rem(8);
+		text-align: center;
+		text-decoration: none;
+	}
+  
+	&:visited {
+		background-color: darken(setColor(primary, cyan), 10%);
+	}
 }
