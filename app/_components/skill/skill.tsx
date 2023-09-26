@@ -1,12 +1,17 @@
+import Link from 'next/link'
+
+import { lato } from '../../_utilities/fonts'
+
 import styles from './skill.module.scss'
 
 interface SkillProps {
   label: string,
+	url: string,
 }
 
-const Skill = ({ label, ...props} : SkillProps) => {
+const Skill = ({ label, url, ...props} : SkillProps) => {
   return (
-    <span className={styles.skill}>{label}</span>
+    <li className={`${styles.skill} ${lato.className}`}><Link href={url}>{label}</Link></li>
   )
 }
 
