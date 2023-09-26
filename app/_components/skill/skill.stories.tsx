@@ -30,7 +30,7 @@ export const Default: Story = {
 export const ClickedLink: Story = {
 	args: {
     label: 'Tag',
-		url: 'http://www.google.com',
+		url: 'https://www.google.com',
   },
 
 	play: async ({ canvasElement }) => {
@@ -39,6 +39,6 @@ export const ClickedLink: Story = {
 		
 		await userEvent.click(link)
 
-		await expect(window.location.href).toBe(link.href)
+		await expect(window.location.href).toBe('https://www.google.com')
 	}
 }
