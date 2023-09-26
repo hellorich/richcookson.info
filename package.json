@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
-		"test-storybook": "test-storybook",
+    "test-storybook": "test-storybook --url http://localhost:6007",
     "storybook": "storybook dev --no-open -p 6007",
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded"
@@ -31,6 +31,7 @@
     "@storybook/addon-links": "^7.4.0",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.4.0",
+    "@storybook/jest": "^0.2.2",
     "@storybook/nextjs": "^7.4.0",
     "@storybook/react": "^7.4.0",
     "@storybook/test-runner": "^0.13.0",
