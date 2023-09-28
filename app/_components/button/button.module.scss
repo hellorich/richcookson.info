@@ -3,10 +3,11 @@
 // -----------------------------------------------------------------------------
 
 .button {
+	align-items: center;
 	background-color: setColor(primary, blue);
 	border-radius: rem(8);
 	color: setColor(neutral, white);
-	display: inline-block;
+	display: inline-flex;
 	font-size: rem(20);
 	line-height: 1;
 	margin: rem(8);
@@ -21,5 +22,5 @@
 }
 
 .icon {
-	padding-right: rem(12);
+	padding-right: rem(8);
 }
