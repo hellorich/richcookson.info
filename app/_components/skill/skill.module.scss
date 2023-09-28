@@ -6,16 +6,17 @@
 	margin: rem(8);
 	
 	a {
-		background-color: setColor(primary, cyan);
+		background-color: setColor(primary, blue);
 		color: setColor(neutral, white);
 		display: inline-block;
+		font-size: rem(20);
 		min-width: rem(80);
-		padding: rem(8);
+		padding: rem(12);
 		text-align: center;
 		text-decoration: none;
 	}
   
 	&:visited {
-		background-color: darken(setColor(primary, cyan), 10%);
+		background-color: darken(setColor(primary, blue), 10%);
 	}
 }
