@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import { FaEnvelope, FaGithub, FaMastodon } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6';
 import Button from './button'
 
 const meta: Meta<typeof Button> = {
@@ -35,8 +35,8 @@ NoIcon.play = async ({ canvasElement }) => {
 
 export const EmailIcon: Story = {
   args: {
-		icon: <FaEnvelope aria-label="Email logo"/>,
-    text: 'Email',
+		icon: <FaEnvelope aria-label="Email"/>,
+    text: 'rich.cookson@frobitz.com',
 		url: 'mailto:rich.cookson@frobitz.com',
   },
 }
@@ -44,10 +44,10 @@ export const EmailIcon: Story = {
 EmailIcon.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
-	const icon = await canvas.getByLabelText('Email logo')
+	const icon = await canvas.getByLabelText('Email')
 
 	await expect(link).toBeInTheDocument()
-	await expect(link.textContent).toBe('Email')
+	await expect(link.textContent).toBe('rich.cookson@frobitz.com')
 
 	await expect(icon).toBeInTheDocument()
 }
@@ -90,6 +90,27 @@ MastodonIcon.play = async ({ canvasElement }) => {
 
 	await expect(link).toBeInTheDocument()
 	await expect(link.textContent).toBe('Mastodon')
+
+	await expect(icon).toBeInTheDocument()
+}
+
+// Phone button
+
+export const PhoneIcon: Story = {
+  args: {
+		icon: <FaMobileButton aria-label="Phone"/>,
+    text: '+44 7792 871 698',
+		url: 'tel:+447792871698',
+  },
+}
+
+PhoneIcon.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const link = await canvas.getByRole('link')
+	const icon = await canvas.getByLabelText('Phone')
+
+	await expect(link).toBeInTheDocument()
+	await expect(link.textContent).toBe('+44 7792 871 698')
 
 	await expect(icon).toBeInTheDocument()
 }
