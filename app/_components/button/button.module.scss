@@ -4,7 +4,7 @@
 
 .button {
 	align-items: center;
-	background-color: setColor(primary, blue);
+	background-color: setColor(neutral, gray-40);
 	border-radius: rem(8);
 	color: setColor(neutral, white);
 	display: inline-flex;
@@ -19,7 +19,7 @@
 	text-decoration: none;
 
 	&:hover {
-		background-color: darken(setColor(primary, blue), 10%);
+		background-color: darken(setColor(neutral, gray-20), 10%);
 	}
 }
 
