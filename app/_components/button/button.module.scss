@@ -1,0 +1,25 @@
+//
+// Button
+// -----------------------------------------------------------------------------
+
+.button {
+	background-color: setColor(primary, blue);
+	border-radius: rem(8);
+	color: setColor(neutral, white);
+	display: inline-block;
+	font-size: rem(20);
+	line-height: 1;
+	margin: rem(8);
+	min-width: rem(80);
+	padding: rem(12);
+	text-align: center;
+	text-decoration: none;
+
+	&:hover {
+		background-color: darken(setColor(primary, blue), 10%);
+	}
+}
+
+.icon {
+	padding-right: rem(12);
+}
