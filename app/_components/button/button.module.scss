@@ -18,6 +18,8 @@
 	text-align: center;
 	text-decoration: none;
 
+	// [Todo] - We shouldn't use functions like darken as it introduces random colors
+	// Change this when we set up a final color palette 
 	&:hover {
 		background-color: darken(setColor(neutral, gray-20), 10%);
 	}
