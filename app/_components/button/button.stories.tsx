@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
 import Button from './button'
 
 const meta: Meta<typeof Button> = {
@@ -16,14 +16,14 @@ type Story = StoryObj<typeof Button>
 
 // Button with no icon
 
-export const NoIcon: Story = {
+export const DefaultButton: Story = {
   args: {
     text: 'Button',
 		url: 'http://www.google.com',
   },
 }
 
-NoIcon.play = async ({ canvasElement }) => {
+DefaultButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
 
@@ -33,7 +33,7 @@ NoIcon.play = async ({ canvasElement }) => {
 
 // Email button
 
-export const EmailIcon: Story = {
+export const EmailButton: Story = {
   args: {
 		icon: <FaEnvelope aria-label="Email"/>,
     text: 'rich.cookson@frobitz.com',
@@ -41,7 +41,7 @@ export const EmailIcon: Story = {
   },
 }
 
-EmailIcon.play = async ({ canvasElement }) => {
+EmailButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
 	const icon = await canvas.getByLabelText('Email')
@@ -54,7 +54,7 @@ EmailIcon.play = async ({ canvasElement }) => {
 
 // Github button
 
-export const GithubIcon: Story = {
+export const GithubButton: Story = {
   args: {
 		icon: <FaGithub aria-label="Github logo"/>,
     text: 'Github',
@@ -62,7 +62,7 @@ export const GithubIcon: Story = {
   },
 }
 
-GithubIcon.play = async ({ canvasElement }) => {
+GithubButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
 	const icon = await canvas.getByLabelText('Github logo')
@@ -75,7 +75,7 @@ GithubIcon.play = async ({ canvasElement }) => {
 
 // Mastodon button
 
-export const MastodonIcon: Story = {
+export const MastodonButton: Story = {
   args: {
 		icon: <FaMastodon aria-label="Mastodon logo"/>,
     text: 'Mastodon',
@@ -83,7 +83,7 @@ export const MastodonIcon: Story = {
   },
 }
 
-MastodonIcon.play = async ({ canvasElement }) => {
+MastodonButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
 	const icon = await canvas.getByLabelText('Mastodon logo')
@@ -96,7 +96,7 @@ MastodonIcon.play = async ({ canvasElement }) => {
 
 // Phone button
 
-export const PhoneIcon: Story = {
+export const PhoneButton: Story = {
   args: {
 		icon: <FaMobileButton aria-label="Phone"/>,
     text: '+44 7792 871 698',
@@ -104,7 +104,7 @@ export const PhoneIcon: Story = {
   },
 }
 
-PhoneIcon.play = async ({ canvasElement }) => {
+PhoneButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const link = await canvas.getByRole('link')
 	const icon = await canvas.getByLabelText('Phone')
