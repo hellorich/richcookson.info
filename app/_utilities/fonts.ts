@@ -2,5 +2,5 @@ import { Lato } from 'next/font/google'
 
 export const lato = Lato({
   subsets: ['latin'],
-  weight: ['300', '400', '900'],
+  weight: ['400', '900'],
 })
