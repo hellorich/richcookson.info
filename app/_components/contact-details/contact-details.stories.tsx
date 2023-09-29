@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { within } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
 import Button from '../button/button'
 import ContactDetails from './contact-details'
@@ -40,4 +42,11 @@ export const WithButtons: Story = {
 			/>
     </ContactDetails>
   ),
+}
+
+WithButtons.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const contactDetails = await canvas.getByTestId('contact-details')
+	
+	await expect(contactDetails).toBeInTheDocument()
 }
