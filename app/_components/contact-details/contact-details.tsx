@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const ContactDetails = ({ children } : ButtonProps) => {
 	return (
-		<div className={styles['contact-details']}>
+		<div className={styles['contact-details']} data-testid="contact-details">
 			{children}
 		</div>
 	)

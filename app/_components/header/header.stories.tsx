@@ -30,7 +30,7 @@ Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const header = await canvas.getByRole('banner')
 	const h1 = header.querySelector('h1')
-
+	
 	await expect(header).toBeInTheDocument()
 	await expect(h1.textContent).toBe('Rich Cookson')
 }
