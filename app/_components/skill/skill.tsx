@@ -11,7 +11,7 @@ interface SkillProps {
 
 const Skill = ({ text, url } : SkillProps) => {
   return (
-    <li className={`${styles.skill} ${lato.className}`}><Link href={url}>{text}</Link></li>
+    <Link className={`${styles.skill} ${lato.className}`} href={url}>{text}</Link>
   )
 }
 
