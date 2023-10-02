@@ -10,7 +10,7 @@ const meta: Meta<typeof Skill> = {
   decorators: [
     (Story) => (
       <ul style={{ listStyle: 'none' }}>
-        <Story />
+        <li><Story /></li>
       </ul>
     ),
   ],
