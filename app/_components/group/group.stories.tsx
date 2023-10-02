@@ -4,6 +4,9 @@ import { expect } from '@storybook/jest'
 
 import Group from './group'
 import Skill from '../skill/skill'
+import Button from '../button/button'
+
+import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
 
 const meta: Meta<typeof Group> = {
   component: Group,
@@ -16,7 +19,9 @@ type Story = StoryObj<typeof Group>
 
 export const Empty: Story = {}
 
-export const WithOneItem: Story = {
+// Single tag
+
+export const WithOneTag: Story = {
 	render: (args) => (
     <Group {...args}>
       <Skill 
@@ -27,14 +32,16 @@ export const WithOneItem: Story = {
   ),
 }
 
-WithOneItem.play = async ({ canvasElement }) => {
+WithOneTag.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const group = await canvas.getByTestId('group')
 	
 	await expect(group).toBeInTheDocument()
 }
 
-export const WithMultipleItems: Story = {
+// Multiple tags
+
+export const WithMultipleTags: Story = {
 	render: (args) => (
     <Group {...args}>
       <Skill 
@@ -49,7 +56,64 @@ export const WithMultipleItems: Story = {
   ),
 }
 
-WithMultipleItems.play = async ({ canvasElement }) => {
+WithMultipleTags.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const group = await canvas.getByTestId('group')
+	
+	await expect(group).toBeInTheDocument()
+}
+
+// Single button
+
+export const WithOneButton: Story = {
+	render: (args) => (
+    <Group {...args}>
+      <Button 
+				icon={<FaEnvelope aria-label="Email"/>} 
+				text="rich.cookson@frobitz.com" 
+				url="mailto:rich.cookson@frobitz.com"
+			/>
+    </Group>
+  ),
+}
+
+WithOneButton.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const group = await canvas.getByTestId('group')
+	
+	await expect(group).toBeInTheDocument()
+}
+
+// Multiple buttons
+
+export const WithMultipleButtons: Story = {
+	render: (args) => (
+    <Group {...args}>
+      <Button 
+				icon={<FaEnvelope aria-label="Email"/>} 
+				text="rich.cookson@frobitz.com" 
+				url="mailto:rich.cookson@frobitz.com"
+			/>
+			<Button 
+				icon={<FaMobileButton aria-label="Phone"/>} 
+				text="+44 7792 871 698" 
+				url="tel:+447792871698"
+			/>
+			<Button 
+				icon={<FaGithub aria-label="Github logo"/>} 
+				text="Github" 
+				url="https://github.com/hellorich"
+			/>
+			<Button 
+				icon={<FaMastodon aria-label="Mastodon logo"/>} 
+				text="Mastodon" 
+				url="https://github.com/hellorich"
+			/>
+    </Group>
+  ),
+}
+
+WithMultipleButtons.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
 	const group = await canvas.getByTestId('group')
 	
