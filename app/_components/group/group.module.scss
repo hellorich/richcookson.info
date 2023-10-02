@@ -1,6 +1,7 @@
 .group {
 	display: flex;
-	gap: rem(16);
+	flex-wrap: wrap;
+	gap: rem(8);
 	list-style: none;
 	margin: rem(16) 0;
 	padding: 0;
