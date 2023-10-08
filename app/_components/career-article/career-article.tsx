@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { URL } from 'url'
 import Link from 'next/link'
 
 import Group from '../group/group'
@@ -13,7 +14,7 @@ interface CareerArticleProps {
   dateStart: string,
   skills: ReactNode | ReactNode[],
   title: string,
-  url: string,
+  url: URL,
 }
 
 const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {

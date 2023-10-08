@@ -18,7 +18,7 @@ type Story = StoryObj<typeof CareerArticle>
 export const Default: Story = {
   args: {
     title: 'Building a single page web app in React for Hugo and Cat',
-		url: 'http://www.hugoandcat.com',
+		url: new URL('http://www.hugoandcat.com'),
     dateEnd: '2023-01-01',
     dateStart: '2022-10-01',
     children: (
