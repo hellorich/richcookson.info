@@ -1,0 +1,14 @@
+//
+// Group: Horizontal
+// Aligns child elements horizontally
+// Usage: @include group-horizontal()
+// -----------------------------------------------------------------------------
+
+@mixin group-horizontal() {
+  display: flex;
+	flex-wrap: wrap;
+	gap: rem(8);
+	list-style: none;
+	margin: rem(16) 0;
+	padding: 0;
+}

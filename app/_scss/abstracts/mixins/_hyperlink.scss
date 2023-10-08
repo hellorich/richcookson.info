@@ -2,15 +2,15 @@
 // Hyperlinks
 // -----------------------------------------------------------------------------
 
-a {
+@mixin hyperlink() {
   text-decoration: none;
 
   &:link, &:visited {
-    color: set-color(blue, primary);
+    color: setColor(primary, blue);
   }
 
   &:active, &:focus, &:hover {
-    // color: set-color(brand, accent);
+    //color: set-color(brand, accent);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
 

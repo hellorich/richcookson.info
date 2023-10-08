@@ -1,0 +1,10 @@
+//
+// Headings
+// -----------------------------------------------------------------------------
+
+@mixin heading() {
+  color: setColor(neutral, gray-20);
+  line-height: 1.2;
+  margin: 0;
+}
+
