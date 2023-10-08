@@ -26,7 +26,7 @@ export const WithOneTag: Story = {
     <Group {...args}>
       <Skill 
 				text="HTML" 
-				url="https://developer.mozilla.org/en-US/docs/Web/HTML"
+				url={new URL("https://developer.mozilla.org/en-US/docs/Web/HTML")}
 			/>
     </Group>
   ),
@@ -46,99 +46,95 @@ export const WithMultipleTags: Story = {
     <Group {...args}>
       <Skill 
 				text="HTML" 
-				url="https://developer.mozilla.org/en-US/docs/Web/HTML"
+				url={new URL("https://developer.mozilla.org/en-US/docs/Web/HTML")}
 			/>
 			<Skill 
 				text="CSS" 
-				url="https://developer.mozilla.org/en-US/docs/Web/CSS"
+				url={new URL("https://developer.mozilla.org/en-US/docs/Web/CSS")}
 			/>
 			<Skill 
 				text="JavaScript" 
-				url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+				url={new URL("https://developer.mozilla.org/en-US/docs/Web/JavaScript")}
 			/>
 			<Skill 
 				text="React" 
-				url="https://reactjs.org"
+				url={new URL("https://reactjs.org")}
 			/>
 			<Skill 
 				text="Next.js" 
-				url="https://nextjs.org/"
+				url={new URL("https://nextjs.org/")}
 			/>
 			<Skill 
 				text="Storybook" 
-				url="https://storybookjs.org"
+				url={new URL("https://storybookjs.org")}
 			/>
 			<Skill 
 				text="Styled Components" 
-				url="https://styled-components.com"
+				url={new URL("https://styled-components.com")}
 			/>
 			<Skill 
 				text="Webpack" 
-				url="https://webpack.js.org"
+				url={new URL("https://webpack.js.org")}
 			/>
 			<Skill 
 				text="Node" 
-				url="https://nodejs.org"
+				url={new URL("https://nodejs.org")}
 			/>
 			<Skill 
 				text="Express" 
-				url="https://expressjs.com"
+				url={new URL("https://expressjs.com")}
 			/>
 			<Skill 
 				text="Wordpress" 
-				url="https://wordpress.org"
+				url={new URL("https://wordpress.org")}
 			/>
 			<Skill 
 				text="Bootstrap" 
-				url="http://getbootstrap.com"
+				url={new URL("http://getbootstrap.com")}
 			/>
 			<Skill 
 				text="SCSS" 
-				url="http://sass-lang.com"
+				url={new URL("http://sass-lang.com")}
 			/>
 			<Skill 
 				text="jQuery" 
-				url="https://jquery.com"
+				url={new URL("https://jquery.com")}
 			/>
 			<Skill 
 				text="Git" 
-				url="https://git-scm.com"
+				url={new URL("https://git-scm.com")}
 			/>
 			<Skill 
 				text="SVG" 
-				url="https://www.w3.org/Graphics/SVG"
+				url={new URL("https://www.w3.org/Graphics/SVG")}
 			/>
 			<Skill 
 				text="Docker" 
-				url="https://www.docker.com"
-			/>
-			<Skill 
-				text="Docker" 
-				url="https://www.docker.com"
+				url={new URL("https://www.docker.com")}
 			/>
 			<Skill 
 				text="CI" 
-				url="https://en.wikipedia.org/wiki/Continuous_integration"
+				url={new URL("https://en.wikipedia.org/wiki/Continuous_integration")}
 			/>
 			<Skill 
 				text="UNIX" 
-				url="http://www.opengroup.org/unix"
+				url={new URL("http://www.opengroup.org/unix")}
 			/>
 			<Skill 
 				text="Web Accessibility" 
-				url="https://www.w3.org/WAI/fundamentals/accessibility-intro"
+				url={new URL("https://www.w3.org/WAI/fundamentals/accessibility-intro")}
 			/>
 			<Skill 
 				text="Atomic Design" 
-				url="http://atomicdesign.bradfrost.com"
+				url={new URL("http://atomicdesign.bradfrost.com")}
 			/>
 			<Skill 
 				text="Responsive Design" 
-				url="https://en.wikipedia.org/wiki/Responsive_web_design"
+				url={new URL("https://en.wikipedia.org/wiki/Responsive_web_design")}
 			/>
 			<Skill 
 				text="Figma" 
-				url="https://www.figma.com"
+				url={new URL("https://www.figma.com")}
 			/>
     </Group>
   ),
@@ -159,7 +155,7 @@ export const WithOneButton: Story = {
       <Button 
 				icon={<FaEnvelope aria-label="Email"/>} 
 				text="rich.cookson@frobitz.com" 
-				url="mailto:rich.cookson@frobitz.com"
+				url={new URL("mailto:rich.cookson@frobitz.com")}
 			/>
     </Group>
   ),
@@ -180,22 +176,22 @@ export const WithMultipleButtons: Story = {
       <Button 
 				icon={<FaEnvelope aria-label="Email"/>} 
 				text="rich.cookson@frobitz.com" 
-				url="mailto:rich.cookson@frobitz.com"
+				url={new URL("mailto:rich.cookson@frobitz.com")}
 			/>
 			<Button 
 				icon={<FaMobileButton aria-label="Phone"/>} 
 				text="+44 7792 871 698" 
-				url="tel:+447792871698"
+				url={new URL("tel:+447792871698")}
 			/>
 			<Button 
 				icon={<FaGithub aria-label="Github logo"/>} 
 				text="Github" 
-				url="https://github.com/hellorich"
+				url={new URL("https://github.com/hellorich")}
 			/>
 			<Button 
 				icon={<FaMastodon aria-label="Mastodon logo"/>} 
 				text="Mastodon" 
-				url="https://github.com/hellorich"
+				url={new URL("https://github.com/hellorich")}
 			/>
     </Group>
   ),

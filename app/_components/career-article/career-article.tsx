@@ -40,7 +40,6 @@ const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : Ca
           {skills}
         </Group>
       </footer>
-      {/* Footer here for skill tags */}
     </article>
 	)
 }
