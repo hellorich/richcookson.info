@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .article {
-  margin-bottom: 1.5rem;
+  margin-bottom: rem(24);
 
   &:last-child {
     margin-bottom: 0;
@@ -11,31 +11,40 @@
 }
 
 .header {
-  margin-bottom: 0.5rem;
+  margin-bottom: rem(8);
 }
 
-.heading {
-  margin-bottom: 0.25rem;
+.title {
+  @include heading();
+  font-size: 1.5rem;
+  margin-bottom: rem(4);
 }
 
 .metadata {
-  // @include respond-above(medium) {
-  //   @include group-horizontal();
+  font-size: rem(17);
 
-    
-  // }
+  @include respond-above(md) {
+    @include group-horizontal();
+    margin-top: 0;
+  }
+
+  a {
+    @include hyperlink();
+  }
 }
 
 .duration {
-  margin-left: 0.5rem;
+  color: setColor(neutral, gray-50);
+  display: block;
+  margin-right: rem(4);
 }
 
 .content {
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: rem(8);
+  }
 
-    @media print {
-      font-size: 0.875rem;
-    }
+  ul {
+    @include list();
   }
 }
