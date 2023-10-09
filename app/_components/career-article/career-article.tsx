@@ -18,10 +18,10 @@ interface CareerArticleProps {
 }
 
 const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {
-	const linkText = url.hostname
+	const linkText: string = url.hostname
 	const isoDateEnd: string = dateEnd.toISOString()
 	const isoDateStart: string = dateStart.toISOString()
-  const formatDate = (date : Date) : string => date.toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
+  const formatDate = (date : Date) => date.toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
 	
 	return (
 		<article className={`${styles.article} ${lato.className}`}>
