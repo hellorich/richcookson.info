@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
 
@@ -9,10 +9,10 @@ import { lato } from '../../_utilities/fonts'
 import styles from './career-article.module.scss'
 
 interface CareerArticleProps {
-  children: any,
+  children: React.ReactNode,
   dateEnd: Date,
   dateStart: Date,
-  skills: ReactNode | ReactNode[],
+  skills: React.ReactNode,
   title: string,
   url: URL,
 }
