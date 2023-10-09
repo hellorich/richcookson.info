@@ -1,3 +1,4 @@
+import { URL } from 'url'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
 
@@ -8,7 +9,7 @@ import styles from './button.module.scss'
 interface ButtonProps {
 	icon: React.ReactNode,
   text: string,
-	url: string,
+	url: URL,
 }
 
 const Button = ({ icon, text, url } : ButtonProps) => {

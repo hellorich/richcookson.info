@@ -1,0 +1,20 @@
+//
+// Hyperlinks
+// -----------------------------------------------------------------------------
+
+@mixin hyperlink() {
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: setColor(primary, blue);
+  }
+
+  &:active, &:focus, &:hover {
+    //color: set-color(brand, accent);
+    outline: none; // [TODO] - Make better outline that looks good in all contexts
+  }
+
+  // &:visited {
+  //   color: darken(set-color(skill, basic), 30%)
+  // }
+}

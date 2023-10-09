@@ -1,3 +1,4 @@
+import { URL } from 'url'
 import Link from 'next/link'
 
 import { lato } from '../../_utilities/fonts'
@@ -6,7 +7,7 @@ import styles from './skill.module.scss'
 
 interface SkillProps {
   text: string,
-	url: string,
+	url: URL,
 }
 
 const Skill = ({ text, url } : SkillProps) => {

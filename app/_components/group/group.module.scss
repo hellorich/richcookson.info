@@ -1,8 +1,7 @@
+//
+// Group
+// -----------------------------------------------------------------------------
+
 .group {
-	display: flex;
-	flex-wrap: wrap;
-	gap: rem(8);
-	list-style: none;
-	margin: rem(16) 0;
-	padding: 0;
+	@include group-horizontal;
 }

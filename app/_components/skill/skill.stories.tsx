@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Skill>
 export const Default: Story = {
   args: {
     text: 'Tag',
-		url: 'http://www.google.com',
+		url: new URL('http://www.google.com'),
   },
 }
 
