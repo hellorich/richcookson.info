@@ -4,6 +4,7 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import CareerArticle from './career-article'
+import Group from '../group/group'
 import Skill from '../skill/skill'
 
 const meta: Meta<typeof CareerArticle> = {
@@ -32,20 +33,22 @@ export const Default: Story = {
         </ul>
       </>
     ),
-    skills: [
-      <Skill 
-        text="React" 
-        url={new URL("https://reactjs.org")}
-      />,
-      <Skill 
-        text="Storybook" 
-        url={new URL("https://storybookjs.org")}
-      />,
-      <Skill 
-        text="Styled Components" 
-        url={new URL("https://styled-components.com")}
-      />,
-    ]
+    skills: (
+			<Group>
+				<Skill 
+					text="React" 
+					url={new URL("https://reactjs.org")}
+				/>
+				<Skill 
+					text="Storybook" 
+					url={new URL("https://storybookjs.org")}
+				/>
+				<Skill 
+					text="Styled Components" 
+					url={new URL("https://styled-components.com")}
+				/>
+			</Group>
+		)
   },
 }
 

@@ -4,7 +4,7 @@ import styles from './group.module.scss'
 interface GroupProps {
   children: React.ReactNode,
 }
-
+// Make it expect an array of react components?
 const Group = ({ children } : GroupProps) => {
 	const childrenArray = React.Children.toArray(children)
 

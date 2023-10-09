@@ -2,8 +2,6 @@ import React from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
 
-import Group from '../group/group'
-
 import { lato } from '../../_utilities/fonts'
 
 import styles from './career-article.module.scss'
@@ -40,9 +38,7 @@ const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : Ca
       </div>
 
       <footer>
-        <Group>
-          {skills}
-        </Group>
+        {skills}
       </footer>
     </article>
 	)
