@@ -35,15 +35,15 @@ export const Default: Story = {
     skills: [
       <Skill 
         text="React" 
-        url="https://reactjs.org"
+        url={new URL("https://reactjs.org")}
       />,
       <Skill 
         text="Storybook" 
-        url="https://storybookjs.org"
+        url={new URL("https://storybookjs.org")}
       />,
       <Skill 
         text="Styled Components" 
-        url="https://styled-components.com"
+        url={new URL("https://styled-components.com")}
       />,
     ]
   },
