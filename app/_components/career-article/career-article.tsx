@@ -18,13 +18,14 @@ interface CareerArticleProps {
 }
 
 const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {
+	const linkText = url.hostname
   const formatDate = (date : string) => new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
 	return (
 		<article className={`${styles.article} ${lato.className}`}>
       <header className={styles.header}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.metadata}>
-          <Link href={url}>www.hugoandcat.com</Link>
+          <Link href={url}>{linkText}</Link>
           <span className={styles.duration}>
             <time dateTime={dateStart}>{formatDate(dateStart)}</time> to <time dateTime={dateEnd}>{formatDate(dateEnd)}</time>
           </span>
