@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
+import Group from '../group/group'
 
 import { lato } from '../../_utilities/fonts'
 
@@ -48,7 +49,9 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
       </div>
 
       <footer>
-        {skills}
+        <Group>
+          {skills}
+        </Group>
       </footer>
     </article>
 	)
