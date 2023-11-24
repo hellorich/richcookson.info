@@ -4,8 +4,8 @@
 
 .article {
   @extend .grid-item;
-  @extend .xs-12;
-  @extend .md-offset-1;
+  @extend .xs-10;
+  @extend .xs-offset-2;
 
   margin-bottom: rem(24);
 

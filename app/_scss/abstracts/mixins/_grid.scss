@@ -3,15 +3,22 @@
 // Sets up grid layout on the HTML element.
 // -----------------------------------------------------------------------------
 
-.grid {
+@import "gridGutter";
+@import "gridPadding";
+@import "gridMaxWidth";
+
+@mixin grid($padding: true) {
   @include grid-max-width;
-	@include grid-padding;
   @include grid-gutter;
-	align-items: start;
-	box-sizing: border-box;
+  align-items: start;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
+
+  @if $padding {
+    @include grid-padding;
+  }
 }

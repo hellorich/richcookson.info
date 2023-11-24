@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { lato } from '../../_utilities/fonts'
 
 import styles from './header.module.scss'

@@ -30,10 +30,6 @@
   }
 }
 
-.grid-new-row {
-  grid-column-start: 1;
-}
-
 @each $breakpoint, $size in $breakpoints {
   @media screen and (min-width: #{$size}) {
     @for $i from 1 through 12 {

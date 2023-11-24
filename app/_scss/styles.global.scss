@@ -5,20 +5,18 @@
 @import "abstracts/variables/grid";
 
 // Map dependent mixins
-@import "abstracts/maps/breakpoints", "abstracts/mixins/respondAbove",
-  "abstracts/mixins/respondBelow", "abstracts/mixins/respondBetween";
+@import "abstracts/maps/breakpoints";
 @import "abstracts/maps/colors", "abstracts/functions/setColor";
 
 // Independent mixins
-@import "abstracts/mixins/gridGutter";
-@import "abstracts/mixins/gridPadding";
-@import "abstracts/mixins/gridMaxWidth";
+@import "abstracts/mixins/grid";
 @import "abstracts/mixins/groupHorizontal";
 @import "abstracts/mixins/heading";
 @import "abstracts/mixins/hyperlink";
 @import "abstracts/mixins/list";
+@import "abstracts/mixins/respondAbove";
+@import "abstracts/mixins/respondBelow";
+@import "abstracts/mixins/respondBetween";
 
 // Classes
-
-@import "classes/grid";
 @import "classes/gridItem";
