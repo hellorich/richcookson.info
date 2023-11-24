@@ -18,10 +18,10 @@ type Story = StoryObj<typeof CareerArticle>
 export const Default: Story = {
   args: {
     title: 'Building a single page web app in React for Hugo and Cat',
-		url: new URL('http://www.hugoandcat.com'),
+    url: new URL('http://www.hugoandcat.com'),
     dateEnd: '2023-01-01',
     dateStart: '2022-10-01',
-    children: (
+    content: (
       <>
         <p>Front end developer on a project to create a dashboard app, displaying a number of charts and statistics monitoring roll-out and communication of devices for a telecommunications company.</p>
         <ul>
@@ -35,23 +35,24 @@ export const Default: Story = {
     skills: [
       <Skill 
         text="React" 
-        url="https://reactjs.org"
+        url={new URL('https://reactjs.org')}
       />,
       <Skill 
         text="Storybook" 
-        url="https://storybookjs.org"
+        url={new URL('https://storybookjs.org')}
       />,
       <Skill 
         text="Styled Components" 
-        url="https://styled-components.com"
+        url={new URL('https://styled-components.com')}
       />,
     ]
   },
 }
 
 Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const article = await canvas.getByRole('article')
-	
+  const canvas = within(canvasElement)
+  const article = await canvas.getByRole('article')
+  
+  await expect(article).toBeInTheDocument()
 	await expect(article).toBeInTheDocument()
 }

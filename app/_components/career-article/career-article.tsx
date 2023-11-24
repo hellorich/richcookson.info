@@ -9,7 +9,7 @@ import { lato } from '../../_utilities/fonts'
 import styles from './career-article.module.scss'
 
 interface CareerArticleProps {
-  children: any,
+  content: ReactNode | ReactNode[],
   dateEnd: string,
   dateStart: string,
   skills: ReactNode | ReactNode[],
@@ -17,7 +17,7 @@ interface CareerArticleProps {
   url: URL,
 }
 
-const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {
+const CareerArticle = ({ content, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {
   const formatDate = (date : string) => new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
 	return (
 		<article className={`${styles.article} ${lato.className}`}>
@@ -32,7 +32,7 @@ const CareerArticle = ({ children, dateEnd, dateStart, skills, title, url } : Ca
       </header>
     
       <div className={styles.content}>
-        {children}
+        {content}
       </div>
 
       <footer>

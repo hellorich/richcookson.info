@@ -1,37 +1,37 @@
 //
 // Grid Item
-// Sets an element as an iten in the grid. Use with generated grid sizing
+// Sets an element as an item in the grid. Use with generated grid sizing
 // and grid offset classes to adjust position and size.
 // -----------------------------------------------------------------------------
 
 .grid-item {
   grid-column-end: span 12;
-	position: relative;
-	width: auto;
+  position: relative;
+  width: auto;
 
-	&.h-center {
-		align-items: center;
-	}
+  &.h-center {
+    align-items: center;
+  }
 
-	&.v-center {
-		justify-content: center;
-	}
+  &.v-center {
+    justify-content: center;
+  }
 
-	&.h-end {
-		align-items: flex-end;
-	}
+  &.h-end {
+    align-items: flex-end;
+  }
 
-	&.v-end {
-		justify-content: end;
-	}
+  &.v-end {
+    justify-content: end;
+  }
 
-	&.v-stretch {
-		justify-content: stretch;
-	}
+  &.v-stretch {
+    justify-content: stretch;
+  }
 }
 
 .grid-new-row {
-	grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 @each $breakpoint, $size in $breakpoints {
@@ -40,13 +40,13 @@
       /* Col width classes */
       .#{$breakpoint}-#{$i} {
         display: flex;
-				flex-direction: column;
+        flex-direction: column;
         grid-column-end: span $i;
-				width: auto;
+        width: auto;
 
         &.grid-item-center {
-					grid-column-end: span 12;
-					justify-self: center;
+          grid-column-end: span 12;
+          justify-self: center;
           max-width: percentage(calc($i / 12));
         }
       }
