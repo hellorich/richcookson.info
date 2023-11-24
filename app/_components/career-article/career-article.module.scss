@@ -3,6 +3,9 @@
 // -----------------------------------------------------------------------------
 
 .article {
+  @extend .grid-item;
+  @extend .xs-12;
+  
   margin-bottom: rem(24);
 
   &:last-child {
