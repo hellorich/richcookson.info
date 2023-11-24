@@ -4,8 +4,13 @@ import CareerArticle from '../_components/career-article/career-article'
 
 import styles from './page.module.scss'
 
+interface Skill {
+  text: string;
+  url: URL;
+}
+
 export default function Home() {
-  const skills = [
+  const skills: Skill[] = [
     { text: "React", url: new URL('https://reactjs.org') },
     { text: "Storybook", url: new URL('https://storybookjs.org') },
     { text: "Styled Components", url: new URL('https://styled-components.com') },
