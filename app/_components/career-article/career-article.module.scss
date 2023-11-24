@@ -5,7 +5,8 @@
 .article {
   @extend .grid-item;
   @extend .xs-12;
-  
+  @extend .md-offset-1;
+
   margin-bottom: rem(24);
 
   &:last-child {
@@ -37,7 +38,7 @@
 }
 
 .duration {
-  color: setColor(neutral, gray-50);
+  color: setColor(neutral, gray-20);
   display: block;
   margin-right: rem(4);
 }
