@@ -6,7 +6,8 @@
   text-decoration: none;
 
   &:link, &:visited {
-    color: setColor(primary, blue);
+    color: setColor(neutral, black);
+    text-decoration: underline;
   }
 
   &:active, &:focus, &:hover {
