@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
-import Group from '../group/group'
+import { Group } from '../group'
 
 import { lato } from '../../_utilities/fonts'
 

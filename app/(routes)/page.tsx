@@ -1,6 +1,6 @@
-import Header from '../_components/header/header'
-import Skill from '../_components/skill/skill'
-import CareerArticle from '../_components/career-article/career-article'
+import { Header } from '../_components/header'
+import { Skill } from '../_components/skill'
+import { CareerArticle } from '../_components/career-article'
 
 import styles from './page.module.scss'
 
