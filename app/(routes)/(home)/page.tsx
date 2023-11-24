@@ -1,6 +1,6 @@
-import { Header } from '../_components/header'
-import { Skill } from '../_components/skill'
-import { CareerArticle } from '../_components/career-article'
+import { Header } from '../../_components/header'
+import { Skill } from '../../_components/skill'
+import { CareerArticle } from '../../_components/career-article'
 
 import styles from './page.module.scss'
 
@@ -9,7 +9,7 @@ interface Skill {
   url: URL;
 }
 
-export default function Home() {
+export default function HomePage() {
   const skills: Skill[] = [
     { text: "React", url: new URL('https://reactjs.org') },
     { text: "Storybook", url: new URL('https://storybookjs.org') },
@@ -38,6 +38,7 @@ export default function Home() {
         }
         skills={skills.map(skill => (
           <Skill 
+            key={skill.text}
             text={skill.text} 
             url={skill.url}
           />

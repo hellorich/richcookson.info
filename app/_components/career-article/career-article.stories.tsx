@@ -9,7 +9,8 @@ import Skill from '../skill/skill'
 
 const meta: Meta<typeof CareerArticle> = {
   component: CareerArticle,
-  title: 'Career Article',
+  title: 'Components/Career Article',
+  tags: ['autodocs'],
 }
 
 export default meta

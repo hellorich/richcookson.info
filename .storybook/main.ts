@@ -36,7 +36,7 @@ const config: StorybookConfig = {
   staticDirs: ['../public'],
   stories: [
     '../stories/**/*.mdx',
-    '../app/_components/**/*.stories.@(ts|tsx)',
+    '../app/**/*.(stories|story).@(ts|tsx)',
   ],
 }
 

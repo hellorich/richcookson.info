@@ -1,16 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { within } from "@storybook/testing-library"
-import { expect } from "@storybook/jest"
+import type { Meta, StoryObj } from '@storybook/react'
+import { within } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
-import Group from "./group"
-import Skill from "../skill/skill"
-import Button from "../button/button"
+import Group from './group'
+import Skill from '../skill/skill'
+import Button from '../button/button'
 
-import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from "react-icons/fa6"
+import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
 
 const meta: Meta<typeof Group> = {
   component: Group,
-  title: "Group",
+  title: 'Components/Group',
+	tags: ['autodocs'],
 }
 
 export default meta
@@ -36,7 +37,7 @@ export const WithOneTag: Story = {
 
 WithOneTag.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId("group")
+	const group = await canvas.getByTestId('group')
 	
 	await expect(group).toBeInTheDocument()
 }
@@ -144,7 +145,7 @@ export const WithMultipleTags: Story = {
 
 WithMultipleTags.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId("group")
+	const group = await canvas.getByTestId('group')
 	
 	await expect(group).toBeInTheDocument()
 }
@@ -165,7 +166,7 @@ export const WithOneButton: Story = {
 
 WithOneButton.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId("group")
+	const group = await canvas.getByTestId('group')
 	
 	await expect(group).toBeInTheDocument()
 }
@@ -201,7 +202,7 @@ export const WithMultipleButtons: Story = {
 
 WithMultipleButtons.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId("group")
+	const group = await canvas.getByTestId('group')
 	
 	await expect(group).toBeInTheDocument()
 }
