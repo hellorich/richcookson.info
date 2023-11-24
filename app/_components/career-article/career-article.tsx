@@ -10,12 +10,13 @@ interface CareerArticleProps {
   content: ReactNode | ReactNode[],
   dateEnd: Date,
   dateStart: Date,
+  linkText: string,
   skills: ReactNode | ReactNode[],
   title: string,
   url: URL,
 }
 
-const CareerArticle = ({ content, dateEnd, dateStart, skills, title, url } : CareerArticleProps) => {
+const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, url } : CareerArticleProps) => {
   const formatDateForDisplay = (date : Date) => new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
 	
   const formatDateForDatetime = (date: Date) => {

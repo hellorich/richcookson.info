@@ -20,6 +20,7 @@ export const Default: Story = {
   args: {
     title: 'Building a single page web app in React for Hugo and Cat',
     url: new URL('http://www.hugoandcat.com'),
+    linkText: 'www.hugoandcat.com',
     dateEnd: new Date('2023, 01, 01'),
     dateStart: new Date('2022, 10, 01'),
     content: (
