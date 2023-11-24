@@ -4,6 +4,7 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import CareerArticle from './career-article'
+import Group from '../group/group'
 import Skill from '../skill/skill'
 
 const meta: Meta<typeof CareerArticle> = {
