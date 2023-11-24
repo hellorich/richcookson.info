@@ -22,11 +22,10 @@ const CareerArticle = ({ content, dateEnd, dateStart, skills, title, url } : Car
 	
   const formatDateForDatetime = (date: Date) => {
     const year = date.getFullYear()
-    const month = (date.getMonth() + 1).toString().padStart(2, '0') // Months are 0-indexed in JavaScript
-    const day = date.getDate().toString().padStart(2, '0')
-  
-    return `${year}-${month}-${day}`;
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    return `${year}-${month}`
   }
+
   return (
 		<article className={`${styles.article} ${lato.className}`}>
       <header className={styles.header}>
