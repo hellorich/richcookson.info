@@ -6,7 +6,8 @@ import Skill from './skill'
 
 const meta: Meta<typeof Skill> = {
   component: Skill,
-  title: 'Skill',
+  title: 'Components/Skill',
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <ul style={{ listStyle: 'none' }}>

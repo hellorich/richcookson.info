@@ -6,7 +6,8 @@ import Header from './header'
 
 const meta: Meta<typeof Header> = {
   component: Header,
-  title: 'Header',
+  title: 'Components/Header',
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div style={{ display: 'grid', padding: '4rem' }}>
