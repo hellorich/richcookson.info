@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
 
