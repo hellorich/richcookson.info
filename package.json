@@ -9,8 +9,8 @@
     "lint": "next lint",
     "test": "jest --watch",
     "test-storybook": "test-storybook --url http://localhost:6007",
-		"test-storybook:coverage": "test-storybook --url http://localhost:6007 --coverage",
-    "storybook": "storybook dev --no-open -p 6007",
+    "test-storybook:coverage": "test-storybook --url http://localhost:6007 --coverage",
+    "storybook": "storybook dev --no-open -p 6007 & jest",
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded"
   },
@@ -33,6 +33,7 @@
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-storyshots": "^7.5.3",
     "@storybook/blocks": "^7.5.3",
     "@storybook/jest": "^0.2.3",
     "@storybook/nextjs": "^7.5.3",

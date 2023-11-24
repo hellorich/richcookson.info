@@ -24,11 +24,18 @@ export const DefaultButton: Story = {
 }
 
 DefaultButton.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const link = await canvas.getByRole('link')
+  const canvas = within(canvasElement)
+  const link = await canvas.getByRole('link')
 
-	await expect(link).toBeInTheDocument()
-	await expect(link.textContent).toBe('Button')
+  await expect(link).toBeInTheDocument()
+  await expect(link.textContent).toBe('Button')
+
+  // Interaction test
+  link.addEventListener('click', function(event) {
+    event.preventDefault()
+  })
+  link.click()
+  await expect(link).toHaveAttribute('href', 'http://www.google.com/')
 }
 
 // Email button
