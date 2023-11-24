@@ -11,6 +11,10 @@ My resume web site.
 
 This app uses Storybook for component development, publishing to Chromatic on each PR to automate visual and interaction tests. This also allows integration of Storybook with Figma for a seamless design / development workflow.
 
+## External Links
+
+Progress and tasks tracked on [Trello](https://trello.com/b/QFbikkXi/richcooksoninfo)
+
 ## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

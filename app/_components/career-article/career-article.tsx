@@ -1,8 +1,6 @@
-import { ReactNode } from 'react'
+import React from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
-
-import Group from '../group/group'
 
 import { lato } from '../../_utilities/fonts'
 
@@ -31,7 +29,7 @@ const CareerArticle = ({ content, dateEnd, dateStart, skills, title, url } : Car
       <header className={styles.header}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.metadata}>
-          <Link href={url}>www.hugoandcat.com</Link>
+          <Link href={url}>{linkText}</Link>
           <span className={styles.duration}>
             <time dateTime={formatDateForDatetime(dateStart)}>
               {formatDateForDisplay(dateStart)}
@@ -49,9 +47,7 @@ const CareerArticle = ({ content, dateEnd, dateStart, skills, title, url } : Car
       </div>
 
       <footer>
-        <Group>
-          {skills}
-        </Group>
+        {skills}
       </footer>
     </article>
 	)

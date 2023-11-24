@@ -17,6 +17,8 @@ export default meta
 
 type Story = StoryObj<typeof Group>
 
+// Change this to use the template for the component and pass args as an array of react components
+
 export const Empty: Story = {}
 
 // Single tag
