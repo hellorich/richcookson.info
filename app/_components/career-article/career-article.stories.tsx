@@ -19,8 +19,8 @@ export const Default: Story = {
   args: {
     title: 'Building a single page web app in React for Hugo and Cat',
     url: new URL('http://www.hugoandcat.com'),
-    dateEnd: '2023-01-01',
-    dateStart: '2022-10-01',
+    dateEnd: new Date('2023, 01, 01'),
+    dateStart: new Date('2022, 10, 01'),
     content: (
       <>
         <p>Front end developer on a project to create a dashboard app, displaying a number of charts and statistics monitoring roll-out and communication of devices for a telecommunications company.</p>
