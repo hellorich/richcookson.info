@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .article {
+  @extend .grid-item;
+  @extend .xs-10;
+  @extend .xs-offset-2;
+
   margin-bottom: rem(24);
 
   &:last-child {
@@ -16,8 +20,8 @@
 
 .title {
   @include heading();
-  font-size: 1.5rem;
-  margin-bottom: rem(4);
+  font-size: 2rem;
+  margin-bottom: rem(8);
 }
 
 .metadata {
@@ -34,14 +38,17 @@
 }
 
 .duration {
-  color: setColor(neutral, gray-50);
+  color: setColor(neutral, gray-20);
   display: block;
   margin-right: rem(4);
 }
 
 .content {
   p {
-    margin-bottom: rem(8);
+    color: setColor(neutral, gray-20);
+    font-size: rem(17);
+    line-height: 1.35;
+    margin: 0 0 rem(16);
   }
 
   ul {

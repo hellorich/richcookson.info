@@ -1,3 +1,3 @@
-.main {
-  @extend .grid;
+.page {
+  @include grid;
 }
