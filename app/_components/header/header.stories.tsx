@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import Header from './header'
+import { Header } from '@/app/_components/header'
 
 const meta: Meta<typeof Header> = {
   component: Header,

@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import Group from './group'
-import Skill from '../skill/skill'
-import Button from '../button/button'
+import { Group } from '@/app/_components/group'
+import { Skill } from '@/app/_components/skill'
+import { Button } from '@/app/_components/button'
 
 import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
 

@@ -1,0 +1,30 @@
+.section {
+  @extend .grid-item;
+  @extend .md-offset-2;
+  @extend .md-10;
+  margin-bottom: 1.5rem;
+
+  @include respond-above(md) {
+    margin-bottom: 2rem;
+  }
+}
+
+.h2 {
+  border-bottom: rem(1) solid setColor(neutral, gray-85);
+  padding-bottom: rem(8);
+}
+
+.description {
+  margin-bottom: rem(32);
+
+  a {
+    @include hyperlink();
+  }
+
+  p {
+    color: setColor(neutral, gray-20);
+    font-size: rem(17);
+    line-height: 1.35;
+    margin: 0 0 rem(16);
+  }
+}
