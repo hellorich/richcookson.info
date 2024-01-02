@@ -1,4 +1,14 @@
 .h1 {
-  font-size: 2.5rem;
-  line-height: 3rem;
+  color: setColor(neutral, gray-20);
+  font-size: rem(48);
+  font-weight: 900;
+  letter-spacing: rem(-1);
+  margin-bottom: rem(16);
+  padding-bottom: rem(8);
+}
+
+.h3 {
+  @include heading();
+  font-size: 2rem;
+  margin-bottom: rem(8);
 }

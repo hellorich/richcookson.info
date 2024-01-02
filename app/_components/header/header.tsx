@@ -1,7 +1,6 @@
-import { clsx } from 'clsx'
-import { lato } from '../../_utilities/fonts'
+import { Title } from '@/app/_components/title'
 
-import styles from './header.module.scss'
+import classes from './header.module.scss'
 
 interface HeaderProps {
   title: string,
@@ -9,8 +8,12 @@ interface HeaderProps {
 
 const Header = ({ title } : HeaderProps) => {
   return (
-    <header className={styles.header}>
-      <h1 className={clsx(styles.h1, lato.className)}>{title}</h1>
+    <header className={classes.header}>
+      <Title 
+        className={classes.h1}
+        order={1}
+        text={title}
+      />
     </header>
   )
 }
