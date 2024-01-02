@@ -1,3 +1,5 @@
+
+import { clsx } from 'clsx'
 import React, { ReactNode } from 'react'
 import { URL } from 'url'
 import Link from 'next/link'
@@ -27,7 +29,7 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
   }
 
   return (
-		<article className={`${styles.article} ${lato.className}`}>
+		<article className={clsx(styles.article, lato.className)}>
       <header className={styles.header}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.metadata}>

@@ -1,3 +1,4 @@
+import { clsx } from 'clsx'
 import React from 'react'
 import styles from './group.module.scss'
 
@@ -13,7 +14,7 @@ const Group = ({ children } : GroupProps) => {
   }
 
 	return (
-		<ul className={styles.group} data-testid="group">
+		<ul className={clsx(styles.group)} data-testid="group">
 			{childrenArray.map((child, index) => (
         <li key={index}>{child}</li>
       ))}

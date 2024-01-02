@@ -1,4 +1,5 @@
 import { URL } from 'url'
+import { clsx } from 'clsx'
 import Link from 'next/link'
 
 import { lato } from '../../_utilities/fonts'
@@ -12,7 +13,7 @@ interface SkillProps {
 
 const Skill = ({ text, url } : SkillProps) => {
   return (
-    <Link className={`${styles.skill} ${lato.className}`} href={url}>{text}</Link>
+    <Link className={clsx(styles.skill, lato.className)} href={url}>{text}</Link>
   )
 }
 

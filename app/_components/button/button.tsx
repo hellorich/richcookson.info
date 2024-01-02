@@ -1,4 +1,5 @@
 import { URL } from 'url'
+import { clsx } from 'clsx'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
 
@@ -14,7 +15,7 @@ interface ButtonProps {
 
 const Button = ({ icon, text, url } : ButtonProps) => {
   return (
-    <Link className={`${styles.button} ${lato.className}`} href={url}>
+    <Link className={clsx(styles.button, lato.className)} href={url}>
 			<IconContext.Provider value={{ className: styles.icon }}>
 				{icon}
 			</IconContext.Provider>
