@@ -142,3 +142,24 @@ export const WithContent: Story = {
     )
   }
 }
+
+Default.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const section = await canvas.getByTestId('section')
+
+	await expect(section).toBeInTheDocument()
+}
+
+WithDescription.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const section = await canvas.getByTestId('section')
+
+	await expect(section).toBeInTheDocument()
+}
+
+WithContent.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement)
+	const section = await canvas.getByTestId('section')
+
+	await expect(section).toBeInTheDocument()
+}

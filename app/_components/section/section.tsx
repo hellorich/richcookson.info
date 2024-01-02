@@ -14,7 +14,7 @@ interface SectionProps {
 
 const Section = ({ children, description, title } : SectionProps) => {
   return (
-    <section className={classes.section}>
+    <section className={classes.section} data-testid="section">
       {!description ? (
         <Title
           className={classes.h2}
