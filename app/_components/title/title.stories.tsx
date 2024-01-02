@@ -34,17 +34,3 @@ export const h3: Story = {
     text: 'This is an h3 title',
   },
 }
-
-export const h4: Story = {
-  args: {
-    order: 4,
-    text: 'This is an h4 title',
-  },
-}
-
-export const h5: Story = {
-  args: {
-    order: 5,
-    text: 'This is an h5 title',
-  },
-}
