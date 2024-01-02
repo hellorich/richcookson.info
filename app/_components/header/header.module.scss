@@ -10,34 +10,18 @@
   &:before {
     @extend .grid-item;
     @extend .xs-2;
-    background-image: url('/images/png/avatar.png');
+    background-image: url("/images/png/avatar.png");
     background-position: top right;
     background-repeat: no-repeat;
-    content: '';
+    content: "";
     display: block;
-		filter: grayscale(100%);
+    filter: grayscale(100%);
     height: rem(80);
-
-    @media print {
-      display: none;
-    }
   }
 
   .h1 {
     @extend .grid-item;
     @extend .xs-10;
-
     border-bottom: rem(1) solid setColor(neutral, gray-85);
-    color: setColor(neutral, gray-20);
-    font-size: rem(48);
-    font-weight: 900;
-    letter-spacing: rem(-1);
-    margin-bottom: rem(16);
-    padding-bottom: rem(8);
-
-    @media print {
-      font-size: rem(32);
-      letter-spacing: 0;
-    }
   }
 }

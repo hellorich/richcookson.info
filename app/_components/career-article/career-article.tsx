@@ -1,11 +1,14 @@
-import React, { ReactNode } from 'react'
+
 import { URL } from 'url'
+import { clsx } from 'clsx'
+import React, { ReactNode } from 'react'
 import Link from 'next/link'
-import { Group } from '../group'
 
-import { lato } from '../../_utilities/fonts'
+import { Title } from '@/app/_components/title'
+import { Group } from '@/app/_components/group'
 
-import styles from './career-article.module.scss'
+import { lato } from '@/app/_utilities/fonts'
+import classes from './career-article.module.scss'
 
 interface CareerArticleProps {
   content: ReactNode | ReactNode[],
@@ -27,12 +30,16 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
   }
 
   return (
-		<article className={`${styles.article} ${lato.className}`}>
-      <header className={styles.header}>
-        <h3 className={styles.title}>{title}</h3>
-        <div className={styles.metadata}>
+		<article className={clsx(classes.article, lato.className)}>
+      <header className={classes.header}>
+        <Title
+          className={classes.title}
+          order={3}
+          text={title}
+        />
+        <div className={classes.metadata}>
           <Link href={url}>{linkText}</Link>
-          <span className={styles.duration}>
+          <span className={classes.duration}>
             <time dateTime={formatDateForDatetime(dateStart)}>
               {formatDateForDisplay(dateStart)}
             </time>
@@ -44,7 +51,7 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
         </div>
       </header>
     
-      <div className={styles.content}>
+      <div className={classes.content}>
         {content}
       </div>
 

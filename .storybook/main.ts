@@ -1,5 +1,6 @@
 import type { AddonOptionsBabel } from '@storybook/addon-coverage'
 import type { StorybookConfig } from '@storybook/nextjs'
+import path from 'path'
 
 // Storybook test coverage configuration
 const coverageConfig: AddonOptionsBabel = {
@@ -38,6 +39,12 @@ const config: StorybookConfig = {
     '../stories/**/*.mdx',
     '../app/**/*.(stories|story).@(ts|tsx)',
   ],
+  webpackFinal: async (config) => {
+    config.resolve ??= {};
+    config.resolve.alias ??= {};
+    config.resolve.alias['@'] = path.resolve(__dirname, '../');
+    return config;
+  },
 }
 
 export default config
