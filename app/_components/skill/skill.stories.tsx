@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import Skill from './skill'
+import { Skill } from '@/app/_components/skill'
 
 const meta: Meta<typeof Skill> = {
   component: Skill,
