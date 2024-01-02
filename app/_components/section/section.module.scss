@@ -1,4 +1,7 @@
 .section {
+  @extend .grid-item;
+  @extend .md-offset-2;
+  @extend .md-10;
   margin-bottom: 1.5rem;
 
   @include respond-above(md) {
@@ -12,6 +15,8 @@
 }
 
 .description {
+  margin-bottom: rem(32);
+
   a {
     @include hyperlink();
   }

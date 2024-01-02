@@ -9,12 +9,12 @@
 
 .h2 {
   @include heading();
-  font-size: rem(32);
+  font-size: rem(40);
   margin-bottom: rem(8);
 }
 
 .h3 {
   @include heading();
-  font-size: rem(28);
+  font-size: rem(32);
   margin-bottom: rem(8);
 }

@@ -18,12 +18,6 @@
   margin-bottom: rem(8);
 }
 
-.title {
-  @include heading();
-  font-size: 2rem;
-  margin-bottom: rem(8);
-}
-
 .metadata {
   font-size: rem(17);
 
