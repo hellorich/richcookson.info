@@ -4,7 +4,6 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import CareerArticle from './career-article'
-import { Group } from '@/app/_components/group'
 import { Skill } from '@/app/_components/skill'
 
 const meta: Meta<typeof CareerArticle> = {
@@ -24,17 +23,7 @@ export const Default: Story = {
     linkText: 'www.hugoandcat.com',
     dateEnd: new Date('2023, 01, 01'),
     dateStart: new Date('2022, 10, 01'),
-    content: (
-      <>
-        <p>Front end developer on a project to create a dashboard app, displaying a number of charts and statistics monitoring roll-out and communication of devices for a telecommunications company.</p>
-        <ul>
-          <li>Developed the React app in StoryBook for rapid development while the back-end was being worked on.</li>
-          <li>Used React Query to consume the multiple API&apos;s required by the app.</li>
-          <li>Created a number of charts based on customised Victory Charts components, and also bespoke charts as SVG components.</li>
-          <li>Carried out demonstrations of progress to internal team at Hugo & Cat as well as to stakeholders at the client company thorough sprints.</li>
-        </ul>
-      </>
-    ),
+    content: "<p>A short contract to help cover the maintenance of existing client sites and aid with the implementation of the companies rebranding.</p><ul><li>Worked on updates to multiple Wordpress sites using plugins such as <a href=\"https://www.upstatement.com/timber\" rel=\"external\">Timber</a>, <a href=\"https://www.advancedcustomfields.com\" rel=\"external\">Advanced Custom Fields</a> and alternative code structures such as <a href=\"https://roots.io/bedrock\" rel=\"external\">Bedrock</a></li><li>Partnered with a designer to implement the company rebrand on the intranet, and their blog Pegasus Pulse - improved the layout and responsive code</li></ul>",
     skills: [
       <Skill 
         text="React" 
