@@ -48,4 +48,8 @@
   ul {
     @include list();
   }
+
+  a {
+    @include hyperlink();
+  }
 }
