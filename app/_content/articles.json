@@ -35,7 +35,7 @@
     "linkText": "www.wearetilt.com",
     "dateStart": "2023-01-01",
     "dateEnd": "2023-11-01",
-    "content": "<p>Worked on multiple projects involving SCORM and Next.js</p><ul><li>Created <a href='https://cop-timeline.wearetilt.com'>cop-timeline.wearetilt.com</a>, a one page timeline of the COP climate change conference history</li><li>Implementing a boilerplate for the creation of LMS courses using Next.js</li><li>Reworked a Laravel backed assessment tool into a SCORM course</li></ul>",
+    "content": "<p>Worked on multiple projects involving SCORM and Next.js</p><ul><li>Created <a href=\"https://cop-timeline.wearetilt.com\" rel=\"external\">cop-timeline.wearetilt.com</a>, a one page timeline of the COP climate change conference history</li><li>Implementing a boilerplate for the creation of LMS courses using Next.js</li><li>Reworked a Laravel backed assessment tool into a SCORM course</li></ul>",
     "skills": [
       {
         "text": "TypeScript",
@@ -87,7 +87,7 @@
     "linkText": "www.wearetilt.com",
     "dateStart": "2020-12-01",
     "dateEnd": "2022-07-01",
-    "content": "<p>In charge of the management and ongoing development of a Sharepoint site creation framework based on <a href='https://gohugo.io/'>Hugo</a> static site generator, JavaScript, PowerShell scripts and the Sharepoint API, for a multinational pharmaceutical corporation.</p><ul><li>Managed development on improvements to the initial framework to improve structure and usability of the scripts and code</li><li>Produced components in to allow rich features such as site search, user challenges, quizzes and other custom functionality</li><li>Moved development from an old jQuery stack to modular ES6 vanilla JavaScript once IE 11 support was dropped</li><li>Developed and wrote rich documentation for all features and components utilising the framework itself</li><li>Worked directly with a range of project managers at Tilt and with the stakeholders at the end client</li></ul>",
+    "content": "<p>In charge of the management and ongoing development of a Sharepoint site creation framework based on <a href=\"https://gohugo.io\" rel=\"external\">Hugo</a> static site generator, JavaScript, PowerShell scripts and the Sharepoint API, for a multinational pharmaceutical corporation.</p><ul><li>Managed development on improvements to the initial framework to improve structure and usability of the scripts and code</li><li>Produced components in to allow rich features such as site search, user challenges, quizzes and other custom functionality</li><li>Moved development from an old jQuery stack to modular ES6 vanilla JavaScript once IE 11 support was dropped</li><li>Developed and wrote rich documentation for all features and components utilising the framework itself</li><li>Worked directly with a range of project managers at Tilt and with the stakeholders at the end client</li></ul>",
     "skills": [
       {
         "text": "Hugo",
@@ -203,7 +203,7 @@
     "linkText": "www.iris-worldwide.com",
     "dateStart": "2019-04-01",
     "dateEnd": "2019-09-01",
-    "content": "<p>Took over development of numerous content micro-site builds for <a rel=\"external\" href=\"https://www.samsungbackstage.co.uk\">Samsung Backstage</a>, a portal for sales staff to learn about Samsung's range of mobile devices.</p><ul><li>Audited existing micro-site code which was based on Node, Gulp and Bootstrap</li><li>Improved tooling and framework for micro-sites to improve reusability and optimise page performance</li><li>Supported lead front end developer and Moodle developers on the redesign of Samsung Backstage</li></ul>",
+    "content": "<p>Took over development of numerous content micro-site builds for <a href=\"https://www.samsungbackstage.co.uk\" rel=\"external\">Samsung Backstage</a>, a portal for sales staff to learn about Samsung's range of mobile devices.</p><ul><li>Audited existing micro-site code which was based on Node, Gulp and Bootstrap</li><li>Improved tooling and framework for micro-sites to improve reusability and optimise page performance</li><li>Supported lead front end developer and Moodle developers on the redesign of Samsung Backstage</li></ul>",
     "skills": [
       {
         "text": "Bootstrap",
@@ -243,7 +243,7 @@
     "linkText": "www.lumesselearning.com",
     "dateStart": "2018-03-01",
     "dateEnd": "2018-04-01",
-    "content": "<p>Responsible for development of a Vue.js based learning application based on Lumesse internal framework.</p><ul><li>Set up a <a rel=\"external\" href=\"https://vuejs.org\">Vue.js</a> web app based on an internal framework, coding custom components and integrating existing ones</li><li>Constructed a complex single page scrolling animation using GreenSock</li><li>Fixed bugs and made content adjustments to several other applications</li></ul>",
+    "content": "<p>Responsible for development of a Vue.js based learning application based on Lumesse internal framework.</p><ul><li>Set up a <a href=\"https://vuejs.org\" rel=\"external\">Vue.js</a> web app based on an internal framework, coding custom components and integrating existing ones</li><li>Constructed a complex single page scrolling animation using GreenSock</li><li>Fixed bugs and made content adjustments to several other applications</li></ul>",
     "skills": [
       {
         "text": "Vue.js",
@@ -261,7 +261,7 @@
     "linkText": "www.brilliantnoise.com",
     "dateStart": "2017-09-01",
     "dateEnd": "2018-03-01",
-    "content": "<p>Working as a senior software developer, I was responsible for developing and expanding several internal software projects, as well as aiding with client work.</p><ul><li>Led a project to create a content organisation application using <a rel=\"external\" href=\"https://reactjs.org\">React</a>, <a rel=\"external\" href=\"https://nodejs.org\">Node</a>, <a rel=\"external\" href=\"https://expressjs.com\">Express</a> and <a rel=\"external\" href=\"https://www.mongodb.com\">MongoDB</a></li><li>Customised and extended the REST API of a headless Wordpress multi-site installation, providing content to custom front end interfaces built with Express and Handlebars</li><li>Expanded and improved the same Wordpress sites content editing functions using <a rel=\"external\" href=\"https://www.advancedcustomfields.com\">ACF Pro</a></li><li>Reverse engineered existing web applications, fixing bugs and creating technical documentation for them</li><li>Mentored a junior developer and carried out code reviews.</li></ul>",
+    "content": "<p>Working as a senior software developer, I was responsible for developing and expanding several internal software projects, as well as aiding with client work.</p><ul><li>Led a project to create a content organisation application using <a href=\"https://reactjs.org\" rel=\"external\">React</a>, <a href=\"https://nodejs.org\" rel=\"external\">Node</a>, <a href=\"https://expressjs.com\" rel=\"external\">Express</a> and <a href=\"https://www.mongodb.com\" rel=\"external\">MongoDB</a></li><li>Customised and extended the REST API of a headless Wordpress multi-site installation, providing content to custom front end interfaces built with Express and Handlebars</li><li>Expanded and improved the same Wordpress sites content editing functions using <a href=\"https://www.advancedcustomfields.com\" rel=\"external\">ACF Pro</a></li><li>Reverse engineered existing web applications, fixing bugs and creating technical documentation for them</li><li>Mentored a junior developer and carried out code reviews.</li></ul>",
     "skills": [
       {
         "text": "Wordpress",
@@ -291,7 +291,7 @@
     "linkText": "www.starlingbank.com",
     "dateStart": "2017-06-01",
     "dateEnd": "2017-09-01",
-    "content": "<p>Took over responsibility for the marketing and community sites for Starling Bank while a new permanent developer was hired.</p><ul><li>Worked with the marketing team on <a rel=\"external\" href=\"https://www.advancedcustomfields.com\">Advanced Custom Fields</a> customisations and updates to the Wordpress based Starling Bank site</li><li>Advised and aided on performance and SEO optimisation improvement work</li><li>Implemented changes and fixes to the Discourse community site</li></ul>",
+    "content": "<p>Took over responsibility for the marketing and community sites for Starling Bank while a new permanent developer was hired.</p><ul><li>Worked with the marketing team on <a href=\"https://www.advancedcustomfields.com\" rel=\"external\">Advanced Custom Fields</a> customisations and updates to the Wordpress based Starling Bank site</li><li>Advised and aided on performance and SEO optimisation improvement work</li><li>Implemented changes and fixes to the Discourse community site</li></ul>",
     "skills": [
       {
         "text": "Wordpress",
@@ -309,7 +309,7 @@
     "linkText": "www.thisispegasus.co.uk",
     "dateStart": "2017-05-01",
     "dateEnd": "",
-    "content": "<p>A short contract to help cover the maintenance of existing client sites and aid with the implementation of the companies rebranding.</p><ul><li>Worked on updates to multiple Wordpress sites using plugins such as <a rel=\"external\" href=\"https://www.upstatement.com/timber\">Timber</a>, <a rel=\"external\" href=\"https://www.advancedcustomfields.com\">Advanced Custom Fields</a> and alternative code structures such as <a rel=\"external\" href=\"https://roots.io/bedrock\">Bedrock</a></li><li>Partnered with a designer to implement the company rebrand on the intranet, and their blog <a rel=\"external\" href=\"http://www.pegasuspulse.com\">Pegasus Pulse</a> - improved the layout and responsive code</li></ul>",
+    "content": "<p>A short contract to help cover the maintenance of existing client sites and aid with the implementation of the companies rebranding.</p><ul><li>Worked on updates to multiple Wordpress sites using plugins such as <a href=\"https://www.upstatement.com/timber\" rel=\"external\">Timber</a>, <a href=\"https://www.advancedcustomfields.com\" rel=\"external\">Advanced Custom Fields</a> and alternative code structures such as <a href=\"https://roots.io/bedrock\" rel=\"external\">Bedrock</a></li><li>Partnered with a designer to implement the company rebrand on the intranet, and their blog Pegasus Pulse - improved the layout and responsive code</li></ul>",
     "skills": [
       {
         "text": "Wordpress",
@@ -327,7 +327,7 @@
     "linkText": "www.wearetilt.com",
     "dateStart": "2017-04-01",
     "dateEnd": "2017-05-01",
-    "content": "<p>Brought in to cover holiday leave, I worked on Wordpress site builds for two client projects both of which are now live.</p><ul><li>Utilised the <a rel=\"external\" href=\"https://www.advancedcustomfields.com\">Advanced Custom Fields</a> plugin amongst others, to create rich, reusable content modules in Wordpress</li><li>Created front end templates using PHP and the Wordpress template hierarchy</li><li>Implemented responsive layouts from designs provided in Adobe XD</li><li>Worked closely with other developers on these projects to ensure work was carried out efficiently and to deadline</li></ul>",
+    "content": "<p>Brought in to cover holiday leave, I worked on Wordpress site builds for two client projects both of which are now live.</p><ul><li>Utilised the <a href=\"https://www.advancedcustomfields.com\" rel=\"external\">Advanced Custom Fields</a> plugin amongst others, to create rich, reusable content modules in Wordpress</li><li>Created front end templates using PHP and the Wordpress template hierarchy</li><li>Implemented responsive layouts from designs provided in Adobe XD</li><li>Worked closely with other developers on these projects to ensure work was carried out efficiently and to deadline</li></ul>",
     "skills": [
       {
         "text": "Wordpress",
