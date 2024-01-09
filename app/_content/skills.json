@@ -1,0 +1,94 @@
+[
+  {
+    "text": "HTML",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  },
+  {
+    "text": "CSS",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  },
+  {
+    "text": "JavaScript",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    "text": "React",
+    "url": "https://reactjs.org"
+  },
+  {
+    "text": "Next.js",
+    "url": "https://nextjs.org/"
+  },
+  {
+    "text": "Storybook",
+    "url": "https://storybookjs.org"
+  },
+  {
+    "text": "Styled Components",
+    "url": "https://styled-components.com"
+  },
+  {
+    "text": "Webpack",
+    "url": "https://webpack.js.org"
+  },
+  {
+    "text": "Node",
+    "url": "https://nodejs.org"
+  },
+  {
+    "text": "Express",
+    "url": "https://expressjs.com"
+  },
+  {
+    "text": "Wordpress",
+    "url": "https://wordpress.org"
+  },
+  {
+    "text": "Bootstrap",
+    "url": "http://getbootstrap.com"
+  },
+  {
+    "text": "SCSS",
+    "url": "http://sass-lang.com"
+  },
+  {
+    "text": "jQuery",
+    "url": "https://jquery.com"
+  },
+  {
+    "text": "Git",
+    "url": "https://git-scm.com"
+  },
+  {
+    "text": "SVG",
+    "url": "https://www.w3.org/Graphics/SVG"
+  },
+  {
+    "text": "Docker",
+    "url": "https://www.docker.com"
+  },
+  {
+    "text": "CI",
+    "url": "https://en.wikipedia.org/wiki/Continuous_integration"
+  },
+  {
+    "text": "UNIX",
+    "url": "http://www.opengroup.org/unix"
+  },
+  {
+    "text": "Web Accessibility",
+    "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro"
+  },
+  {
+    "text": "Atomic Design",
+    "url": "http://atomicdesign.bradfrost.com"
+  },
+  {
+    "text": "Responsive Design",
+    "url": "https://en.wikipedia.org/wiki/Responsive_web_design"
+  },
+  {
+    "text": "Figma",
+    "url": "https://www.figma.com"
+  }
+]
