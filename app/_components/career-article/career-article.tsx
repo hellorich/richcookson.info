@@ -11,7 +11,7 @@ import { lato } from '@/app/_utilities/fonts'
 import classes from './career-article.module.scss'
 
 interface CareerArticleProps {
-  content: ReactNode | ReactNode[],
+  content: string,
   dateEnd: Date,
   dateStart: Date,
   linkText: string,
@@ -50,10 +50,8 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
           </span>
         </div>
       </header>
-    
-      <div className={classes.content}>
-        {content}
-      </div>
+      
+      <div className={classes.content} dangerouslySetInnerHTML={{ __html: content }} />
 
       <footer>
         <Group>
