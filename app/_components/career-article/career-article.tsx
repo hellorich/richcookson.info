@@ -38,7 +38,7 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
           text={title}
         />
         <div className={classes.metadata}>
-          <Link href={url}>{linkText}</Link>
+          <Link href={url} rel="external">{linkText}</Link>
           <span className={classes.duration}>
             <time dateTime={formatDateForDatetime(dateStart)}>
               {formatDateForDisplay(dateStart)}
