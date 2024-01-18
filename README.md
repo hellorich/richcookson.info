@@ -13,7 +13,8 @@ This app uses Storybook for component development, publishing to Chromatic on ea
 
 ## External Links
 
-Progress and tasks tracked on [Trello](https://trello.com/b/QFbikkXi/richcooksoninfo)
+- Progress and tasks tracked on [Trello](https://trello.com/b/QFbikkXi/richcooksoninfo)
+- Design available on [Figma](https://www.figma.com/file/QDKib2ccPgoUPyaYBeE6eJ/richcookson.info-%2F-design?type=design&node-id=0%3A1&mode=design&t=Wy1nhzZ5RTF2W2hc-1)
 
 ## Deployment
 
