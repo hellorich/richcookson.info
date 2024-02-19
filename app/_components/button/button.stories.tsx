@@ -36,7 +36,7 @@ DefaultButton.play = async ({ canvasElement }) => {
     event.preventDefault()
   })
   link.click()
-  await expect(link).toHaveAttribute('href', 'http://www.google.com/')
+  await expect(link).toHaveAttribute('href', 'http://www.google.com')
 }
 
 // Email button
