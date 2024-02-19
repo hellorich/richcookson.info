@@ -1,0 +1,8 @@
+.p {
+  @include paragraph();
+}
+
+.span {
+  @include paragraph();
+  margin: 0;
+}

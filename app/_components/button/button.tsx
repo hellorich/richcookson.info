@@ -9,7 +9,7 @@ import classes from './button.module.scss'
 interface ButtonProps {
 	icon: React.ReactNode,
   text: string,
-	url: URL,
+	url: string,
 }
 
 const Button = ({ icon, text, url } : ButtonProps) => {
