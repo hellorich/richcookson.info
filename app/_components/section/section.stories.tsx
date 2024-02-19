@@ -48,95 +48,95 @@ export const WithContent: Story = {
       <Group>
         <Skill 
           text="HTML" 
-          url={new URL("https://developer.mozilla.org/en-US/docs/Web/HTML")}
+          url="https://developer.mozilla.org/en-US/docs/Web/HTML"
         />
         <Skill 
           text="CSS" 
-          url={new URL("https://developer.mozilla.org/en-US/docs/Web/CSS")}
+          url="https://developer.mozilla.org/en-US/docs/Web/CSS"
         />
         <Skill 
           text="JavaScript" 
-          url={new URL("https://developer.mozilla.org/en-US/docs/Web/JavaScript")}
+          url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         />
         <Skill 
           text="React" 
-          url={new URL("https://reactjs.org")}
+          url="https://reactjs.org"
         />
         <Skill 
           text="Next.js" 
-          url={new URL("https://nextjs.org/")}
+          url="https://nextjs.org/"
         />
         <Skill 
           text="Storybook" 
-          url={new URL("https://storybookjs.org")}
+          url="https://storybookjs.org"
         />
         <Skill 
           text="Styled Components" 
-          url={new URL("https://styled-components.com")}
+          url="https://styled-components.com"
         />
         <Skill 
           text="Webpack" 
-          url={new URL("https://webpack.js.org")}
+          url="https://webpack.js.org"
         />
         <Skill 
           text="Node" 
-          url={new URL("https://nodejs.org")}
+          url="https://nodejs.org"
         />
         <Skill 
           text="Express" 
-          url={new URL("https://expressjs.com")}
+          url="https://expressjs.com"
         />
         <Skill 
           text="Wordpress" 
-          url={new URL("https://wordpress.org")}
+          url="https://wordpress.org"
         />
         <Skill 
           text="Bootstrap" 
-          url={new URL("http://getbootstrap.com")}
+          url="http://getbootstrap.com"
         />
         <Skill 
           text="SCSS" 
-          url={new URL("http://sass-lang.com")}
+          url="http://sass-lang.com"
         />
         <Skill 
           text="jQuery" 
-          url={new URL("https://jquery.com")}
+          url="https://jquery.com"
         />
         <Skill 
           text="Git" 
-          url={new URL("https://git-scm.com")}
+          url="https://git-scm.com"
         />
         <Skill 
           text="SVG" 
-          url={new URL("https://www.w3.org/Graphics/SVG")}
+          url="https://www.w3.org/Graphics/SVG"
         />
         <Skill 
           text="Docker" 
-          url={new URL("https://www.docker.com")}
+          url="https://www.docker.com"
         />
         <Skill 
           text="CI" 
-          url={new URL("https://en.wikipedia.org/wiki/Continuous_integration")}
+          url="https://en.wikipedia.org/wiki/Continuous_integration"
         />
         <Skill 
           text="UNIX" 
-          url={new URL("http://www.opengroup.org/unix")}
+          url="http://www.opengroup.org/unix"
         />
         <Skill 
           text="Web Accessibility" 
-          url={new URL("https://www.w3.org/WAI/fundamentals/accessibility-intro")}
+          url="https://www.w3.org/WAI/fundamentals/accessibility-intro"
         />
         <Skill 
           text="Atomic Design" 
-          url={new URL("http://atomicdesign.bradfrost.com")}
+          url="http://atomicdesign.bradfrost.com"
         />
         <Skill 
           text="Responsive Design" 
-          url={new URL("https://en.wikipedia.org/wiki/Responsive_web_design")}
+          url="https://en.wikipedia.org/wiki/Responsive_web_design"
         />
         <Skill 
           text="Figma" 
-          url={new URL("https://www.figma.com")}
+          url="https://www.figma.com"
         />
       </Group>
     )
