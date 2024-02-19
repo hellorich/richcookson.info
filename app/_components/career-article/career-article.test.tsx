@@ -10,11 +10,11 @@ describe('CareerArticle', () => {
     render(
       <CareerArticle
         title="Test title"
-        url={new URL("https://www.google.com/")}
+        url="https://www.google.com/"
         linkText="www.google.com"
         dateStart={startDate}
         dateEnd={endDate}
-        content={<p>Content</p>}
+        content="<p>Content</p>"
         skills={<div><p>Test Skill 1</p><p>Test Skill 2</p></div>}
       />
     )

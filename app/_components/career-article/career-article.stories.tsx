@@ -19,7 +19,7 @@ type Story = StoryObj<typeof CareerArticle>
 export const Default: Story = {
   args: {
     title: 'Building a single page web app in React for Hugo and Cat',
-    url: new URL('http://www.hugoandcat.com'),
+    url: "http://www.hugoandcat.com",
     linkText: 'www.hugoandcat.com',
     dateEnd: new Date('2023, 01, 01'),
     dateStart: new Date('2022, 10, 01'),
@@ -27,15 +27,15 @@ export const Default: Story = {
     skills: [
       <Skill 
         text="React" 
-        url={new URL('https://reactjs.org')}
+        url="https://reactjs.org"
       />,
       <Skill 
         text="Storybook" 
-        url={new URL('https://storybookjs.org')}
+        url="https://storybookjs.org"
       />,
       <Skill 
         text="Styled Components" 
-        url={new URL('https://styled-components.com')}
+        url="https://styled-components.com"
       />,
     ]
   },
