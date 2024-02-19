@@ -3,18 +3,18 @@
 // -----------------------------------------------------------------------------
 
 .skill {
-	background-color: setColor(neutral, gray-40);
-	color: setColor(neutral, white);
-	display: inline-block;
-	font-size: rem(17);
-	min-width: rem(80);
-	padding: rem(8);
-	text-align: center;
-	text-decoration: none;
+  background-color: setColor(neutral, gray-40);
+  color: setColor(neutral, white);
+  display: inline-block;
+  font-size: rem(17);
+  min-width: rem(80);
+  padding: rem(8);
+  text-align: center;
+  text-decoration: none;
 
-	// [Todo] - We shouldn't use functions like darken as it introduces random colors
-	// Change this when we set up a final color palette 
-	&:visited {
-		background-color: darken(setColor(neutral, gray-40), 10%);
-	}
+  // [Todo] - We shouldn't use functions like darken as it introduces random colors
+  // Change this when we set up a final color palette
+  &:visited {
+    background-color: darken(setColor(neutral, gray-40), 10%);
+  }
 }

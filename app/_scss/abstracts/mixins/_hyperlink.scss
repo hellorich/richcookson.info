@@ -5,12 +5,15 @@
 @mixin hyperlink() {
   text-decoration: none;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: setColor(neutral, black);
     text-decoration: underline;
   }
 
-  &:active, &:focus, &:hover {
+  &:active,
+  &:focus,
+  &:hover {
     //color: set-color(brand, accent);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
