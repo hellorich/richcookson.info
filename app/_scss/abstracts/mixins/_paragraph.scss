@@ -2,7 +2,7 @@
 // Paragraphs
 // -----------------------------------------------------------------------------
 
-p {
+@mixin paragraph() {
   color: setColor(neutral, gray-20);
   font-size: rem(17);
   line-height: 1.35;
