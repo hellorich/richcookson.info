@@ -21,7 +21,7 @@ export const Paragraph : Story = {
   },
 }
 
-export const Inline : Story = {
+export const Span : Story = {
   args: {
     inline: true,
     children: 'The quick brown fox jumps over the lazy dog',
