@@ -5,7 +5,7 @@ import { FaCoffee } from 'react-icons/fa'
 
 describe('Button', () => {
   beforeEach(() => {
-    render(<Button icon={<FaCoffee />} text="Test Button" url="https://www.google.com/" />)
+    render(<Button icon={<FaCoffee />} text="Test Button" url="https://www.google.com" />)
   })
 
   it('renders the button with text', () => {
@@ -15,6 +15,6 @@ describe('Button', () => {
 
   it('renders the button with correct href', () => {
     const buttonElement = screen.getByRole('link')
-    expect(buttonElement).toHaveAttribute('href', 'https://www.google.com/')
+    expect(buttonElement).toHaveAttribute('href', 'https://www.google.com')
   })
 })

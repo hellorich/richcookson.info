@@ -10,7 +10,7 @@ describe('CareerArticle', () => {
     render(
       <CareerArticle
         title="Test title"
-        url="https://www.google.com/"
+        url="https://www.google.com"
         linkText="www.google.com"
         dateStart={startDate}
         dateEnd={endDate}
@@ -27,7 +27,7 @@ describe('CareerArticle', () => {
 
   it('renders the article with correct href', () => {
     const linkElement = screen.getByRole('link')
-    expect(linkElement).toHaveAttribute('href', 'https://www.google.com/')
+    expect(linkElement).toHaveAttribute('href', 'https://www.google.com')
   })
 
   it('renders the link text correctly', () => {
