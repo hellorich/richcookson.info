@@ -7,7 +7,7 @@ import styles from './skill.module.scss'
 
 interface SkillProps {
   text: string,
-	url: URL,
+	url: string,
 }
 
 const Skill = ({ text, url } : SkillProps) => {

@@ -17,7 +17,7 @@ interface CareerArticleProps {
   linkText: string,
   skills: ReactNode | ReactNode[],
   title: string,
-  url: URL,
+  url: string,
 }
 
 const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, url } : CareerArticleProps) => {

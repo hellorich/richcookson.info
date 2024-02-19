@@ -40,7 +40,7 @@ export default function HomePage() {
             <Skill 
               key={index}
               text={skill.text} 
-              url={new URL(skill.url)}
+              url={skill.url}
             />
           ))}
         </Group>
@@ -59,7 +59,7 @@ export default function HomePage() {
           <CareerArticle
             key={index}
             title={article.title}
-            url={new URL(article.url)}
+            url={article.url}
             linkText={article.linkText}
             dateEnd={new Date(article.dateEnd)}
             dateStart={new Date(article.dateStart)}
@@ -68,7 +68,7 @@ export default function HomePage() {
               <Skill 
                 key={skill.text}
                 text={skill.text} 
-                url={new URL(skill.url)}
+                url={skill.url}
               />
             ))}
           />
