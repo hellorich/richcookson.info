@@ -20,7 +20,7 @@ type Story = StoryObj<typeof Button>
 export const DefaultButton: Story = {
   args: {
     text: 'Button',
-		url: new URL('http://www.google.com'),
+		url: 'http://www.google.com',
   },
 }
 
@@ -45,7 +45,7 @@ export const EmailButton: Story = {
   args: {
 		icon: <FaEnvelope aria-label="Email"/>,
     text: 'rich.cookson@frobitz.com',
-		url: new URL('mailto:rich.cookson@frobitz.com'),
+		url: 'mailto:rich.cookson@frobitz.com',
   },
 }
 
@@ -66,7 +66,7 @@ export const GithubButton: Story = {
   args: {
 		icon: <FaGithub aria-label="Github logo"/>,
     text: 'Github',
-		url: new URL('https://github.com/hellorich'),
+		url: 'https://github.com/hellorich',
   },
 }
 
@@ -87,7 +87,7 @@ export const MastodonButton: Story = {
   args: {
 		icon: <FaMastodon aria-label="Mastodon logo"/>,
     text: 'Mastodon',
-		url: new URL('https://github.com/hellorich'),
+		url: 'https://github.com/hellorich',
   },
 }
 
@@ -108,7 +108,7 @@ export const PhoneButton: Story = {
   args: {
 		icon: <FaMobileButton aria-label="Phone"/>,
     text: '+44 7792 871 698',
-		url: new URL('tel:+447792871698'),
+		url: 'tel:+447792871698',
   },
 }
 

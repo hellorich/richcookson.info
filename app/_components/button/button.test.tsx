@@ -5,7 +5,7 @@ import { FaCoffee } from 'react-icons/fa'
 
 describe('Button', () => {
   beforeEach(() => {
-    render(<Button icon={<FaCoffee />} text="Test Button" url={new URL('https://www.google.com/')} />)
+    render(<Button icon={<FaCoffee />} text="Test Button" url="https://www.google.com/" />)
   })
 
   it('renders the button with text', () => {
