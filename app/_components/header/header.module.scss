@@ -22,5 +22,6 @@
     @extend .grid-item;
     @extend .xs-10;
     border-bottom: rem(1) solid setColor(neutral, gray-85);
+    margin-bottom: 0;
   }
 }
