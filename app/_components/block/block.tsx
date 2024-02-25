@@ -7,6 +7,6 @@ interface BlockProps {
 }
 
 const Block = ({ children } : BlockProps) => 
-  <div className={classes.div}>{children}</div>
+  <div className={classes.div} data-testid="div">{children}</div>
 
 export default Block
