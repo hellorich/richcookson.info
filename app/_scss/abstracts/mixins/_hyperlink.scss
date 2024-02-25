@@ -13,7 +13,7 @@
   &:active,
   &:focus,
   &:hover {
-    color: set-color(primary, blue);
+    color: setColor(secondary, redOrange);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
 
