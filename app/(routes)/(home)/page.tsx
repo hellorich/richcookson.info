@@ -1,27 +1,32 @@
 import { Header } from '@/app/_components/header'
-import { Group } from '@/app/_components/group'
-import { Skill } from '@/app/_components/skill'
-import { Block } from '@/app/_components/block'
-import { Text } from '@/app/_components/text'
 import { Section } from '@/app/_components/section'
+import { Block } from '@/app/_components/block'
+import { Group } from '@/app/_components/group'
+import { Button } from '@/app/_components/button'
+import { Skill } from '@/app/_components/skill'
+import { Text } from '@/app/_components/text'
+
 import { CareerArticle } from '@/app/_components/career-article'
 
+// ToDo: This is a temporary solution to get the data into the page while I build CMS functionality
 import skillsData from '@/app/_content/skills.json'
 import articlesData from '@/app/_content/articles.json'
 
+import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
+
 interface Skill {
-  text: string;
-  url: string;
+  text: string
+  url: string
 }
 
 interface Article {
-  title: string;
-  url: string;
-  linkText: string;
-  dateEnd: string;
-  dateStart: string;
-  content: string;
-  skills: Skill[];
+  title: string
+  url: string
+  linkText: string
+  dateEnd: string
+  dateStart: string
+  content: string
+  skills: Skill[]
 }
 
 const skills: Skill[] = skillsData
@@ -37,6 +42,31 @@ export default function HomePage() {
       <Block>
         <Text>Hi, I&apos;m Rich. I&apos;m a senior web developer with over 14 years of freelance expertise, working both for digital agencies and directly for organisations such as the BBC, Time Inc and Starling Bank.</Text>
         <Text>My core expertise is front end development, but I&apos;ve worked with a variety of surrounding technologies over my career and am able to adapt quickly to new technologies as required by a project.</Text>
+      </Block>
+
+      <Block>
+        <Group>
+          <Button 
+            icon={<FaEnvelope aria-label="Email"/>} 
+            text="rich.cookson@frobitz.com" 
+            url="mailto:rich.cookson@frobitz.com"
+          />
+          <Button 
+            icon={<FaMobileButton aria-label="Phone"/>} 
+            text="+44 7792 871 698" 
+            url="tel:+447792871698"
+          />
+          <Button 
+            icon={<FaGithub aria-label="Github logo"/>} 
+            text="Github" 
+            url="https://github.com/hellorich"
+          />
+          <Button 
+            icon={<FaMastodon aria-label="Mastodon logo"/>} 
+            text="Mastodon" 
+            url="https://github.com/hellorich"
+          />
+        </Group>
       </Block>
 
       <Section
