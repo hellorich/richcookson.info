@@ -6,9 +6,9 @@
 
 @mixin group-horizontal() {
   display: flex;
-	flex-wrap: wrap;
-	gap: rem(8);
-	list-style: none;
-	margin: rem(16) 0;
-	padding: 0;
+  flex-wrap: wrap;
+  gap: rem(8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

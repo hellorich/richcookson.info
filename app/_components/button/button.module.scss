@@ -4,7 +4,7 @@
 
 .button {
   align-items: center;
-  background-color: setColor(neutral, gray-40);
+  background-color: setColor(primary, cyan);
   border-radius: rem(8);
   color: setColor(neutral, white);
   display: inline-flex;
@@ -20,7 +20,7 @@
   // [Todo] - We shouldn't use functions like darken as it introduces random colors
   // Change this when we set up a final color palette
   &:hover {
-    background-color: darken(setColor(neutral, gray-20), 10%);
+    background-color: setColor(secondary, redOrange);
   }
 }
 

@@ -1,22 +1,23 @@
 $palettes: (
   neutral: (
     white: rgb(255, 255, 255),
-    gray-90: rgb(230, 230, 230), // Used
+    gray-90: rgb(230, 230, 230),
+    // Used
     gray-85: rgb(217, 217, 217),
     gray-80: rgb(204, 204, 204),
     gray-60: rgb(154, 154, 154),
     gray-50: rgb(128, 128, 128),
     gray-40: rgb(103, 103, 103),
     gray-20: rgb(52, 52, 52),
-		gray-10: rgb(40, 40, 40),
+    gray-10: rgb(40, 40, 40),
     black: rgb(0, 0, 0),
   ),
-	primary: (
-		blue: rgb(25, 118, 210),
-		cyan: rgb(0, 159, 218),
-	),
-	secondary: (
-		orange: rgb(255, 165, 0),
-		redOrange: rgb(255, 83, 73),
-	)
+  primary: (
+    blue: rgb(5, 79, 185),
+    cyan: rgb(0, 115, 230),
+  ),
+  secondary: (
+    orange: rgb(255, 165, 0),
+    redOrange: rgb(235, 23, 0),
+  ),
 );

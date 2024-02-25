@@ -24,6 +24,15 @@ export const DefaultButton: Story = {
   },
 }
 
+// Button Hover state
+export const OnHover: Story = {
+  args: {
+    text: 'Button',
+		url: 'http://www.google.com',
+  },
+}
+OnHover.parameters = { pseudo: { hover: true } }
+
 DefaultButton.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   const link = await canvas.getByRole('link')
