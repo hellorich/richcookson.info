@@ -1,0 +1,10 @@
+.div {
+  @extend .grid-item;
+  @extend .md-offset-2;
+  @extend .md-10;
+  margin-bottom: 1.5rem;
+
+  @include respond-above(md) {
+    margin-bottom: 2rem;
+  }
+}
