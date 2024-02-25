@@ -3,7 +3,7 @@
   @extend .md-offset-2;
   @extend .md-10;
 
-  :last-child {
+  > p:last-of-type {
     margin-bottom: 0;
   }
 }
