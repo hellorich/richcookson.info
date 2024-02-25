@@ -1,6 +1,8 @@
 import { Header } from '@/app/_components/header'
 import { Group } from '@/app/_components/group'
 import { Skill } from '@/app/_components/skill'
+import { Block } from '@/app/_components/block'
+import { Text } from '@/app/_components/text'
 import { Section } from '@/app/_components/section'
 import { CareerArticle } from '@/app/_components/career-article'
 
@@ -31,6 +33,11 @@ export default function HomePage() {
   return (
     <div className={classes.page}>
       <Header title="Rich Cookson" />
+      
+      <Block>
+        <Text>Hi, I&apos;m Rich. I&apos;m a senior web developer with over 14 years of freelance expertise, working both for digital agencies and directly for organisations such as the BBC, Time Inc and Starling Bank.</Text>
+        <Text>My core expertise is front end development, but I&apos;ve worked with a variety of surrounding technologies over my career and am able to adapt quickly to new technologies as required by a project.</Text>
+      </Block>
 
       <Section
         title="Skills"
@@ -73,6 +80,13 @@ export default function HomePage() {
             ))}
           />
         ))}
+      </Section>
+
+      <Section
+        title="And finally&hellip;"
+      >
+        <Text>I&apos;m a big music fan and love going to see bands play live locally. I&apos;m also a life long fan of video games.</Text>
+        <Text>More actively, I enjoy running, swimming and hiking the coast and countryside around Brighton.</Text>
       </Section>
     </div>
   )
