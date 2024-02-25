@@ -7,14 +7,13 @@
 
   &:link,
   &:visited {
-    color: setColor(neutral, black);
-    text-decoration: underline;
+    color: setColor(primary, cyan);
   }
 
   &:active,
   &:focus,
   &:hover {
-    //color: set-color(brand, accent);
+    color: set-color(primary, blue);
     outline: none; // [TODO] - Make better outline that looks good in all contexts
   }
 
