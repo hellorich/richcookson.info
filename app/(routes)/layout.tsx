@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Richard Cookson - Front end web developer and designer',
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <Analytics />
       </body>
     </html>
   )
