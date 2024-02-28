@@ -1,13 +1,15 @@
 import React from 'react'
+import { clsx } from 'clsx'
 
 import classes from './group.module.scss'
 
 interface GroupProps {
-  children?: React.ReactNode,
+  children?: React.ReactNode
+	stack?: boolean
 }
 
 // Make it expect an array of react components?
-const Group = ({ children } : GroupProps) => {
+const Group = ({ children, stack } : GroupProps) => {
 	const childrenArray = React.Children.toArray(children)
 
 	if (childrenArray.length === 0) {
@@ -15,7 +17,9 @@ const Group = ({ children } : GroupProps) => {
   }
 
 	return (
-		<ul className={classes.group} data-testid="group">
+		<ul className={clsx(classes.group, {
+			[classes.stack]: stack 
+		})} data-testid="group">
 			{childrenArray.map((child, index) => (
         <li key={index}>{child}</li>
       ))}

@@ -3,5 +3,11 @@
 // -----------------------------------------------------------------------------
 
 .group {
-	@include group-horizontal;
+  @include group-horizontal;
+}
+
+.stack {
+  @include respond-below(md) {
+    @include group-vertical;
+  }
 }
