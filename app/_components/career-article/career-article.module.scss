@@ -22,6 +22,11 @@
     margin-top: 0;
   }
 
+  @include respond-below(md) {
+    @include group-vertical();
+    margin-top: 0;
+  }
+
   a {
     @include hyperlink();
   }
