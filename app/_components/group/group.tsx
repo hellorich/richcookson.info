@@ -17,9 +17,8 @@ const Group = ({ children, stack } : GroupProps) => {
   }
 
 	return (
-		<ul className={clsx({
-			[classes.group]: true,
-			[classes.stack]: stack,
+		<ul className={clsx(classes.group, {
+			[classes.stack]: stack 
 		})} data-testid="group">
 			{childrenArray.map((child, index) => (
         <li key={index}>{child}</li>
