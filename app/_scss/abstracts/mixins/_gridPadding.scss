@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 @mixin grid-padding() {
-  padding: $grid-v-padding * 1.5 $grid-h-padding * 1.5;
+  padding: $grid-v-padding * 0.5 $grid-h-padding * 0.5;
 
   @include respond-above(md) {
     padding: $grid-v-padding * 2 $grid-h-padding * 2;
