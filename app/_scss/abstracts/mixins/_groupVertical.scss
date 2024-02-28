@@ -1,0 +1,15 @@
+//
+// Group: Horizontal
+// Aligns child elements vertically
+// Usage: @include group-vertical()
+// -----------------------------------------------------------------------------
+
+@mixin group-vertical() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: rem(8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

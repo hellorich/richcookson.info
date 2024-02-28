@@ -45,7 +45,7 @@ export default function HomePage() {
       </Block>
 
       <Block>
-        <Group>
+        <Group stack>
           <Button 
             icon={<FaEnvelope aria-label="Email"/>} 
             text="rich.cookson@frobitz.com" 

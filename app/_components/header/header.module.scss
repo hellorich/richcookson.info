@@ -5,6 +5,11 @@
 .header {
   @include grid($padding: false);
   @extend .grid-item;
+  text-align: center;
+
+  @include respond-above(md) {
+    text-align: left;
+  }
 
   // Avatar
   &:before {
@@ -16,6 +21,11 @@
     content: "";
     display: block;
     height: rem(80);
+
+    @include respond-below(md) {
+      background-position: top center;
+      margin-bottom: rem(8);
+    }
   }
 
   .h1 {
