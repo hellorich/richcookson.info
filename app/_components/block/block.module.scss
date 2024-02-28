@@ -1,7 +1,7 @@
 .div {
   @extend .grid-item;
   @extend .md-offset-2;
-  @extend .md-10;
+  @extend .md-9;
 
   > p:last-of-type {
     margin-bottom: 0;

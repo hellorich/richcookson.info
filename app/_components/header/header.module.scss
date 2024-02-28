@@ -9,7 +9,7 @@
   // Avatar
   &:before {
     @extend .grid-item;
-    @extend .xs-2;
+    @extend .md-2;
     background-image: url("/images/png/avatar.png");
     background-position: top right;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
   .h1 {
     @extend .grid-item;
-    @extend .xs-10;
+    @extend .md-9;
     border-bottom: rem(1) solid setColor(neutral, gray-85);
     margin-bottom: 0;
   }
