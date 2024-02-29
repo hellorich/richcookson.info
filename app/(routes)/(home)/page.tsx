@@ -64,7 +64,7 @@ export default function HomePage() {
           <Button 
             icon={<FaMastodon aria-label="Mastodon logo"/>} 
             text="Mastodon" 
-            url="https://github.com/hellorich"
+            url="https://mastodon.social/@hellorich"
           />
         </Group>
       </Block>
