@@ -5,7 +5,7 @@
     "linkText": "megaslice.uk",
     "dateStart": "2023-11-01",
     "dateEnd": "2023-12-01",
-    "content": "<p>Implemented the UI for a new eCommerce site using Mantine, Next.js and Storybook.</p><ul><li>Customising Mantine components and composing further components to fit UX wire-frames provided</li><li>Built out pages and routes using the new Next.js App Router</li><li>Worked with back-end engineer, coordinating daily on progress and advising on integration</li></ul>",
+    "content": "<p>Implemented the UI for a MVP of a new eCommerce site using Mantine, Next.js and Storybook.</p><ul><li>Customising Mantine components and composing further components to fit UX wire-frames provided</li><li>Built out pages and routes using the new Next.js App Router</li><li>Worked with back-end engineer, coordinating daily on progress and advising on integration</li></ul>",
     "skills": [
       {
         "text": "TypeScript",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "title": "Building Next.js applications for We are Tilt",
+    "title": "Building Next.js applications for Tilt",
     "url": "https://www.wearetilt.com",
     "linkText": "www.wearetilt.com",
     "dateStart": "2023-01-01",

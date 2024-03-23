@@ -2,10 +2,10 @@
   @extend .grid-item;
   @extend .md-offset-2;
   @extend .md-9;
-  margin-bottom: 1.5rem;
+  margin: rem(12) 0;
 
   @include respond-above(md) {
-    margin-bottom: 2rem;
+    margin-bottom: rem(16);
   }
 }
 
@@ -15,7 +15,11 @@
 }
 
 .description {
-  margin-bottom: rem(32);
+  margin-bottom: rem(24);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   a {
     @include hyperlink();
