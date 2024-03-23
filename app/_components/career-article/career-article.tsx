@@ -12,7 +12,7 @@ import classes from './career-article.module.scss'
 
 interface CareerArticleProps {
   content: string,
-  dateEnd: Date,
+  dateEnd?: Date,
   dateStart: Date,
   linkText: string,
   skills: ReactNode | ReactNode[],
@@ -23,6 +23,13 @@ interface CareerArticleProps {
 const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, url } : CareerArticleProps) => {
   const formatDateForDisplay = (date : Date) => new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
 	
+  const formatDateNow = () => {
+    const now = new Date()
+      const year = now.getFullYear()
+      const month = (now.getMonth() + 1).toString().padStart(2, '0')
+      return `${year}-${month}`
+  }
+
   const formatDateForDatetime = (date: Date) => {
     const year = date.getFullYear()
     const month = (date.getMonth() + 1).toString().padStart(2, '0')
@@ -44,8 +51,8 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
               {formatDateForDisplay(dateStart)}
             </time>
             {' '}to{' '} 
-            <time dateTime={formatDateForDatetime(dateEnd)}>
-              {formatDateForDisplay(dateEnd)}
+            <time dateTime={dateEnd ? formatDateForDatetime(dateEnd) : formatDateNow()}>
+              {dateEnd ? formatDateForDisplay(dateEnd) : 'Present'}
             </time>
           </span>
         </div>

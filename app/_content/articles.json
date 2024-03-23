@@ -1,8 +1,46 @@
 [
   {
+    "title": "Fixing issues and adding features to a web app for Tryka",
+    "url": "https://tryka.com",
+    "linkText": "www.tryka.com",
+    "dateStart": "2024-02-01",
+    "content": "<p>Brought in to fix ongoing issues with a web site providing custom PDF data sheets for bespoke light installations.</p><ul><li>Making fixes and adjustments to a complex Angular application and its FireBase backend</li><li>Investigating search engine visibility problems and making improvements to gain greater traffic</li></ul>",
+    "skills": [
+      {
+        "text": "Angular",
+        "url": "https://angular.io/"
+      },
+      {
+        "text": "Firebase",
+        "url": "https://firebase.google.com/"
+      },
+      {
+        "text": "TypeScript",
+        "url": "https://www.typescriptlang.org/"
+      }
+    ]
+  },
+  {
+    "title": "Maintaining a WooCommerce site for SLC",
+    "url": "https://specialistlanguagecourses.com",
+    "linkText": "www.specialistlanguagecourses.com",
+    "dateStart": "2024-02-01",
+    "content": "<p>Working as a technical consultant and developer for a WooCommerce site providing language courses for medical professionals.</p><ul><li>Carrying out weekly review and installation of plugin updates for WordPress</li><li>Advising staff on issues with payment processes as required</li><li>Setting up payment testing mechanisms</li></ul>",
+    "skills": [
+      {
+        "text": "Wordpress",
+        "url": "https://wordpress.org"
+      },
+      {
+        "text": "WooCommerce",
+        "url": "https://woocommerce.com"
+      }
+    ]
+  },
+  {
     "title": "Constructing Next.js front end components for Megaslice",
     "url": "https://megaslice.uk",
-    "linkText": "megaslice.uk",
+    "linkText": "www.megaslice.uk",
     "dateStart": "2023-11-01",
     "dateEnd": "2023-12-01",
     "content": "<p>Implemented the UI for a MVP of a new eCommerce site using Mantine, Next.js and Storybook.</p><ul><li>Customising Mantine components and composing further components to fit UX wire-frames provided</li><li>Built out pages and routes using the new Next.js App Router</li><li>Worked with back-end engineer, coordinating daily on progress and advising on integration</li></ul>",
@@ -112,7 +150,7 @@
     ]
   },
   {
-    "title": "Wordpress and Fractal style-guide updates for Hugo and Cat",
+    "title": "Wordpress and Fractal style-guide updates for Hugo & Cat",
     "url": "https://www.hugoandcat.com",
     "linkText": "www.hugoandcat.com",
     "dateStart": "2020-09-01",
@@ -130,7 +168,7 @@
     ]
   },
   {
-    "title": "Web app optimisation for Hugo and Cat",
+    "title": "Web app optimisation for Hugo & Cat",
     "url": "https://www.hugoandcat.com",
     "linkText": "www.hugoandcat.com",
     "dateStart": "2020-06-01",
@@ -184,7 +222,7 @@
     ]
   },
   {
-    "title": "Working on legacy applications for Hugo and Cat",
+    "title": "Working on legacy applications for Hugo & Cat",
     "url": "https://www.hugoandcat.com",
     "linkText": "www.hugoandcat.com",
     "dateStart": "2019-11-01",
