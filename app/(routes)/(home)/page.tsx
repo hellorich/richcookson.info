@@ -23,7 +23,7 @@ interface Article {
   title: string
   url: string
   linkText: string
-  dateEnd: string
+  dateEnd?: string
   dateStart: string
   content: string
   skills: Skill[]
