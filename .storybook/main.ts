@@ -14,19 +14,19 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-essentials',
-		'@storybook/addon-interactions',
-		'@storybook/addon-links',
+    '@storybook/addon-interactions',
+    '@storybook/addon-links',
     '@storybook/addon-onboarding',
-    '@storybook/addon-storyshots',
-    'storybook-addon-pseudo-states',
-		{
-			name: '@storybook/addon-coverage',
-			options: {
-				istanbul: {
-					...coverageConfig,
-				},
-			},
-		},
+    '@chromatic-com/storybook',
+    {
+        name: '@storybook/addon-coverage',
+        options: {
+            istanbul: {
+                ...coverageConfig,
+            },
+        },
+    },
+    
   ],
   docs: {
     autodocs: 'tag',

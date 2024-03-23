@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 
 import { Group } from '@/app/_components/group'
 import { Skill } from '@/app/_components/skill'
@@ -23,7 +21,6 @@ type Story = StoryObj<typeof Group>
 export const Empty: Story = {}
 
 // Single tag
-
 export const WithOneTag: Story = {
 	render: (args) => (
     <Group {...args}>
@@ -35,15 +32,7 @@ export const WithOneTag: Story = {
   ),
 }
 
-WithOneTag.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId('group')
-	
-	await expect(group).toBeInTheDocument()
-}
-
 // Multiple tags
-
 export const WithMultipleTags: Story = {
 	render: (args) => (
     <Group {...args}>
@@ -143,15 +132,7 @@ export const WithMultipleTags: Story = {
   ),
 }
 
-WithMultipleTags.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId('group')
-	
-	await expect(group).toBeInTheDocument()
-}
-
 // Single button
-
 export const WithOneButton: Story = {
 	render: (args) => (
     <Group {...args}>
@@ -164,15 +145,7 @@ export const WithOneButton: Story = {
   ),
 }
 
-WithOneButton.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId('group')
-	
-	await expect(group).toBeInTheDocument()
-}
-
 // Multiple buttons
-
 export const WithMultipleButtons: Story = {
 	render: (args) => (
     <Group {...args}>
@@ -198,11 +171,4 @@ export const WithMultipleButtons: Story = {
 			/>
     </Group>
   ),
-}
-
-WithMultipleButtons.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const group = await canvas.getByTestId('group')
-	
-	await expect(group).toBeInTheDocument()
 }

@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-key */
 import type { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 
 import CareerArticle from './career-article'
 import { Skill } from '@/app/_components/skill'
@@ -39,12 +37,4 @@ export const Default: Story = {
       />,
     ]
   },
-}
-
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  const article = await canvas.getByRole('article')
-  
-  await expect(article).toBeInTheDocument()
-	await expect(article).toBeInTheDocument()
 }

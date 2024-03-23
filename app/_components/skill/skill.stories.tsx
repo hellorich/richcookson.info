@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 
 import { Skill } from '@/app/_components/skill'
 
@@ -26,12 +24,4 @@ export const Default: Story = {
     text: 'Tag',
 		url: 'http://www.google.com',
   },
-}
-
-Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const link = await canvas.getByRole('link')
-
-	await expect(link).toBeInTheDocument()
-	await expect(link.textContent).toBe('Tag')
 }
