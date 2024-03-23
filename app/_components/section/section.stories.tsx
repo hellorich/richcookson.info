@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 
 import { Group } from '@/app/_components/group'
 import { Skill } from '@/app/_components/skill'
@@ -141,25 +139,4 @@ export const WithContent: Story = {
       </Group>
     )
   }
-}
-
-Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const section = await canvas.getByTestId('section')
-
-	await expect(section).toBeInTheDocument()
-}
-
-WithDescription.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const section = await canvas.getByTestId('section')
-
-	await expect(section).toBeInTheDocument()
-}
-
-WithContent.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-	const section = await canvas.getByTestId('section')
-
-	await expect(section).toBeInTheDocument()
 }

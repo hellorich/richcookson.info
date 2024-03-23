@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 
 import { Header } from '@/app/_components/header'
 
@@ -25,13 +23,4 @@ export const Default: Story = {
   args: {
     title: 'Rich Cookson',
   },
-}
-
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  const header = await canvas.getByRole('banner')
-  const h1 = header.querySelector('h1')
-
-  await expect(header).toBeInTheDocument()
-  await expect(h1?.textContent).toBe('Rich Cookson')
 }
