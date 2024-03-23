@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .article {
-  margin-bottom: rem(24);
+  margin: rem(24) 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -39,6 +39,8 @@
 }
 
 .content {
+  margin: rem(8) 0 rem(16);
+
   p {
     @include paragraph();
     margin-bottom: rem(8);
