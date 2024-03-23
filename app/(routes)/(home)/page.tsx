@@ -98,7 +98,7 @@ export default function HomePage() {
             title={article.title}
             url={article.url}
             linkText={article.linkText}
-            dateEnd={new Date(article.dateEnd)}
+            dateEnd={article.dateEnd ? new Date(article.dateEnd) : undefined}
             dateStart={new Date(article.dateStart)}
             content={article.content}
             skills={article.skills.map(skill => (
