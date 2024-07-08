@@ -25,9 +25,9 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
 	
   const formatDateNow = () => {
     const now = new Date()
-      const year = now.getFullYear()
-      const month = (now.getMonth() + 1).toString().padStart(2, '0')
-      return `${year}-${month}`
+    const year = now.getFullYear()
+    const month = (now.getMonth() + 1).toString().padStart(2, '0')
+    return `${year}-${month}`
   }
 
   const formatDateForDatetime = (date: Date) => {
