@@ -11,16 +11,29 @@
     font-size: rem(48);
     line-height: 1;
   }
+
+  @media print {
+    font-size: rem(40);
+  }
 }
 
 .h2 {
   @include heading();
   font-size: rem(40);
   margin-bottom: rem(8);
+
+  @media print {
+    font-size: rem(24);
+  }
 }
 
 .h3 {
   @include heading();
   font-size: rem(32);
   margin-bottom: rem(8);
+
+  @media print {
+    font-size: rem(18);
+    margin-bottom: rem(4);
+  }
 }

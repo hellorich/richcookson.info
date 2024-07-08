@@ -22,6 +22,11 @@
   &:hover {
     background-color: setColor(secondary, redOrange);
   }
+
+  @media print {
+    font-size: rem(14);
+    padding: rem(6) rem(8);
+  }
 }
 
 .text {

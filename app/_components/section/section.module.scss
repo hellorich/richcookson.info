@@ -12,10 +12,19 @@
 .h2 {
   border-bottom: rem(1) solid setColor(neutral, gray-85);
   padding-bottom: rem(8);
+
+  @media print {
+    margin-bottom: rem(4);
+    padding-bottom: rem(8);
+  }
 }
 
 .description {
   margin-bottom: rem(24);
+
+  @media print {
+    margin-bottom: rem(8);
+  }
 
   &:last-child {
     margin-bottom: 0;

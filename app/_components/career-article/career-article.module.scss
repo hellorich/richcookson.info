@@ -8,10 +8,23 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media print {
+    display: none;
+    page-break-inside: avoid;
+
+    &:nth-child(-n + 9) {
+      display: block;
+    }
+  }
 }
 
 .header {
   margin-bottom: rem(8);
+
+  @media print {
+    margin-bottom: rem(4);
+  }
 
   h3 {
     text-wrap: pretty;
@@ -19,11 +32,12 @@
 }
 
 .metadata {
+  @include group-horizontal();
   font-size: rem(17);
+  margin-top: 0;
 
-  @include respond-above(md) {
-    @include group-horizontal();
-    margin-top: 0;
+  @media print {
+    font-size: rem(13);
   }
 
   @include respond-below(md) {
@@ -39,7 +53,17 @@
 .duration {
   color: setColor(neutral, gray-20);
   display: block;
-  margin-right: rem(4);
+
+  &:after {
+    color: setColor(neutral, gray-20);
+    content: "•";
+    display: inline-block;
+    margin-left: rem(8);
+
+    @include respond-below(md) {
+      display: none;
+    }
+  }
 }
 
 .content {

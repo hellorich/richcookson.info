@@ -17,4 +17,9 @@
   &:visited {
     background-color: setColor(primary, blue);
   }
+
+  @media print {
+    font-size: rem(13);
+    padding: rem(6) rem(8);
+  }
 }

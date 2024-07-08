@@ -26,6 +26,10 @@
       background-position: top center;
       margin-bottom: rem(8);
     }
+
+    @media print {
+      display: none;
+    }
   }
 
   .h1 {
@@ -33,5 +37,9 @@
     @extend .md-9;
     border-bottom: rem(1) solid setColor(neutral, gray-85);
     margin-bottom: 0;
+
+    @media print {
+      width: 100%;
+    }
   }
 }
