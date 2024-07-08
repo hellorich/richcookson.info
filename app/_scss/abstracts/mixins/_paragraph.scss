@@ -7,4 +7,8 @@
   font-size: rem(17);
   line-height: 1.35;
   margin: 0 0 rem(16);
+
+  @media print {
+    font-size: rem(13);
+  }
 }

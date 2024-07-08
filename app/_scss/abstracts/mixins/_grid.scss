@@ -21,4 +21,9 @@
   @if $padding {
     @include grid-padding;
   }
+
+  @media print {
+    display: flex;
+    flex-direction: column;
+  }
 }
