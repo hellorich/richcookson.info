@@ -1,20 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
 import chromium from 'chrome-aws-lambda'
-import playwright from 'playwright-core'
+import playwright, { Browser } from 'playwright-core'
 
-async function getBrowser() {
-  const executablePath = process.env.NODE_ENV === 'production'
-    ? await chromium.executablePath
-    : '/opt/homebrew/bin/chromium' // Adjust path as per your local setup
+async function getBrowser(): Promise<Browser | undefined> {
+  try {
+    const executablePath = process.env.NODE_ENV === 'production'
+      ? await chromium.executablePath
+      : '/opt/homebrew/bin/chromium'
 
-  return await playwright.chromium.launch({
-    executablePath,
-  })
+    return await playwright.chromium.launch({
+      executablePath,
+    })
+  } catch (error) {
+    // Log the error with additional context or stack for better debugging
+    console.error('Failed to launch the browser. Error:', error instanceof Error ? error.stack : error)
+    return undefined // Return undefined to indicate failure
+  }
 }
 
 export async function GET() {
+  let browser: Browser | undefined
+
   try {
-    const browser = await getBrowser()
+    browser = await getBrowser()
+    if (!browser) {
+      throw new Error('Browser instance is undefined')
+    }
+
     const context = await browser.newContext()
     const page = await context.newPage()
 
@@ -38,9 +50,20 @@ export async function GET() {
       },
     })
   } catch (error) {
-    return new NextResponse(JSON.stringify({ error: 'Error generating PDF', details: (error as any).message }), {
+    console.error('Error generating PDF:', error)
+
+    if (browser) {
+      await browser.close()
+    }
+
+    const errorResponse = {
+      error: 'Error generating PDF',
+      details: process.env.NODE_ENV === 'development' ? (error as any).message : undefined,
+    }
+
+    return new NextResponse(JSON.stringify(errorResponse), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     })
-  }
+}
 }
