@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { chromium as playwright, Browser } from 'playwright-core'
+import puppeteerCore, { Browser } from 'puppeteer-core'
 import chromium from '@sparticuz/chromium-min'
 
 async function getBrowser(): Promise<Browser | undefined> {
@@ -8,21 +8,20 @@ async function getBrowser(): Promise<Browser | undefined> {
 
     const executablePath = isProduction
       ? await chromium.executablePath(
-        "https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar"
+        "https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar"
       )
       : '/opt/homebrew/bin/chromium'
 
     console.log('Executable Path:', executablePath)
 
-    return await playwright.launch({
+    return await puppeteerCore.launch({
       args: isProduction ? [...chromium.args] : [],
       executablePath,
-      headless: true,
+      headless: isProduction ? chromium.headless : true,
     })
   } catch (error) {
-    // Log the error with additional context or stack for better debugging
     console.error('Failed to launch the browser. Error:', error instanceof Error ? error.stack : error)
-    return undefined // Return undefined to indicate failure
+    return undefined
   }
 }
 
@@ -31,18 +30,21 @@ export async function GET() {
 
   try {
     browser = await getBrowser()
+
     if (!browser) {
       throw new Error('Browser instance is undefined')
     }
 
-    const context = await browser.newContext()
-    const page = await context.newPage()
+    const page = await browser.newPage()
 
     const pdfUrl = process.env.NODE_ENV === 'production'
       ? 'https://www.richcookson.info'
       : 'http://localhost:3000'
 
-    await page.goto(pdfUrl, { waitUntil: 'load' })
+    await page.goto(pdfUrl, { waitUntil: "networkidle0" })
+
+    console.log("Chromium:", await browser.version())
+    console.log("Page Title:", await page.title())
 
     const pdfBuffer = await page.pdf({
       printBackground: true,

@@ -8,7 +8,7 @@ const nextConfig = {
     additionalData: '@import "_scss/styles.global.scss";',
   },
   experimental: {
-    serverComponentsExternalPackages: ['playwright-core', '@sparticuz/chromium-min'],
+    serverComponentsExternalPackages: ['puppeteer-core', '@sparticuz/chromium-min'],
     externalDir: true
   }
 }
