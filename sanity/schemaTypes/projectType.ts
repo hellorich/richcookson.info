@@ -30,6 +30,13 @@ export const projectType = defineType({
           type: 'block'
         }
       ]
+    }),
+    defineField({
+      name: 'skills',
+      type: 'tags',
+      options: {
+        includeFromReference: 'skill'
+      }
     })
   ],
 })

@@ -6,11 +6,13 @@ export const skillType = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'skill',
+      name: 'label',
+      title: 'Skill',
       type: 'string',
     }),
     defineField({
-      name: 'link',
+      name: 'value',
+      title: 'Link',
       type: 'url',
     }),
   ],
