@@ -18,7 +18,7 @@ async function getBrowser(): Promise<Browser> {
       headless: isProduction ? chromium.headless : true,
     })
   } catch (error) {
-    console.error('Failed to launch the browser. Error:', error instanceof Error ? error.stack : error)
+    console.error('Failed to launch the browser. Error:', error)
     throw new Error('Failed to launch the browser')
   }
 }
@@ -38,9 +38,6 @@ export async function GET() {
 
     const page = await browser.newPage()
     await page.goto(pdfUrl, { waitUntil: "networkidle0" })
-
-    console.log("Chromium:", await browser.version())
-    console.log("Page Title:", await page.title())
 
     const pdfBuffer = await page.pdf({
       printBackground: true,
