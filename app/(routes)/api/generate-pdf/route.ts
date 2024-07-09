@@ -2,11 +2,11 @@ import { NextResponse } from 'next/server'
 import puppeteerCore, { Browser } from 'puppeteer-core'
 import chromium from '@sparticuz/chromium-min'
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction: boolean = process.env.NODE_ENV === 'production'
 
 async function getBrowser(): Promise<Browser> {
   try {
-    const executablePath = isProduction
+    const executablePath: string = isProduction
       ? await chromium.executablePath(
           "https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar"
         )
@@ -17,29 +17,25 @@ async function getBrowser(): Promise<Browser> {
       executablePath,
       headless: isProduction ? chromium.headless : true,
     })
-  } catch (error) {
-    console.error('Failed to launch the browser. Error:', error)
+  } catch (error: unknown) {
+    console.error('Failed to launch the browser. Error:', (error as Error).stack)
     throw new Error('Failed to launch the browser')
   }
 }
 
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
   let browser: Browser | undefined
 
   try {
     browser = await getBrowser()
-    const pdfUrl = isProduction
+    const pdfUrl: string = isProduction
       ? 'https://www.richcookson.info'
       : 'http://localhost:3000'
-
-    if (!browser) {
-      throw new Error('Browser instance is undefined')
-    }
 
     const page = await browser.newPage()
     await page.goto(pdfUrl, { waitUntil: "networkidle0" })
 
-    const pdfBuffer = await page.pdf({
+    const pdfBuffer: Buffer = await page.pdf({
       printBackground: true,
       format: 'a4',
     })
@@ -52,7 +48,7 @@ export async function GET() {
         'Content-Disposition': 'attachment; filename=rich-cookson-cv.pdf',
       },
     })
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Error generating PDF:', error)
 
     if (browser) {
