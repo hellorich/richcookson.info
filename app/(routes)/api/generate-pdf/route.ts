@@ -4,13 +4,19 @@ import chromium from '@sparticuz/chromium-min'
 
 const isProduction: boolean = process.env.NODE_ENV === 'production'
 
+const fileName = 'rich-cookson-cv.pdf'
+const chromiumPath = {
+  'dev': '/opt/homebrew/bin/chromium',
+  'prod': 'https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar',
+}
+const pageUrl = {
+  'dev': 'http://localhost:3000',
+  'prod': 'https://www.richcookson.info',
+}
+
 async function getBrowser(): Promise<Browser> {
   try {
-    const executablePath: string = isProduction
-      ? await chromium.executablePath(
-          "https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar"
-        )
-      : '/opt/homebrew/bin/chromium'
+    const executablePath: string = isProduction ? await chromium.executablePath(chromiumPath.prod): chromiumPath.dev
 
     return await puppeteerCore.launch({
       args: isProduction ? [...chromium.args] : [],
@@ -28,9 +34,7 @@ export async function GET(): Promise<NextResponse> {
 
   try {
     browser = await getBrowser()
-    const pdfUrl: string = isProduction
-      ? 'https://www.richcookson.info'
-      : 'http://localhost:3000'
+    const pdfUrl: string = isProduction ? pageUrl.prod : pageUrl.dev
 
     const page = await browser.newPage()
     await page.goto(pdfUrl, { waitUntil: "networkidle0" })
@@ -45,7 +49,7 @@ export async function GET(): Promise<NextResponse> {
     return new NextResponse(pdfBuffer, {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename=rich-cookson-cv.pdf',
+        'Content-Disposition': `attachment; filename=${fileName}`,
       },
     })
   } catch (error: unknown) {
