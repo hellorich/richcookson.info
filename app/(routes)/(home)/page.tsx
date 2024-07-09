@@ -3,7 +3,6 @@ import { Section } from '@/app/_components/section'
 import { Block } from '@/app/_components/block'
 import { Group } from '@/app/_components/group'
 import { Button } from '@/app/_components/button'
-import { ButtonPDF } from '@/app/_components/button-pdf'
 import { Skill } from '@/app/_components/skill'
 import { Text } from '@/app/_components/text'
 
@@ -67,7 +66,6 @@ export default function HomePage() {
             text="Mastodon" 
             url="https://mastodon.social/@hellorich"
           />
-          <ButtonPDF />
         </Group>
       </Block>
 

@@ -32,10 +32,13 @@
     }
   }
 
-  .h1 {
+  &-inner {
     @extend .grid-item;
     @extend .md-9;
+    align-items: center;
     border-bottom: rem(1) solid setColor(neutral, gray-85);
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 0;
 
     @media print {

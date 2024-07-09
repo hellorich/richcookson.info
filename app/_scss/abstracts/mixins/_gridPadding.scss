@@ -12,8 +12,11 @@
   @include respond-above(md) {
     padding: $grid-v-padding * 2 $grid-h-padding * 2;
   }
+}
 
-  @media print {
-    padding: 0;
+// Add print styles
+@media print {
+  @page {
+    margin: 1cm;
   }
 }

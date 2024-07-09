@@ -1,0 +1,36 @@
+//
+// Button
+// -----------------------------------------------------------------------------
+
+.button {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: setColor(neutral, white);
+  cursor: pointer;
+  font-size: rem(17);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: rem(-24);
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+
+  @media print {
+    display: none;
+  }
+
+  .download {
+    color: setColor(primary, cyan);
+    margin-right: rem(-4);
+
+    &:hover {
+      color: setColor(secondary, redOrange);
+    }
+  }
+}
+
+.text {
+  padding-left: rem(8);
+}

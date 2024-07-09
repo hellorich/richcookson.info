@@ -3,9 +3,9 @@
   font-size: rem(64);
   font-weight: 900;
   letter-spacing: rem(-1);
-  margin-bottom: rem(16);
   margin-top: 0;
-  padding-bottom: rem(8);
+  margin-bottom: 0;
+  padding-bottom: 0;
 
   @include respond-below(md) {
     font-size: rem(48);
