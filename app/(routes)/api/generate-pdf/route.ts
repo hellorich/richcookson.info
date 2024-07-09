@@ -4,12 +4,18 @@ import playwright, { Browser } from 'playwright-core'
 
 async function getBrowser(): Promise<Browser | undefined> {
   try {
-    const executablePath = process.env.NODE_ENV === 'production'
+    const isProduction = process.env.NODE_ENV === 'production'
+
+    const executablePath = isProduction
       ? await chromium.executablePath
       : '/opt/homebrew/bin/chromium'
 
+    console.log('Executable Path:', executablePath)
+
     return await playwright.chromium.launch({
+      args: isProduction ? [...chromium.args] : [],
       executablePath,
+      headless: isProduction ? chromium.headless : true,
     })
   } catch (error) {
     // Log the error with additional context or stack for better debugging
@@ -65,5 +71,5 @@ export async function GET() {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     })
-}
+  }
 }
