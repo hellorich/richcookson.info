@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import playwright, { Browser } from 'playwright-core'
+import { chromium as playwright, Browser } from 'playwright-core'
 import chromium from '@sparticuz/chromium-min'
 
 async function getBrowser(): Promise<Browser | undefined> {
@@ -14,7 +14,7 @@ async function getBrowser(): Promise<Browser | undefined> {
 
     console.log('Executable Path:', executablePath)
 
-    return await playwright.chromium.launch({
+    return await playwright.launch({
       args: isProduction ? [...chromium.args] : [],
       executablePath,
       headless: true,
