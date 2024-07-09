@@ -1,13 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server'
-import chromium from 'chrome-aws-lambda'
+import { NextResponse } from 'next/server'
 import playwright, { Browser } from 'playwright-core'
+import chromium from '@sparticuz/chromium-min'
 
 async function getBrowser(): Promise<Browser | undefined> {
   try {
     const isProduction = process.env.NODE_ENV === 'production'
 
     const executablePath = isProduction
-      ? await chromium.executablePath
+      ? await chromium.executablePath(
+        "https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar"
+      )
       : '/opt/homebrew/bin/chromium'
 
     console.log('Executable Path:', executablePath)
@@ -15,7 +17,7 @@ async function getBrowser(): Promise<Browser | undefined> {
     return await playwright.chromium.launch({
       args: isProduction ? [...chromium.args] : [],
       executablePath,
-      headless: isProduction ? chromium.headless : true,
+      headless: true,
     })
   } catch (error) {
     // Log the error with additional context or stack for better debugging
