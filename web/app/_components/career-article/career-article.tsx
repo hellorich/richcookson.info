@@ -4,10 +4,10 @@ import { clsx } from 'clsx'
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
 
-import { Title } from '@/web/app/_components/title'
-import { Group } from '@/web/app/_components/group'
+import { Title } from '@/app/_components/title'
+import { Group } from '@/app/_components/group'
 
-import { lato } from '@/web/app/_utilities/fonts'
+import { lato } from '@/app/_utilities/fonts'
 import classes from './career-article.module.scss'
 
 interface CareerArticleProps {

@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { lato } from '@/web/app/_utilities/fonts'
+import { lato } from '@/app/_utilities/fonts'
 import classes from './title.module.scss'
 
 interface TitleProps {

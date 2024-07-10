@@ -1,12 +1,12 @@
-import { Header } from '@/web/app/_components/header'
-import { Section } from '@/web/app/_components/section'
-import { Block } from '@/web/app/_components/block'
-import { Group } from '@/web/app/_components/group'
-import { Button } from '@/web/app/_components/button'
-import { Skill } from '@/web/app/_components/skill'
-import { Text } from '@/web/app/_components/text'
+import { Header } from '@/app/_components/header'
+import { Section } from '@/app/_components/section'
+import { Block } from '@/app/_components/block'
+import { Group } from '@/app/_components/group'
+import { Button } from '@/app/_components/button'
+import { Skill } from '@/app/_components/skill'
+import { Text } from '@/app/_components/text'
 
-import { CareerArticle } from '@/web/app/_components/career-article'
+import { CareerArticle } from '@/app/_components/career-article'
 
 // ToDo: This is a temporary solution to get the data into the page while I build CMS functionality
 import skillsData from '@/app/_content/skills.json'

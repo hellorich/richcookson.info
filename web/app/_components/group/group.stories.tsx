@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Group } from '@/web/app/_components/group'
-import { Skill } from '@/web/app/_components/skill'
-import { Button } from '@/web/app/_components/button'
+import { Group } from '@/app/_components/group'
+import { Skill } from '@/app/_components/skill'
+import { Button } from '@/app/_components/button'
 
 import { FaEnvelope, FaGithub, FaMastodon, FaMobileButton } from 'react-icons/fa6'
 

@@ -2,7 +2,7 @@ import { URL } from 'url'
 import { clsx } from 'clsx'
 import Link from 'next/link'
 
-import { lato } from '@/web/app/_utilities/fonts'
+import { lato } from '@/app/_utilities/fonts'
 import styles from './skill.module.scss'
 
 interface SkillProps {

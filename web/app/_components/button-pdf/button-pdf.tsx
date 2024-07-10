@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver'
 import { clsx } from 'clsx'
 import { FaFilePdf } from 'react-icons/fa6'
 
-import { lato } from '@/web/app/_utilities/fonts'
+import { lato } from '@/app/_utilities/fonts'
 import classes from './button-pdf.module.scss'
 
 

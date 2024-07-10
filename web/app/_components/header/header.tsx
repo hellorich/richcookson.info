@@ -1,5 +1,5 @@
-import { Title } from '@/web/app/_components/title'
-import { ButtonPDF } from '@/web/app/_components/button-pdf'
+import { Title } from '@/app/_components/title'
+import { ButtonPDF } from '@/app/_components/button-pdf'
 
 import classes from './header.module.scss'
 

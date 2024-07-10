@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Block } from '@/web/app/_components/block'
-import { Text } from '@/web/app/_components/text'
+import { Block } from '@/app/_components/block'
+import { Text } from '@/app/_components/text'
 
 const meta: Meta<typeof Block> = {
   component: Block,
