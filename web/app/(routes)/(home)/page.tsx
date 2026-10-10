@@ -1,3 +1,5 @@
+//import { client} from '@/utils/sanity/client'
+
 import { Header } from '@/app/_components/header'
 import { Section } from '@/app/_components/section'
 import { Block } from '@/app/_components/block'

@@ -15,6 +15,8 @@
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/react-loader": "^1.10.4",
     "@sparticuz/chromium-min": "^123.0.1",
     "@storybook/test": "^8.0.4",
     "@types/node": "20.5.9",
@@ -27,6 +29,7 @@
     "eslint-config-next": "^14.1.0",
     "file-saver": "^2.0.5",
     "next": "^14.1.0",
+    "next-sanity": "^9.4.2",
     "puppeteer-core": "^22.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
