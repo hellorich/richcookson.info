@@ -9,6 +9,14 @@ Requires Node 22.17 or later.
 1. Start up the development server using `npm run dev` and open [http://localhost:3000](http://localhost:3000).
 2. Start up Storybook for component development using `npm run storybook` and open [http://localhost:6007](http://localhost:6007).
 
+## Linting and formatting
+
+This app uses [Biome](https://biomejs.dev) for linting and formatting.
+
+- `npm run check` lints and checks formatting
+- `npm run lint` lints only
+- `npm run format` formats all files
+
 ## Testing
 
 This app uses Storybook for component development, publishing to Chromatic on each PR to automate visual and interaction tests. This also allows integration of Storybook with Figma for a seamless design / development workflow.
