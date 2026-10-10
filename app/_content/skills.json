@@ -8,6 +8,10 @@
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
+    "text": "SCSS",
+    "url": "http://sass-lang.com"
+  },
+  {
     "text": "JavaScript",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
@@ -24,6 +28,30 @@
     "url": "https://nextjs.org/"
   },
   {
+    "text": "jQuery",
+    "url": "https://jquery.com"
+  },
+  {
+    "text": "Node",
+    "url": "https://nodejs.org"
+  },
+  {
+    "text": "PHP",
+    "url": "https://www.php.net/"
+  },
+  {
+    "text": "SQL",
+    "url": "https://www.mysql.com/"
+  },
+  {
+    "text": "Wordpress",
+    "url": "https://wordpress.org"
+  },
+  {
+    "text": "WooCommerce",
+    "url": "https://woocommerce.com/"
+  },
+  {
     "text": "Storybook",
     "url": "https://storybookjs.org"
   },
@@ -34,30 +62,6 @@
   {
     "text": "Webpack",
     "url": "https://webpack.js.org"
-  },
-  {
-    "text": "Node",
-    "url": "https://nodejs.org"
-  },
-  {
-    "text": "Express",
-    "url": "https://expressjs.com"
-  },
-  {
-    "text": "Wordpress",
-    "url": "https://wordpress.org"
-  },
-  {
-    "text": "Bootstrap",
-    "url": "http://getbootstrap.com"
-  },
-  {
-    "text": "SCSS",
-    "url": "http://sass-lang.com"
-  },
-  {
-    "text": "jQuery",
-    "url": "https://jquery.com"
   },
   {
     "text": "Git",
