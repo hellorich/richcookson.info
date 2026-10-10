@@ -1,38 +1,21 @@
-import type { AddonOptionsBabel } from '@storybook/addon-coverage'
-import type { StorybookConfig } from '@storybook/nextjs'
+import type { StorybookConfig } from '@storybook/nextjs-vite'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
-// Storybook test coverage configuration
-const coverageConfig: AddonOptionsBabel = {
-  include: ['**/stories/**'],
-  exclude: ['**/_utilities/**'],
-  excludeNodeModules: true,
-};
+const dirname = path.dirname(fileURLToPath(import.meta.url))
+const root = path.resolve(dirname, '../')
 
 // Storybook configuration
 const config: StorybookConfig = {
   addons: [
     '@storybook/addon-a11y',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+    '@storybook/addon-docs',
     '@storybook/addon-links',
     '@storybook/addon-onboarding',
     '@chromatic-com/storybook',
-    {
-        name: '@storybook/addon-coverage',
-        options: {
-            istanbul: {
-                ...coverageConfig,
-            },
-        },
-    },
-    
   ],
-  docs: {
-    autodocs: 'tag',
-  },
   framework: {
-    name: '@storybook/nextjs',
+    name: '@storybook/nextjs-vite',
     options: {},
   },
   staticDirs: ['../public'],
@@ -40,11 +23,23 @@ const config: StorybookConfig = {
     '../stories/**/*.mdx',
     '../app/**/*.(stories|story).@(ts|tsx)',
   ],
-  webpackFinal: async (config) => {
-    config.resolve ??= {};
-    config.resolve.alias ??= {};
-    config.resolve.alias['@'] = path.resolve(__dirname, '../');
-    return config;
+  viteFinal: async (config) => {
+    config.resolve ??= {}
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': root,
+    }
+    // Mirror the sassOptions in next.config.js, which the Vite builder doesn't read
+    config.css ??= {}
+    config.css.preprocessorOptions = {
+      ...config.css.preprocessorOptions,
+      scss: {
+        loadPaths: [path.join(root, 'app')],
+        additionalData: '@import "_scss/styles.global.scss";',
+        silenceDeprecations: ['import', 'global-builtin'],
+      },
+    }
+    return config
   },
 }
 

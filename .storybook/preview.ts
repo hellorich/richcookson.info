@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/react"
+import type { Preview } from "@storybook/nextjs-vite"
 
 const preview: Preview = {
   parameters: {
@@ -11,4 +11,4 @@ const preview: Preview = {
   },
 }
 
-export default preview;
+export default preview

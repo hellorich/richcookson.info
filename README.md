@@ -4,6 +4,8 @@ My resume web site.
 
 ## Development
 
+Requires Node 22.17 or later.
+
 1. Start up the development server using `npm run dev` and open [http://localhost:3000](http://localhost:3000).
 2. Start up Storybook for component development using `npm run storybook` and open [http://localhost:6007](http://localhost:6007).
 

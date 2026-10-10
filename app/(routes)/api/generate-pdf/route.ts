@@ -7,7 +7,7 @@ const isProduction: boolean = process.env.NODE_ENV === 'production'
 const fileName = 'rich-cookson-cv.pdf'
 const chromiumPath = {
   'dev': '/opt/homebrew/bin/chromium',
-  'prod': 'https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar',
+  'prod': 'https://github.com/Sparticuz/chromium/releases/download/v153.0.0/chromium-v153.0.0-pack.x64.tar',
 }
 const pageUrl = {
   'dev': 'http://localhost:3000',
@@ -21,7 +21,7 @@ async function getBrowser(): Promise<Browser> {
     return await puppeteerCore.launch({
       args: isProduction ? [...chromium.args] : [],
       executablePath,
-      headless: isProduction ? chromium.headless : true,
+      headless: isProduction ? 'shell' : true,
     })
   } catch (error: unknown) {
     console.error('Failed to launch the browser. Error:', (error as Error).stack)
@@ -39,14 +39,14 @@ export async function GET(): Promise<NextResponse> {
     const page = await browser.newPage()
     await page.goto(pdfUrl, { waitUntil: "networkidle0" })
 
-    const pdfBuffer: Buffer = await page.pdf({
+    const pdf: Uint8Array = await page.pdf({
       printBackground: true,
       format: 'a4',
     })
 
     await browser.close()
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdf), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename=${fileName}`,

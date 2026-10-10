@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
 import CareerArticle from './career-article'
 import { Skill } from '@/app/_components/skill'

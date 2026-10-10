@@ -6,13 +6,13 @@ describe('Text component', () => {
     render(<Text inline>Test text</Text>)
     const textElement = screen.getByText(/Test text/i)
     expect(textElement).toBeInTheDocument()
-    expect(textElement.firstChild?.nodeName).toBe('SPAN')
+    expect(textElement.nodeName).toBe('SPAN')
   })
 
   it('renders paragraph text when inline prop is false', () => {
     render(<Text inline={false}>Test Text</Text>)
     const textElement = screen.getByText(/Test Text/i)
     expect(textElement).toBeInTheDocument()
-    expect(textElement.firstChild?.nodeName).toBe('P')
+    expect(textElement.nodeName).toBe('P')
   })
 })

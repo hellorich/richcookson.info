@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
 import { Group } from '@/app/_components/group'
 import { Skill } from '@/app/_components/skill'

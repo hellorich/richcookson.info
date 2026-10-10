@@ -11,6 +11,6 @@ describe('Skill', () => {
   it('renders the skill link correctly', () => {
     render(<Skill text="Test Skill" url="https://www.test.com" />)
     const linkElement = screen.getByRole('link')
-    expect(linkElement).toHaveAttribute('href', 'https://www.test.com/')
+    expect(linkElement).toHaveAttribute('href', 'https://www.test.com')
   })
 })
