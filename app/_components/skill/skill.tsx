@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import { URL } from 'url'
 
 import { lato } from '@/app/_utilities/fonts'
 import styles from './skill.module.scss'

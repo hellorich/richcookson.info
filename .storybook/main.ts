@@ -1,6 +1,6 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import type { StorybookConfig } from '@storybook/nextjs-vite'
-import path from 'path'
-import { fileURLToPath } from 'url'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(dirname, '../')

@@ -7,11 +7,11 @@ import { Header } from '@/app/_components/header'
 import { Section } from '@/app/_components/section'
 import { Skill } from '@/app/_components/skill'
 import { Text } from '@/app/_components/text'
-import articlesData from '@/app/_content/articles.json'
 // ToDo: This is a temporary solution to get the data into the page while I build CMS functionality
+import articlesData from '@/app/_content/articles.json'
 import skillsData from '@/app/_content/skills.json'
 
-interface Skill {
+interface SkillData {
   text: string
   url: string
 }
@@ -23,10 +23,10 @@ interface Article {
   dateEnd?: string
   dateStart: string
   content: string
-  skills: Skill[]
+  skills: SkillData[]
 }
 
-const skills: Skill[] = skillsData
+const skills: SkillData[] = skillsData
 const articles: Article[] = articlesData
 
 import classes from './page.module.scss'
@@ -76,8 +76,8 @@ export default function HomePage() {
 
       <Section title="Skills">
         <Group>
-          {skills.map((skill, index) => (
-            <Skill key={index} text={skill.text} url={skill.url} />
+          {skills.map((skill) => (
+            <Skill key={skill.url} text={skill.text} url={skill.url} />
           ))}
         </Group>
       </Section>
@@ -98,9 +98,9 @@ export default function HomePage() {
           </>
         }
       >
-        {articles.map((article, index) => (
+        {articles.map((article) => (
           <CareerArticle
-            key={index}
+            key={`${article.title}-${article.dateStart}`}
             title={article.title}
             url={article.url}
             linkText={article.linkText}

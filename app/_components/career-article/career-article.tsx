@@ -1,7 +1,6 @@
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import React, { type ReactNode } from 'react'
-import { URL } from 'url'
+import type { ReactNode } from 'react'
 import { Group } from '@/app/_components/group'
 import { Title } from '@/app/_components/title'
 
@@ -64,6 +63,7 @@ const CareerArticle = ({
         </div>
       </header>
 
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: content is my own HTML from app/_content, not user input */}
       <div className={classes.content} dangerouslySetInnerHTML={{ __html: content }} />
 
       <footer>

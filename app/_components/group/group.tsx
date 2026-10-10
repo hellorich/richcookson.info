@@ -24,6 +24,7 @@ const Group = ({ children, stack }: GroupProps) => {
       data-testid="group"
     >
       {childrenArray.map((child, index) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: wrapper <li>s follow the children's order, which never changes
         <li key={index}>{child}</li>
       ))}
     </ul>

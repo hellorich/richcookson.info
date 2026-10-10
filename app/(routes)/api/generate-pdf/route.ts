@@ -63,7 +63,7 @@ export async function GET(): Promise<NextResponse> {
 
     const errorResponse = {
       error: 'Error generating PDF',
-      details: isProduction ? undefined : (error as any).message,
+      details: isProduction ? undefined : error instanceof Error ? error.message : String(error),
     }
 
     return new NextResponse(JSON.stringify(errorResponse), {

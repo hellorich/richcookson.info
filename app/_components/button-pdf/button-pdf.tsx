@@ -30,7 +30,7 @@ const ButtonPDF = ({ text }: ButtonPDFProps) => {
   }
 
   return (
-    <button className={classes.button} onClick={handleGeneratePDF}>
+    <button type="button" className={classes.button} onClick={handleGeneratePDF}>
       <FaFilePdf aria-label="CV PDF" className={classes.download} size="28px" />
       {text && <span className={clsx(classes.text, lato.className)}>{text}</span>}
     </button>

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import { URL } from 'url'
 import CareerArticle from './career-article'
 
 describe('CareerArticle', () => {

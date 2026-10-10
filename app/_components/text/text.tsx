@@ -7,14 +7,16 @@ interface TextProps {
   inline?: boolean
 }
 
-const Text = ({ children, inline }: TextProps) =>
-  inline ? (
-    <span
-      className={clsx(classes.span, lato.className)}
+const Text = ({ children, inline }: TextProps) => {
+  const Tag = inline ? 'span' : 'p'
+
+  return (
+    <Tag
+      className={clsx(inline ? classes.span : classes.p, lato.className)}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: children is my own HTML from app/_content, not user input
       dangerouslySetInnerHTML={{ __html: children }}
     />
-  ) : (
-    <p className={clsx(classes.p, lato.className)} dangerouslySetInnerHTML={{ __html: children }} />
   )
+}
 
 export default Text
