@@ -1,22 +1,24 @@
-import { NextResponse } from 'next/server'
-import puppeteerCore, { Browser } from 'puppeteer-core'
 import chromium from '@sparticuz/chromium-min'
+import { NextResponse } from 'next/server'
+import puppeteerCore, { type Browser } from 'puppeteer-core'
 
 const isProduction: boolean = process.env.NODE_ENV === 'production'
 
 const fileName = 'rich-cookson-cv.pdf'
 const chromiumPath = {
-  'dev': '/opt/homebrew/bin/chromium',
-  'prod': 'https://github.com/Sparticuz/chromium/releases/download/v153.0.0/chromium-v153.0.0-pack.x64.tar',
+  dev: '/opt/homebrew/bin/chromium',
+  prod: 'https://github.com/Sparticuz/chromium/releases/download/v153.0.0/chromium-v153.0.0-pack.x64.tar',
 }
 const pageUrl = {
-  'dev': 'http://localhost:3000',
-  'prod': 'https://www.richcookson.info',
+  dev: 'http://localhost:3000',
+  prod: 'https://www.richcookson.info',
 }
 
 async function getBrowser(): Promise<Browser> {
   try {
-    const executablePath: string = isProduction ? await chromium.executablePath(chromiumPath.prod): chromiumPath.dev
+    const executablePath: string = isProduction
+      ? await chromium.executablePath(chromiumPath.prod)
+      : chromiumPath.dev
 
     return await puppeteerCore.launch({
       args: isProduction ? [...chromium.args] : [],
@@ -37,7 +39,7 @@ export async function GET(): Promise<NextResponse> {
     const pdfUrl: string = isProduction ? pageUrl.prod : pageUrl.dev
 
     const page = await browser.newPage()
-    await page.goto(pdfUrl, { waitUntil: "networkidle0" })
+    await page.goto(pdfUrl, { waitUntil: 'networkidle0' })
 
     const pdf: Uint8Array = await page.pdf({
       printBackground: true,

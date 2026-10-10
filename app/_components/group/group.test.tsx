@@ -7,7 +7,7 @@ describe('Group', () => {
       <Group>
         <div>Child 1</div>
         <div>Child 2</div>
-      </Group>
+      </Group>,
     )
 
     const children = screen.getAllByRole('listitem')

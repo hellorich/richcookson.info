@@ -1,28 +1,35 @@
-
-import { URL } from 'url'
 import { clsx } from 'clsx'
-import React, { ReactNode } from 'react'
 import Link from 'next/link'
-
-import { Title } from '@/app/_components/title'
+import React, { type ReactNode } from 'react'
+import { URL } from 'url'
 import { Group } from '@/app/_components/group'
+import { Title } from '@/app/_components/title'
 
 import { lato } from '@/app/_utilities/fonts'
 import classes from './career-article.module.scss'
 
 interface CareerArticleProps {
-  content: string,
-  dateEnd?: Date,
-  dateStart: Date,
-  linkText: string,
-  skills: ReactNode | ReactNode[],
-  title: string,
-  url: string,
+  content: string
+  dateEnd?: Date
+  dateStart: Date
+  linkText: string
+  skills: ReactNode | ReactNode[]
+  title: string
+  url: string
 }
 
-const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, url } : CareerArticleProps) => {
-  const formatDateForDisplay = (date : Date) => new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
-	
+const CareerArticle = ({
+  content,
+  dateEnd,
+  dateStart,
+  linkText,
+  skills,
+  title,
+  url,
+}: CareerArticleProps) => {
+  const formatDateForDisplay = (date: Date) =>
+    new Date(date).toLocaleDateString('en-gb', { year: 'numeric', month: 'short' })
+
   const formatDateNow = () => {
     const now = new Date()
     const year = now.getFullYear()
@@ -37,37 +44,33 @@ const CareerArticle = ({ content, dateEnd, dateStart, linkText, skills, title, u
   }
 
   return (
-		<article className={clsx(classes.article, lato.className)}>
+    <article className={clsx(classes.article, lato.className)}>
       <header className={classes.header}>
-        <Title
-          className={classes.title}
-          order={3}
-          text={title}
-        />
+        <Title className={classes.title} order={3} text={title} />
         <div className={classes.metadata}>
           <span className={classes.duration}>
             <time dateTime={formatDateForDatetime(dateStart)}>
               {formatDateForDisplay(dateStart)}
-            </time>
-            {' '}to{' '} 
+            </time>{' '}
+            to{' '}
             <time dateTime={dateEnd ? formatDateForDatetime(dateEnd) : formatDateNow()}>
               {dateEnd ? formatDateForDisplay(dateEnd) : 'Present'}
             </time>
           </span>
 
-          <Link href={url} rel="external">{linkText}</Link>
+          <Link href={url} rel="external">
+            {linkText}
+          </Link>
         </div>
       </header>
-      
+
       <div className={classes.content} dangerouslySetInnerHTML={{ __html: content }} />
 
       <footer>
-        <Group>
-          {skills}
-        </Group>
+        <Group>{skills}</Group>
       </footer>
     </article>
-	)
+  )
 }
 
 export default CareerArticle

@@ -19,10 +19,7 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ['../public'],
-  stories: [
-    '../stories/**/*.mdx',
-    '../app/**/*.(stories|story).@(ts|tsx)',
-  ],
+  stories: ['../stories/**/*.mdx', '../app/**/*.(stories|story).@(ts|tsx)'],
   viteFinal: async (config) => {
     config.resolve ??= {}
     config.resolve.alias = {

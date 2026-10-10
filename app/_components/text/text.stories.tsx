@@ -14,25 +14,23 @@ type Story = StoryObj<typeof Text>
 
 export const Empty: Story = {}
 
-export const Paragraph : Story = {
+export const Paragraph: Story = {
   args: {
     inline: false,
     children: 'The quick brown fox jumps over the lazy dog',
   },
 }
 
-export const Span : Story = {
+export const Span: Story = {
   args: {
     inline: true,
     children: 'The quick brown fox jumps over the lazy dog',
   },
 }
 
-export const WithHTML : Story = {
+export const WithHTML: Story = {
   args: {
     inline: true,
     children: 'The quick brown <strong>fox</strong> jumps over the lazy dog',
   },
 }
-
-

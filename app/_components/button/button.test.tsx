@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
+import { FaCoffee } from 'react-icons/fa'
 import { URL } from 'url'
 import Button from './button'
-import { FaCoffee } from 'react-icons/fa'
 
 describe('Button', () => {
   beforeEach(() => {

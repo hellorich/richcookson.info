@@ -15,8 +15,13 @@ describe('CareerArticle', () => {
         dateStart={startDate}
         dateEnd={endDate}
         content="<p>Content</p>"
-        skills={<div><p>Test Skill 1</p><p>Test Skill 2</p></div>}
-      />
+        skills={
+          <div>
+            <p>Test Skill 1</p>
+            <p>Test Skill 2</p>
+          </div>
+        }
+      />,
     )
   })
 

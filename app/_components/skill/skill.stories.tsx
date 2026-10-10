@@ -9,7 +9,9 @@ const meta: Meta<typeof Skill> = {
   decorators: [
     (Story) => (
       <ul style={{ listStyle: 'none' }}>
-        <li><Story /></li>
+        <li>
+          <Story />
+        </li>
       </ul>
     ),
   ],
@@ -22,6 +24,6 @@ type Story = StoryObj<typeof Skill>
 export const Default: Story = {
   args: {
     text: 'Tag',
-		url: 'http://www.google.com',
+    url: 'http://www.google.com',
   },
 }

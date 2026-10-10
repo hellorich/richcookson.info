@@ -25,7 +25,7 @@ describe('Section component', () => {
       <ul>
         <li>Child 1</li>
         <li>Child 2</li>
-      </ul>
+      </ul>,
     )
 
     const children = screen.getAllByRole('listitem')

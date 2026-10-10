@@ -32,5 +32,4 @@ describe('Title component', () => {
     expect(titleElement).toBeInTheDocument()
     expect(titleElement.nodeName).toBe('H1')
   })
-
 })

@@ -1,18 +1,20 @@
-import { URL } from 'url'
 import { clsx } from 'clsx'
 import Link from 'next/link'
+import { URL } from 'url'
 
 import { lato } from '@/app/_utilities/fonts'
 import styles from './skill.module.scss'
 
 interface SkillProps {
-  text: string,
-	url: string,
+  text: string
+  url: string
 }
 
-const Skill = ({ text, url } : SkillProps) => {
+const Skill = ({ text, url }: SkillProps) => {
   return (
-    <Link className={clsx(styles.skill, lato.className)} href={url}>{text}</Link>
+    <Link className={clsx(styles.skill, lato.className)} href={url}>
+      {text}
+    </Link>
   )
 }
 

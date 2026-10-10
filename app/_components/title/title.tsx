@@ -3,9 +3,9 @@ import { lato } from '@/app/_utilities/fonts'
 import classes from './title.module.scss'
 
 interface TitleProps {
-  className?: string;
-  order: number;
-  text: string;
+  className?: string
+  order: number
+  text: string
 }
 
 const Title = ({ className, order, text }: TitleProps) => {

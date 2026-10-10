@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Block>
 
 export const Empty: Story = {}
 
-export const WithContent : Story = {
+export const WithContent: Story = {
   args: {
     children: <Text>Hello world</Text>,
   },
